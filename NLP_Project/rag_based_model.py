@@ -32,7 +32,7 @@ class RAGModel:
 
         # The PromptNode will download the model from Hugging Face if not cached.
         prompt_template = PromptTemplate(
-            prompt='''Given the provided Documents, answer the Question.
+            prompt='''Given the provided Dgocuments, answer the Question.
                        If the answer is not in the Documents, say 'I don't know'.
                        Documents: {join(documents)}
                        Question: {query}
