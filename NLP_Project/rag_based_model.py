@@ -5,6 +5,7 @@ from haystack.pipelines import Pipeline
 from haystack import Document
 from haystack.nodes.prompt import PromptModel
 from haystack.nodes.prompt.invocation_layer import HFLocalInvocationLayer
+from squad_utils import get_squad_item
 
 
 class RAGModel:
@@ -23,8 +24,11 @@ class RAGModel:
         :param text: A string containing the text to be used as a knowledge base.
         """
         self.document_store = InMemoryDocumentStore(use_bm25=True)
-        # Split text into paragraphs and create documents
-        paragraphs = text.split('\n\n')
+        # Split text into paragraphs and create documents with  \n or . or , as delimiters
+        paragraphs = []
+        for p in text.split('\n'):
+            paragraphs.extend(p.split('. '))
+            paragraphs.extend(p.split(', '))
         documents = [Document(content=p) for p in paragraphs if p.strip()]
         self.document_store.write_documents(documents)
 
@@ -32,8 +36,8 @@ class RAGModel:
 
         # The PromptNode will download the model from Hugging Face if not cached.
         prompt_template = PromptTemplate(
-            prompt='''Given the provided Dgocuments, answer the Question.
-                       If the answer is not in the Documents, say 'I don't know'.
+            prompt='''Given the provided Documents, answer the Question.
+                       If the answer is not in the Documents, say 'I don\'t know'.
                        Documents: {join(documents)}
                        Question: {query}
                        Answer:''',
@@ -84,7 +88,7 @@ class RAGModel:
         if not self.pipeline:
             raise Exception("Pipeline not set up. Please call 'setup_from_text' or 'setup_from_file' first.")
 
-        result = self.pipeline.run(query=question, params={"Retriever": {"top_k": 3}})
+        result = self.pipeline.run(query=question, params={"Retriever": {"top_k": 1}})
 
         # The output of a PromptNode is a list of strings in the 'results' key.
         if result and result.get('results'):
@@ -92,7 +96,33 @@ class RAGModel:
         return "No answer found."
 
 
-if __name__ == '__main__':
+def main():
+    # fetch the document of doc 0 from squad_utils
+    squad_path = r"NLP_Project\books\squad.json"
+    docs = ""
+    answers = []
+    questions = []
+    for i in range(7):
+        docs += f"doc{i} " +get_squad_item(squad_path, i, "document") + "\n\n"
+        answers += get_squad_item(squad_path, i, "answers")
+        questions += get_squad_item(squad_path, i, "questions")
+
+
+    rag_model_string = RAGModel()
+    rag_model_string.setup_from_text(docs)
+    count_correct = 0
+    total_questions = len(questions)
+    for q, a in zip(questions, answers):
+        res = rag_model_string.ask(q)
+        count_correct += 1 if res in a else 0
+
+    print(f"Accuracy on SQuAD doc 0: {count_correct}/{total_questions} = {count_correct/total_questions:.2%}")
+
+
+    
+
+
+def main1():
     # --- Example with a string ---
     print("--- Running example with a string ---")
     rag_model_string = RAGModel()
@@ -130,3 +160,37 @@ if __name__ == '__main__':
     else:
         print(f"\n--- File example skipped ---")
         print(f"File not found: {file_path}")
+
+def main_long_book():
+    """
+    Reads from 'book text.txt' and asks questions about it.
+    """
+    print("\n--- Running example with file: book text.txt ---")
+    rag_model_book = RAGModel()
+    file_path = r'C:\Users\ohads\Desktop\NLP\final project\code\NLP_Project\books\book text.txt'
+
+    try:
+        rag_model_book.setup_from_file(file_path)
+
+        questions = [
+            "Who is the author of the book?",
+            "What is the synopsis of Dangerous Liaisons?",
+            "Who does Cécile de Volanges fall in love with?",
+            "What is Viscount de Valmont's main goal?",
+            "What is the relationship between the Marchioness de Merteuil and Gercourt?"
+        ]
+
+        for q in questions:
+            print(f"\nQ: {q}")
+            ans = rag_model_book.ask(q)
+            print(f"A: {ans}")
+
+    except FileNotFoundError:
+        print(f"Error: File not found at {file_path}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+if __name__ == '__main__':
+    #main1()
+    main()
