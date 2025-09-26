@@ -1,0 +1,6 @@
+MODEL: Qwen/Qwen3-8B
++ RAG - (over chunk split type, top k, needle size)
++ change run_training to support all needle types + needle_sizes
++ benchmark preseved utility
++ QA - optional run_training with QA or as is text
++ Lora - (needle size, (epochs, learnign rate, batch_size, adapter sizes, QA enabled)) - baseline (epoch = 5, learning_rate = 1e-3 to fixed batch_size, adapter_r = 6, adapter_layers = 8) 

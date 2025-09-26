@@ -1,11 +1,17 @@
 import os
 import torch
+import time
+print(f"⏱️  Imports started at {time.time():.2f}")
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+print(f"⏱️  Transformers imported at {time.time():.2f}")
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import heapq
 from squad_utils import get_squad_item
+import json
+from utils import parse_needles_jsonl_grouped, extract_text_and_qa_from_needles
+print(f"⏱️  All imports completed at {time.time():.2f}")
 
 # Setup cache directories to use existing team cache
 def setup_cache_directories():
@@ -16,8 +22,7 @@ def setup_cache_directories():
     os.environ["HUGGINGFACE_HUB_CACHE"] = cache_dir
     print(f"Using existing Hugging Face cache directory: {cache_dir}")
 
-# Setup cache immediately
-setup_cache_directories()
+# Cache setup will be called in main() when needed
 
 
 class RAGModelQwen3:
@@ -32,10 +37,13 @@ class RAGModelQwen3:
         self.tokenizer = None
         self.model = None
         self.device = None
+        
+        # Initialize the model once in __init__
+        self._initialize_model()
 
-    def setup_from_text(self, text: str):
+    def _initialize_model(self):
         """
-        Sets up the RAG pipeline with the given text using Qwen3-8B exactly like train_lora_optimized.py
+        Initialize Qwen3-8B model once. This is the heavy operation that should only happen once.
         """
         # Check GPU availability
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -44,24 +52,6 @@ class RAGModelQwen3:
             print(f"GPU: {torch.cuda.get_device_name(0)}")
             print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
         
-        # Split text into documents
-        print("📄 Processing documents...")
-        self.documents = []
-        for p in text.split('\n'):
-            # Split by sentences
-            sentences = p.split('. ')
-            for sentence in sentences:
-                if sentence.strip() and len(sentence.strip()) > 20:
-                    self.documents.append(sentence.strip())
-        
-        print(f"Created {len(self.documents)} document chunks")
-        
-        # Create TF-IDF vectors for retrieval (simpler than sentence transformers)
-        print("🔍 Creating TF-IDF vectors for retrieval...")
-        self.vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
-        self.doc_vectors = self.vectorizer.fit_transform(self.documents)
-        print("✅ TF-IDF vectors created")
-
         # Load Qwen3-8B model EXACTLY like train_lora_optimized.py
         print("📥 Loading Qwen3-8B model using train_lora_optimized.py approach...")
         
@@ -87,11 +77,33 @@ class RAGModelQwen3:
         )
         
         print("✅ Qwen3-8B model loaded successfully!")
-        print("RAG pipeline is set up and ready.")
         
-        # Show GPU memory usage
+        # Show GPU memory usage after model loading
         if torch.cuda.is_available():
-            print(f"GPU Memory after setup: {torch.cuda.memory_allocated()/1024**2:.1f} MB allocated, {torch.cuda.memory_reserved()/1024**2:.1f} MB reserved")
+            print(f"GPU Memory after model setup: {torch.cuda.memory_allocated()/1024**2:.1f} MB allocated, {torch.cuda.memory_reserved()/1024**2:.1f} MB reserved")
+
+    def setup_from_text(self, text: str):
+        """
+        Process the given text for retrieval. Model is already loaded in __init__.
+        """
+        # Split text into documents
+        print("📄 Processing documents...")
+        self.documents = []
+        for p in text.split('\n'):
+            # Split by sentences
+            sentences = p.split('. ')
+            for sentence in sentences:
+                if sentence.strip() and len(sentence.strip()) > 20:
+                    self.documents.append(sentence.strip())
+        
+        print(f"Created {len(self.documents)} document chunks")
+        
+        # Create TF-IDF vectors for retrieval (simpler than sentence transformers)
+        print("🔍 Creating TF-IDF vectors for retrieval...")
+        self.vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
+        self.doc_vectors = self.vectorizer.fit_transform(self.documents)
+        print("✅ TF-IDF vectors created")
+        print("� Document processing complete!")
 
     def retrieve_documents(self, query: str, top_k: int = 3) -> list:
         """
@@ -164,7 +176,41 @@ class RAGModelQwen3:
         return answer
 
 
+
 def main():
+    # Setup cache directories when actually needed
+    setup_cache_directories()
+    
+    # Initialize model ONCE - this is the heavy operation
+    print("🚀 Initializing RAG model (this happens only once)...")
+    rag_model = RAGModelQwen3()
+    
+    for path in ["needles/2048/qa_1_2048.jsonl","needles/32768/qa_1_32768.jsonl","needles/131072/qa_1_131072.jsonl"]:  # Start with 2048 first
+        count_correct = 0
+        docs_data = extract_text_and_qa_from_needles(path)
+
+        total_questions = 0
+        for doc in docs_data[:10]:  # Process first 10 items for demo
+            # Only process documents - model is already loaded
+            rag_model.setup_from_text(doc["document"])
+
+            q = doc["question"]
+            a = doc["answers"]
+
+            res = rag_model.ask(q)
+            print(f"Q: {q}")
+            print(f"A: {res}")
+            print(f"Expected: {a}")
+            print("---")
+            
+            # Check if any expected answer appears in the response
+            count_correct += 1 if any(ans.lower() in res.lower() for ans in a) else 0
+            total_questions += 1
+
+        print(f"Results for file at path {path}:")
+        print(f"Accuracy on {path}: {count_correct}/{total_questions} = {count_correct/total_questions:.2%}")
+        
+def main_2048():
     # Fetch the document from squad_utils
     script_dir = os.path.dirname(os.path.abspath(__file__))
     squad_path = os.path.join(script_dir, "squad.json")

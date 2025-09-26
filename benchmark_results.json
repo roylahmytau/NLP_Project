@@ -1,0 +1,514 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": "/workspace/NLP_Project/adapters/ep5_bs2_lr1e-3_r8_layers15_genQA",
+  "data_file": "needles/2048/qa_1_2048_fixed.jsonl",
+  "metrics": {
+    "exact_accuracy": 0.29,
+    "partial_accuracy": 0.46,
+    "exact_matches": 29,
+    "partial_matches": 17,
+    "total": 100
+  },
+  "predictions": [
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: In what country is Normandy located?",
+      "predicted": "France",
+      "expected": "France"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When were the Normans in Normandy?",
+      "predicted": "911",
+      "expected": "10th and 11th centuries"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: From which countries did the Norse originate?",
+      "predicted": "Denmark, Iceland, and Norway",
+      "expected": "Denmark, Iceland and Norway"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the Norse leader?",
+      "predicted": "Rollo",
+      "expected": "Rollo"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What century did the Normans first gain their separate identity?",
+      "predicted": "10th century",
+      "expected": "10th century"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the duke in the battle of Hastings?",
+      "predicted": "William the Conqueror",
+      "expected": "William the Conqueror"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who ruled the duchy of Normandy",
+      "predicted": "Rollo",
+      "expected": "Richard I"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What religion were the Normans",
+      "predicted": "Christian",
+      "expected": "Catholic"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What is the original meaning of the word Norman?",
+      "predicted": "French for \"Norman\"",
+      "expected": "Viking"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When was the Latin version of the word Norman first recorded?",
+      "predicted": "1064",
+      "expected": "9th century"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When was the Duchy of Normandy founded?",
+      "predicted": "911",
+      "expected": "911"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+      "predicted": "King Charles III of West Francia",
+      "expected": "King Charles III"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What river originally bounded the Duchy",
+      "predicted": "Seine",
+      "expected": "Seine"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who upon arriving gave the original viking settlers a common identity?",
+      "predicted": "Rollo",
+      "expected": "Rollo"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the Norman religion?",
+      "predicted": "Christianity",
+      "expected": "Catholicism"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What part of France were the Normans located?",
+      "predicted": "Normandy",
+      "expected": "north"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was one of the Norman's major exports?",
+      "predicted": "wool",
+      "expected": "fighting horsemen"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?",
+      "predicted": "the Byzantine Empire",
+      "expected": "Seljuk Turks"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Herve serve as a Byzantine general?",
+      "predicted": "1018",
+      "expected": "1050s"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Robert Crispin go up against the Turks?",
+      "predicted": "1169",
+      "expected": "1060s"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who ruined Roussel de Bailleul's plans for an independent state?",
+      "predicted": "William the Conqueror",
+      "expected": "Alexius Komnenos"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the name of the Norman castle?",
+      "predicted": "F\u00e9camp",
+      "expected": "Afranji"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the leader when the Franks entered the Euphrates valley?",
+      "predicted": "Charles Martel",
+      "expected": "Oursel"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did the Normans team up with in Anatolia?",
+      "predicted": "Turkish forces",
+      "expected": "Turkish forces"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What were the origins of the Raouliii family?",
+      "predicted": "Norman mercenaries",
+      "expected": "Norman mercenary"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the name of the count of Apulia ",
+      "predicted": "Richard the Good",
+      "expected": "Robert Guiscard"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Dyrrachium  fall to the Normans?",
+      "predicted": "1185",
+      "expected": "1082"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: How many men were in Robert's army?",
+      "predicted": "10,000",
+      "expected": "30,000"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where did the Normans and Byzantines sign the peace treaty?",
+      "predicted": "Trebizond",
+      "expected": "Deabolis"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Robert's son?",
+      "predicted": "William the Conqueror",
+      "expected": "Bohemond"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What river was Petrela located by?",
+      "predicted": "Tiber",
+      "expected": "Deabolis"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did the Normans attack Dyrrachium?",
+      "predicted": "1081",
+      "expected": "1185"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the naval base called?",
+      "predicted": "Portsmouth",
+      "expected": "Dyrrachium"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where was Dyrrachium located?",
+      "predicted": "Greece",
+      "expected": "the Adriatic"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did Emma Marry?",
+      "predicted": "King Charles III of West Francia",
+      "expected": "King Ethelred II"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Emma's brother?",
+      "predicted": "Richard the Lion-hearted",
+      "expected": "Duke Richard II"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: To where did Ethelred flee?",
+      "predicted": "Normandy",
+      "expected": "Normandy"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who kicked Ethelred out?",
+      "predicted": "Duke Richard of Normandy",
+      "expected": "Sweyn Forkbeard"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Edward the Confessor's half-brother?",
+      "predicted": "Harthacnut",
+      "expected": "Harthacnut"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Edward return?",
+      "predicted": "1066",
+      "expected": "1041"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did Edward make archbishop of Canterbury?",
+      "predicted": "Robert of Jumi\u00e8ges",
+      "expected": "Robert of Jumi\u00e8ges"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where did Harold II die?",
+      "predicted": "Normandy",
+      "expected": "Battle of Hastings"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who killed Harold II? ",
+      "predicted": "William the Conqueror",
+      "expected": "William II"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When was the Battle of Hastings?",
+      "predicted": "1066",
+      "expected": "1066"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the ruling class ahead of the Normans?",
+      "predicted": "Franks",
+      "expected": "Anglo-Saxons"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the Anglo-Norman language's final form?",
+      "predicted": "Old Norman",
+      "expected": "Modern English"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: In what year did the Norman's invade at Bannow Bay?",
+      "predicted": "1169",
+      "expected": "1169"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What country did the Normans invade in 1169?",
+      "predicted": "Ireland",
+      "expected": "Ireland"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What culture did the Normans combine with in Ireland?",
+      "predicted": "Irish culture",
+      "expected": "Irish"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Margaret's brother?",
+      "predicted": "Edmund",
+      "expected": "Edgar"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Margaret's husband?",
+      "predicted": "King Malcolm III of Scotland",
+      "expected": "King Malcolm III of Scotland"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When was Scotland invaded by William?",
+      "predicted": "1066",
+      "expected": "1072"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the hostage?",
+      "predicted": "Edith",
+      "expected": "Duncan"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did Alexander I marry?",
+      "predicted": "Catherine of Braganza",
+      "expected": "Sybilla of Normandy"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What culture's arrival in Scotland is know as the \"Davidian Revolution\"?",
+      "predicted": "Norman",
+      "expected": "Norman"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where was Ralph earl of?",
+      "predicted": "England",
+      "expected": "Hereford"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Ralph in charge of being at war with?",
+      "predicted": "the Normans",
+      "expected": "the Welsh"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who made Ralph earl?",
+      "predicted": "William the Conqueror",
+      "expected": "Edward the Confessor"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What country was under the control of Norman barons?",
+      "predicted": "England",
+      "expected": "Wales"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What year did Roger de Tosny fail to accomplish what he set out to do?",
+      "predicted": "1064",
+      "expected": "1018"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was in charge of the papal army in the War of Barbastro?",
+      "predicted": "William of Montreuil",
+      "expected": "William of Montreuil"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did the Siege of Antioch take place?",
+      "predicted": "1097",
+      "expected": "1097"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the name of Bohemond's nephew?",
+      "predicted": "Richard the Lion-hearted",
+      "expected": "Tancred"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What major conquest did Tancred play a roll in?",
+      "predicted": "Norman conquest of England",
+      "expected": "Jerusalem"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: How long did Western Europe control Cyprus?",
+      "predicted": "380 years",
+      "expected": "380 years"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What ruined Richard's plans to reach Acre?",
+      "predicted": "The storm",
+      "expected": "a storm"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Richard's fiancee?",
+      "predicted": "Eleanor of England",
+      "expected": "Berengaria"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What year did the storm hit Richard's fleet?",
+      "predicted": "1191",
+      "expected": "1191"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who ruled Cyprus in 1191?",
+      "predicted": "Richard the Lion-hearted",
+      "expected": "Isaac Komnenos"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Guy's Rival?",
+      "predicted": "Richard the Lion-hearted",
+      "expected": "Conrad of Montferrat"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What were Isaac's chains made out of?",
+      "predicted": "iron",
+      "expected": "silver"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who led Richard's troops when Cyprus was conquered?",
+      "predicted": "Guy de Lusignan",
+      "expected": "Guy de Lusignan"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What continent are the Canarian Islands off the coast of?",
+      "predicted": "Africa",
+      "expected": "Africa"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who became the King of the Canary Islands?",
+      "predicted": "Henry III",
+      "expected": "Bethencourt"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who bought the rights?",
+      "predicted": "Normans",
+      "expected": "Enrique P\u00e9rez de Guzm\u00e1n"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who sold the rights?",
+      "predicted": "Richard the Lion-hearted",
+      "expected": "Maciot de Bethencourt"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where are Jersey and Guernsey",
+      "predicted": "Channel Islands",
+      "expected": "Channel Islands"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: How many customaries does Norman customary law have?",
+      "predicted": "two",
+      "expected": "two"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What is the Norman architecture idiom?",
+      "predicted": "rounded arches",
+      "expected": "Romanesque"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What kind of arches does Norman architecture have?",
+      "predicted": "rounded arches",
+      "expected": "rounded"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What architecture type came after Norman in England?",
+      "predicted": "Gothic",
+      "expected": "Early Gothic"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What architecture type came before Norman in England?",
+      "predicted": "Anglo-Saxon",
+      "expected": "Anglo-Saxon"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What place had the Norman Arab architectural style?",
+      "predicted": "Normandy",
+      "expected": "Sicily"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did the church reform begin?",
+      "predicted": "1049",
+      "expected": "early 11th century"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who used the church to unify themselves?",
+      "predicted": "Normans",
+      "expected": "dukes"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When were the French wars of religion?",
+      "predicted": "1562\u20131598",
+      "expected": "16th century"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What kind of needlework was used in the creation of the Bayeux Tapestry?",
+      "predicted": "Embroidery",
+      "expected": "embroidery"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What is Norman art's most well known piece?",
+      "predicted": "Bayeux Tapestry",
+      "expected": "Bayeux Tapestry"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who commissioned the Tapestry?",
+      "predicted": "Odo",
+      "expected": "Odo"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What is the most important type of Norman art preserved in churches?",
+      "predicted": "sculpture",
+      "expected": "mosaics"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: In what century did important classical music developments occur in Normandy?",
+      "predicted": "11th century",
+      "expected": "11th"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who were the two abbots at F\u00e9camp Abbey?",
+      "predicted": "William of Volpiano and William of Montreuil",
+      "expected": "William of Volpiano and John of Ravenna"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where did the monks flee to?",
+      "predicted": "Normandy",
+      "expected": "southern Italy"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What monastery did the Saint-Evroul monks establish in Italy?",
+      "predicted": "Monte Cassino",
+      "expected": "Latin monastery at Sant'Eufemia."
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who patronized the monks in Italy? ",
+      "predicted": "King Charles III",
+      "expected": "Robert Guiscard"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What tradition were the Saint-Evroul monks known for?",
+      "predicted": "Norman customary law",
+      "expected": "singing"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What branch of theoretical computer science deals with broadly classifying computational problems by difficulty and class of relationship?",
+      "predicted": "computational complexity theory",
+      "expected": "Computational complexity theory"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: By what main attribute are computational problems classified utilizing computational complexity theory? ",
+      "predicted": "difficulty",
+      "expected": "inherent difficulty"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What is the term for a task that generally lends itself to being solved by a computer?",
+      "predicted": "computational problem",
+      "expected": "computational problems"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What measure of a computational problem broadly defines the inherent difficulty of the solution?",
+      "predicted": "input size",
+      "expected": "if its solution requires significant resources"
+    }
+  ]
+}

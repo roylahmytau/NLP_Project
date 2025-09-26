@@ -1,0 +1,16 @@
+# on pod init
+apt-get update
+apt-get install -y sudo
+sudo apt install tmux -y
+
+# connect to venv:
+source .venv/bin/activate
+
+# init joint session (when on /workspace/NLP_Project#)
+tmux -S /shared.sock new -s shared
+
+# join joint session (when on /workspace/NLP_Project#)
+tmux -S /shared.sock attach -t shared
+
+# run training + benchmark on qa only 2048
+python run_training.py >> output.txt

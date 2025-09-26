@@ -1,0 +1,7 @@
+/adapters
+/logs
+/outputs
+/.venv
+/qwen_venv
+/rag_venv
+/__pycache__

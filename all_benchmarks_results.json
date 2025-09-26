@@ -1,0 +1,340 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": "adapters/ep5_bs2_lr1e-3_r8_layers10",
+  "needle_size": "2048",
+  "needle_type": "qa_1",
+  "data_file": "needles/2048/qa_1_2048.jsonl",
+  "benchmark_type": "all",
+  "results": {
+    "perplexity": {
+      "perplexity": 76.24513903958693,
+      "average_loss": 4.333953663154885,
+      "total_tokens": 54
+    },
+    "mmlu": {
+      "overall_accuracy": 0,
+      "total_correct": 0,
+      "total_questions": 0,
+      "task_results": {
+        "abstract_algebra": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "anatomy": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "astronomy": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "business_ethics": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "clinical_knowledge": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "college_biology": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "college_chemistry": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "college_computer_science": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "college_mathematics": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "college_medicine": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "college_physics": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "computer_security": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "conceptual_physics": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "econometrics": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "electrical_engineering": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "elementary_mathematics": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "formal_logic": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "global_facts": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "high_school_biology": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        },
+        "high_school_chemistry": {
+          "accuracy": 0,
+          "correct": 0,
+          "total": 0
+        }
+      }
+    },
+    "glue": {
+      "average_score": 0.16111022269327333,
+      "task_results": {
+        "cola": {
+          "score": 0.13245323570650439,
+          "predictions": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        "sst2": {
+          "score": 0.8,
+          "predictions": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "mrpc": {
+          "score": 0.47058823529411764,
+          "predictions": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "labels": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        "qqp": {
+          "score": 0,
+          "predictions": [],
+          "labels": []
+        },
+        "stsb": {
+          "score": 0.04695053323883784,
+          "predictions": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "labels": [
+            5.0,
+            4.75,
+            5.0,
+            2.4000000953674316,
+            2.75,
+            2.615000009536743,
+            5.0,
+            2.3329999446868896,
+            3.75,
+            5.0,
+            3.200000047683716,
+            1.5829999446868896,
+            5.0,
+            5.0,
+            4.908999919891357,
+            0.800000011920929,
+            2.4000000953674316,
+            5.0,
+            4.0,
+            0.6359999775886536
+          ]
+        },
+        "mnli": {
+          "score": 0,
+          "predictions": [],
+          "labels": []
+        },
+        "qnli": {
+          "score": 0,
+          "predictions": [],
+          "labels": []
+        },
+        "rte": {
+          "score": 0,
+          "predictions": [],
+          "labels": []
+        },
+        "wnli": {
+          "score": 0,
+          "predictions": [],
+          "labels": []
+        }
+      }
+    }
+  }
+}
