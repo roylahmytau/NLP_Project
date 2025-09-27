@@ -67,11 +67,7 @@ def load_qa_data(file_path):
     data = []
     with open(file_path, 'r') as f:
         # Parse as JSONL (one JSON object per line)
-        for line_num, line in enumerate(f, 1):
-            line = line.strip()
-            if line:
-                item = json.loads(line)
-                data.append(item)
+        data = json.load(f)
         
         print(f"Successfully loaded {len(data)} items from JSON file")
 
@@ -126,12 +122,12 @@ def load_generated_qa_pairs(generated_dir: str):
     return index_to_prompt
 
 def create_lora_model(model_name, adapter_config, use_4bit=True):
-    """Create model with LoRA adapter optimized for RTX 3090"""
+    """Create model with LoRA adapter"""
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     
-    # 4-bit quantization for RTX 3090 (24GB VRAM)
+    # 4-bit quantization 
     if use_4bit:
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -176,7 +172,7 @@ def get_data_file_path(needle_size, needle_type):
     if needle_type not in valid_types:
         raise ValueError(f"Invalid needle type: {needle_type}. Must be one of {valid_types}")
     
-    return f"needles/{needle_size}/{needle_type}_{needle_size}.jsonl"
+    return f"needles/{needle_size}/{needle_type}_{needle_size}.json"
 
 def main():
     parser = argparse.ArgumentParser()
@@ -280,7 +276,7 @@ def main():
     # Use raw dataset - tokenization will be handled by data collator
     tokenized_dataset = dataset
     
-    # Training arguments optimized for RTX 3090
+    # Training arguments
     training_args = TrainingArguments(
         output_dir=args.output_dir,
         num_train_epochs=args.epochs,

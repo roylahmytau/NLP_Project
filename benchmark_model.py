@@ -26,18 +26,15 @@ def get_data_file_path(needle_size, needle_type):
     if needle_type not in valid_types:
         raise ValueError(f"Invalid needle type: {needle_type}. Must be one of {valid_types}")
     
-    return f"needles/{needle_size}/{needle_type}_{needle_size}.jsonl"
+    return f"needles/{needle_size}/{needle_type}_{needle_size}.json"
 
 def load_qa_data(file_path):
     """Load and format QA data for training"""
     data = []
+    print(f"Loading QA data from {file_path}")
     with open(file_path, 'r') as f:
         # Parse as JSONL (one JSON object per line)
-        for line_num, line in enumerate(f, 1):
-            line = line.strip()
-            if line:
-                item = json.loads(line)
-                data.append(item)
+        data = json.load(f)
         
         print(f"Successfully loaded {len(data)} items from JSON file")
     
@@ -71,7 +68,7 @@ def load_model_and_tokenizer(model_name, adapter_path):
     return model, tokenizer
 
 def generate_answer(model, tokenizer, instruction, doc, question, max_length=100):
-    """Generate answer for a given question"""
+    """Generate answer for a given question (single prompt)"""
     # Use Qwen-compatible format
     prompt = f"<|im_start|>user\n{instruction}\n\nQuestion: {question}\n<|im_end|>\n<|im_start|>assistant\n"
     
@@ -88,9 +85,6 @@ def generate_answer(model, tokenizer, instruction, doc, question, max_length=100
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
             )
-            
-            # response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-            # print(response)
             
             # Extract answer - get only new tokens
             new_tokens = outputs[0][inputs['input_ids'].shape[1]:]
@@ -109,6 +103,68 @@ def generate_answer(model, tokenizer, instruction, doc, question, max_length=100
         except Exception as e:
             print(f"Generation error: {e}")
             return "Error generating answer"
+
+def generate_answers_batch(model, tokenizer, instructions, docs, questions, max_length=100, batch_size=8):
+    """Generate answers for a batch of questions"""
+    all_answers = []
+    
+    # Process in batches
+    for i in range(0, len(questions), batch_size):
+        batch_instructions = instructions[i:i+batch_size]
+        batch_docs = docs[i:i+batch_size]
+        batch_questions = questions[i:i+batch_size]
+        
+        # Create batch prompts
+        batch_prompts = []
+        for instruction, doc, question in zip(batch_instructions, batch_docs, batch_questions):
+            prompt = f"<|im_start|>user\n{instruction}\n\nQuestion: {question}\n<|im_end|>\n<|im_start|>assistant\n"
+            batch_prompts.append(prompt)
+        
+        # Tokenize batch
+        inputs = tokenizer(
+            batch_prompts, 
+            return_tensors="pt", 
+            truncation=True, 
+            max_length=1024,
+            padding=True
+        )
+        inputs = {k: v.to(model.device) for k, v in inputs.items()}
+        
+        with torch.no_grad():
+            try:
+                outputs = model.generate(
+                    **inputs,
+                    max_new_tokens=max_length,
+                    temperature=0.1,
+                    do_sample=False,
+                    pad_token_id=tokenizer.eos_token_id,
+                    eos_token_id=tokenizer.eos_token_id,
+                )
+                
+                # Process each output in the batch
+                for j, output in enumerate(outputs):
+                    # Extract answer - get only new tokens
+                    input_length = inputs['input_ids'][j].shape[0]
+                    new_tokens = output[input_length:]
+                    answer = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+                    
+                    # Clean up the answer
+                    if "<|im_end|>" in answer:
+                        answer = answer.split("<|im_end|>")[0].strip()
+                    
+                    # Remove trailing punctuation if it's just a period
+                    if answer.endswith('.') and len(answer) > 1:
+                        answer = answer[:-1]
+                    
+                    all_answers.append(answer)
+                    
+            except Exception as e:
+                print(f"Batch generation error: {e}")
+                # Add error responses for this batch
+                for _ in range(len(batch_prompts)):
+                    all_answers.append("Error generating answer")
+    
+    return all_answers
 
 def evaluate_answers(predictions, ground_truths):
     """Simple evaluation metrics"""
@@ -168,8 +224,8 @@ def calculate_perplexity(model, tokenizer, texts, max_length=512):
         "total_tokens": total_tokens
     }
 
-def run_mmlu_benchmark(model, tokenizer, subset="all", max_samples=100):
-    """Run MMLU (Massive Multitask Language Understanding) benchmark"""
+def run_mmlu_benchmark(model, tokenizer, subset="all", max_samples=100, batch_size=8):
+    """Run MMLU (Massive Multitask Language Understanding) benchmark with batch processing"""
     try:
         # Load MMLU dataset
         if subset == "all":
@@ -188,22 +244,41 @@ def run_mmlu_benchmark(model, tokenizer, subset="all", max_samples=100):
         for task in tasks:
             try:
                 print(f"Running MMLU task: {task}")
-                dataset = load_dataset("lukaemon/mmlu", task, split="test")
+                dataset = load_dataset("cais/mmlu", task, split="test")
                 
                 # Limit samples for faster evaluation
                 if len(dataset) > max_samples:
                     dataset = dataset.select(range(max_samples))
                 
-                correct = 0
-                total = len(dataset)
+                # Prepare batch data
+                questions = []
+                correct_answers = []
                 
-                for item in tqdm(dataset, desc=f"Evaluating {task}"):
+                for item in dataset:
                     # Format question
                     question = f"{item['question']}\nA) {item['choices'][0]}\nB) {item['choices'][1]}\nC) {item['choices'][2]}\nD) {item['choices'][3]}"
+                    questions.append(question)
+                    correct_answers.append(item['answer'])
+                
+                # Generate answers in batches
+                predictions = []
+                for i in range(0, len(questions), batch_size):
+                    batch_questions = questions[i:i+batch_size]
                     
-                    # Generate answer
-                    prompt = f"<|im_start|>user\n{question}\n<|im_end|>\n<|im_start|>assistant\n"
-                    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=1024)
+                    # Create batch prompts
+                    batch_prompts = []
+                    for question in batch_questions:
+                        prompt = f"<|im_start|>user\n{question}\n<|im_end|>\n<|im_start|>assistant\n"
+                        batch_prompts.append(prompt)
+                    
+                    # Tokenize batch
+                    inputs = tokenizer(
+                        batch_prompts, 
+                        return_tensors="pt", 
+                        truncation=True, 
+                        max_length=1024,
+                        padding=True
+                    )
                     inputs = {k: v.to(model.device) for k, v in inputs.items()}
                     
                     with torch.no_grad():
@@ -216,19 +291,25 @@ def run_mmlu_benchmark(model, tokenizer, subset="all", max_samples=100):
                             eos_token_id=tokenizer.eos_token_id,
                         )
                         
-                        response = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()
-                        
-                        # Extract answer choice
-                        answer_choice = None
-                        for choice in ['A', 'B', 'C', 'D']:
-                            if choice in response.upper():
-                                answer_choice = choice
-                                break
-                        
-                        if answer_choice == item['answer']:
-                            correct += 1
+                        # Process each output in the batch
+                        for j, output in enumerate(outputs):
+                            input_length = inputs['input_ids'][j].shape[0]
+                            response = tokenizer.decode(output[input_length:], skip_special_tokens=True).strip()
+                            
+                            # Extract answer choice
+                            answer_choice = None
+                            for choice in ['A', 'B', 'C', 'D']:
+                                if choice in response.upper():
+                                    answer_choice = choice
+                                    break
+                            
+                            predictions.append(answer_choice)
                 
+                # Calculate accuracy
+                correct = sum(1 for pred, gt in zip(predictions, correct_answers) if pred == gt)
+                total = len(predictions)
                 accuracy = correct / total if total > 0 else 0
+                
                 all_results[task] = {
                     "accuracy": accuracy,
                     "correct": correct,
@@ -255,24 +336,22 @@ def run_mmlu_benchmark(model, tokenizer, subset="all", max_samples=100):
         print(f"Error loading MMLU dataset: {e}")
         return {"overall_accuracy": 0, "total_correct": 0, "total_questions": 0, "task_results": {}}
 
-def run_glue_benchmark(model, tokenizer, task="all", max_samples=100):
-    """Run GLUE (General Language Understanding Evaluation) benchmark"""
+def run_glue_benchmark(model, tokenizer, task="all", max_samples=100, batch_size=8):
+    """Run GLUE (General Language Understanding Evaluation) benchmark with batch processing"""
     try:
-        # Define GLUE tasks and their configurations
+        # Define GLUE tasks and their configurations - limited to SST-2, MRPC, and QNLI
         glue_tasks = {
-            "cola": {"dataset": "glue", "subset": "cola", "metric": "matthews_correlation"},
             "sst2": {"dataset": "glue", "subset": "sst2", "metric": "accuracy"},
             "mrpc": {"dataset": "glue", "subset": "mrpc", "metric": "f1"},
-            "qqp": {"dataset": "glue", "subset": "qqp", "metric": "f1"},
-            "stsb": {"dataset": "glue", "subset": "stsb", "metric": "pearson"},
-            "mnli": {"dataset": "glue", "subset": "mnli", "metric": "accuracy"},
-            "qnli": {"dataset": "glue", "subset": "qnli", "metric": "accuracy"},
-            "rte": {"dataset": "glue", "subset": "rte", "metric": "accuracy"},
-            "wnli": {"dataset": "glue", "subset": "wnli", "metric": "accuracy"}
+            "qnli": {"dataset": "glue", "subset": "qnli", "metric": "accuracy"}
         }
         
         if task != "all":
-            glue_tasks = {task: glue_tasks[task]}
+            if task in glue_tasks:
+                glue_tasks = {task: glue_tasks[task]}
+            else:
+                print(f"Warning: Task '{task}' not available. Available tasks: {list(glue_tasks.keys())}")
+                return {"average_score": 0, "task_results": {}}
         
         all_results = {}
         
@@ -285,10 +364,11 @@ def run_glue_benchmark(model, tokenizer, task="all", max_samples=100):
                 if len(dataset) > max_samples:
                     dataset = dataset.select(range(max_samples))
                 
-                predictions = []
+                # Prepare batch data
+                prompts = []
                 labels = []
                 
-                for item in tqdm(dataset, desc=f"Evaluating {task_name}"):
+                for item in dataset:
                     # Format input based on task
                     if task_name in ["cola", "sst2"]:
                         # Single sentence tasks
@@ -312,8 +392,22 @@ def run_glue_benchmark(model, tokenizer, task="all", max_samples=100):
                     else:
                         continue
                     
-                    # Generate prediction
-                    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=1024)
+                    prompts.append(prompt)
+                    labels.append(item["label"])
+                
+                # Generate predictions in batches
+                predictions = []
+                for i in range(0, len(prompts), batch_size):
+                    batch_prompts = prompts[i:i+batch_size]
+                    
+                    # Tokenize batch
+                    inputs = tokenizer(
+                        batch_prompts, 
+                        return_tensors="pt", 
+                        truncation=True, 
+                        max_length=1024,
+                        padding=True
+                    )
                     inputs = {k: v.to(model.device) for k, v in inputs.items()}
                     
                     with torch.no_grad():
@@ -326,30 +420,32 @@ def run_glue_benchmark(model, tokenizer, task="all", max_samples=100):
                             eos_token_id=tokenizer.eos_token_id,
                         )
                         
-                        response = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()
-                        
-                        # Parse prediction based on task
-                        if task_name in ["cola", "sst2"]:
-                            pred = 1 if "positive" in response.lower() else 0
-                        elif task_name in ["mrpc", "qqp"]:
-                            pred = 1 if "yes" in response.lower() else 0
-                        elif task_name == "stsb":
-                            # Extract numeric score
-                            import re
-                            numbers = re.findall(r'\d+\.?\d*', response)
-                            pred = float(numbers[0]) if numbers else 0.0
-                        elif task_name in ["mnli", "qnli", "rte", "wnli"]:
-                            if "yes" in response.lower():
-                                pred = 0  # entailment
-                            elif "no" in response.lower():
-                                pred = 1  # contradiction
+                        # Process each output in the batch
+                        for j, output in enumerate(outputs):
+                            input_length = inputs['input_ids'][j].shape[0]
+                            response = tokenizer.decode(output[input_length:], skip_special_tokens=True).strip()
+                            
+                            # Parse prediction based on task
+                            if task_name in ["cola", "sst2"]:
+                                pred = 1 if "positive" in response.lower() else 0
+                            elif task_name in ["mrpc", "qqp"]:
+                                pred = 1 if "yes" in response.lower() else 0
+                            elif task_name == "stsb":
+                                # Extract numeric score
+                                import re
+                                numbers = re.findall(r'\d+\.?\d*', response)
+                                pred = float(numbers[0]) if numbers else 0.0
+                            elif task_name in ["mnli", "qnli", "rte", "wnli"]:
+                                if "yes" in response.lower():
+                                    pred = 0  # entailment
+                                elif "no" in response.lower():
+                                    pred = 1  # contradiction
+                                else:
+                                    pred = 2  # neutral
                             else:
-                                pred = 2  # neutral
-                        else:
-                            pred = 0
-                        
-                        predictions.append(pred)
-                        labels.append(item["label"])
+                                pred = 0
+                            
+                            predictions.append(pred)
                 
                 # Calculate metrics
                 if task_name == "stsb":
@@ -406,17 +502,25 @@ def main():
     parser.add_argument("--output_file", default="benchmark_results.json",
                        help="Output file for results")
     parser.add_argument("--benchmark", default="qa", 
-                       choices=["qa", "perplexity", "mmlu", "glue", "all"],
+                       choices=["success", "perplexity", "mmlu", "glue", "all"],
                        help="Type of benchmark to run")
     parser.add_argument("--perplexity_texts", default=None,
                        help="Path to text file for perplexity evaluation (one text per line)")
     parser.add_argument("--mmlu_subset", default="all",
                        help="MMLU subset to evaluate (or 'all' for all tasks)")
     parser.add_argument("--glue_task", default="all",
-                       help="GLUE task to evaluate (or 'all' for all tasks)")
+                       choices=["sst2", "mrpc", "qnli", "all"],
+                       help="GLUE task to evaluate: sst2, mrpc, qnli, or 'all' for all three tasks")
+    parser.add_argument("--batch_size", type=int, default=8,
+                       help="Batch size for GPU processing (default: 8)")
     
     args = parser.parse_args()
     
+    print("Starting benchmark...")
+    # print args
+    for arg in vars(args):
+        print(f"{arg}: {getattr(args, arg)}")
+
     # Generate data file path from needle size and type
     data_file = get_data_file_path(args.needle_size, args.needle_type)
     print(f"Using data file: {data_file}")
@@ -427,36 +531,34 @@ def main():
     
     all_results = {}
     
-    # Run QA benchmark
-    # TEMP TODO: add support for 'all' option
-    if args.benchmark in ["qa"]: 
+    # Run success benchmark
+    if args.benchmark in ["success", "all"]: 
         print("\n=== Running QA Benchmark ===")
         # Load data
         print("Loading test data...")
         data = load_qa_data(data_file)
         print(f"Evaluating on {len(data)} samples")
         
-        # Generate predictions
-        predictions = []
-        ground_truths = []
+        # Prepare batch data
+        instructions = [item['instruction'] for item in data]
+        docs = [item['doc'] for item in data]
+        questions = [item['question'] for item in data]
+        ground_truths = [item['outputs'][0] if item['outputs'] else "" for item in data]
         
-        print("Generating predictions...")
-        for item in tqdm(data):
-            instruction = item['instruction']
-            doc = item['doc']
-            question = item['question']
-            expected_answer = item['outputs'][0] if item['outputs'] else ""
-            
-            answer = generate_answer(model, tokenizer, instruction, doc, question)
-            predictions.append(answer)
-            ground_truths.append(expected_answer)
-            
-            # Print question, expected, and predicted answers
-            print(f"\n--- Sample {len(predictions)} ---")
-            print(f"Question: {question}")
-            print(f"Expected: {expected_answer}")
-            print(f"Predicted: {answer}")
-                
+        # Generate predictions in batches
+        print(f"Generating predictions with batch size {args.batch_size}...")
+        predictions = generate_answers_batch(
+            model, tokenizer, instructions, docs, questions, 
+            max_length=100, batch_size=args.batch_size
+        )
+        
+        # Print sample results
+        print("\n--- Sample Results ---")
+        for i in range(min(3, len(predictions))):
+            print(f"\nSample {i+1}:")
+            print(f"Question: {questions[i]}")
+            print(f"Expected: {ground_truths[i]}")
+            print(f"Predicted: {predictions[i]}")
         
         # Evaluate
         print("Evaluating...")
@@ -497,9 +599,9 @@ def main():
         print(f"Total Tokens: {perplexity_results['total_tokens']}")
     
     # Run MMLU benchmark
-    if args.benchmark in ["mmlu", "all"]:
+    if args.benchmark in ["mmlu"]: # , "all"
         print("\n=== Running MMLU Benchmark ===")
-        mmlu_results = run_mmlu_benchmark(model, tokenizer, args.mmlu_subset, args.max_samples)
+        mmlu_results = run_mmlu_benchmark(model, tokenizer, args.mmlu_subset, args.max_samples, args.batch_size)
         all_results["mmlu"] = mmlu_results
         
         print(f"Overall MMLU Accuracy: {mmlu_results['overall_accuracy']:.3f}")
@@ -512,7 +614,7 @@ def main():
     # Run GLUE benchmark
     if args.benchmark in ["glue", "all"]:
         print("\n=== Running GLUE Benchmark ===")
-        glue_results = run_glue_benchmark(model, tokenizer, args.glue_task, args.max_samples)
+        glue_results = run_glue_benchmark(model, tokenizer, args.glue_task, args.max_samples, args.batch_size)
         all_results["glue"] = glue_results
         
         print(f"Average GLUE Score: {glue_results['average_score']:.3f}")

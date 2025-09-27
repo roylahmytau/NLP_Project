@@ -1,3 +1,4 @@
+import collections
 import os
 import torch
 import time
@@ -65,7 +66,8 @@ class RAGModelQwen3:
             load_in_4bit=True,
             bnb_4bit_use_double_quant=True,
             bnb_4bit_quant_type="nf4",
-            bnb_4bit_compute_dtype=torch.float16
+            bnb_4bit_compute_dtype=torch.float16,
+            llm_int8_enable_fp32_cpu_offload=True  # Enable CPU offloading for insufficient GPU RAM
         )
         
         # Load model with exact same config as training script
@@ -76,25 +78,66 @@ class RAGModelQwen3:
             trust_remote_code=True
         )
         
-        print("✅ Qwen3-8B model loaded successfully!")
-        
-        # Show GPU memory usage after model loading
-        if torch.cuda.is_available():
-            print(f"GPU Memory after model setup: {torch.cuda.memory_allocated()/1024**2:.1f} MB allocated, {torch.cuda.memory_reserved()/1024**2:.1f} MB reserved")
+        print("✅ Model loaded successfully!")
 
-    def setup_from_text(self, text: str):
+    def _split_text_into_chunks(self, text: str, split_mode: str = "both", min_length: int = 20):
+        """
+        Split text into chunks using different strategies.
+        
+        Args:
+            text (str): The input text to split
+            split_mode (str): How to split the text
+                - "paragraph": Split only by newlines (\n)
+                - "sentence": Split only by periods (.)
+                - "both": Split by newlines then by periods (default)
+            min_length (int): Minimum character length for chunks (default: 5)
+                              The original 20 was too restrictive - many valid short answers were lost
+                
+        Returns:
+            list: List of text chunks
+        """
+        chunks = []
+        
+        if split_mode == "paragraph":
+            # Split only by newlines
+            for paragraph in text.split('\n'):
+                paragraph = paragraph.strip()
+                if paragraph and len(paragraph) >= min_length:
+                    chunks.append(paragraph)
+                    
+        elif split_mode == "sentence":
+            # Split only by periods
+            sentences = text.split('. ')
+            for sentence in sentences:
+                sentence = sentence.strip()
+                if sentence and len(sentence) >= min_length:
+                    chunks.append(sentence)
+                    
+        elif split_mode == "both":
+            # Split by newlines, then by periods (original behavior)
+            for paragraph in text.split('\n'):
+                sentences = paragraph.split('. ')
+                for sentence in sentences:
+                    sentence = sentence.strip()
+                    if sentence and len(sentence) >= min_length:
+                        chunks.append(sentence)
+        else:
+            raise ValueError(f"Invalid split_mode: {split_mode}. Use 'paragraph', 'sentence', or 'both'")
+        
+        return chunks
+
+    def setup_from_text(self, text: str, split_mode: str = "both", min_length: int = 20):
         """
         Process the given text for retrieval. Model is already loaded in __init__.
+        
+        Args:
+            text (str): The input text to process
+            split_mode (str): How to split text - "paragraph", "sentence", or "both"
+            min_length (int): Minimum character length for chunks (default: 5 instead of 20)
         """
-        # Split text into documents
-        print("📄 Processing documents...")
-        self.documents = []
-        for p in text.split('\n'):
-            # Split by sentences
-            sentences = p.split('. ')
-            for sentence in sentences:
-                if sentence.strip() and len(sentence.strip()) > 20:
-                    self.documents.append(sentence.strip())
+        # Split text into documents using the configurable method
+        print(f"📄 Processing documents (split_mode: {split_mode}, min_length: {min_length})...")
+        self.documents = self._split_text_into_chunks(text, split_mode, min_length)
         
         print(f"Created {len(self.documents)} document chunks")
         
@@ -103,7 +146,11 @@ class RAGModelQwen3:
         self.vectorizer = TfidfVectorizer(stop_words='english', max_features=5000)
         self.doc_vectors = self.vectorizer.fit_transform(self.documents)
         print("✅ TF-IDF vectors created")
-        print("� Document processing complete!")
+        print("📄 Document processing complete!")
+        
+        # Show GPU memory usage after setup
+        if torch.cuda.is_available():
+            print(f"GPU Memory after setup: {torch.cuda.memory_allocated()/1024**2:.1f} MB allocated, {torch.cuda.memory_reserved()/1024**2:.1f} MB reserved")
 
     def retrieve_documents(self, query: str, top_k: int = 3) -> list:
         """
@@ -184,32 +231,40 @@ def main():
     # Initialize model ONCE - this is the heavy operation
     print("🚀 Initializing RAG model (this happens only once)...")
     rag_model = RAGModelQwen3()
+    res = {}
     
-    for path in ["needles/2048/qa_1_2048.jsonl","needles/32768/qa_1_32768.jsonl","needles/131072/qa_1_131072.jsonl"]:  # Start with 2048 first
-        count_correct = 0
-        docs_data = extract_text_and_qa_from_needles(path)
+    for split_mode in ["paragraph", "sentence", "both"]:
+        for path in ["needles/2048/qa_1_2048.jsonl","needles/32768/qa_1_32768.jsonl","needles/131072/qa_1_131072.jsonl"]:  # Start with 2048 first
+            count_correct = 0
+            docs_data = extract_text_and_qa_from_needles(path)
+            total_questions = 0
+            for doc in docs_data[:70]:  # Process first 10 items for demo
+                # Only process documents - model is already loaded
+                rag_model.setup_from_text(doc["document"], split_mode=split_mode)
 
-        total_questions = 0
-        for doc in docs_data[:10]:  # Process first 10 items for demo
-            # Only process documents - model is already loaded
-            rag_model.setup_from_text(doc["document"])
+                q = doc["question"]
+                a = doc["answers"]
 
-            q = doc["question"]
-            a = doc["answers"]
+                answer = rag_model.ask(q)
+                print(f"Q: {q}")
+                print(f"A: {answer}")
+                print(f"Expected: {a}")
+                print("---")
+                
+                # Check if any expected answer appears in the response
+                count_correct += 1 if any(ans.lower() in answer.lower() for ans in a) else 0
+                total_questions += 1
 
-            res = rag_model.ask(q)
-            print(f"Q: {q}")
-            print(f"A: {res}")
-            print(f"Expected: {a}")
-            print("---")
-            
-            # Check if any expected answer appears in the response
-            count_correct += 1 if any(ans.lower() in res.lower() for ans in a) else 0
-            total_questions += 1
-
-        print(f"Results for file at path {path}:")
-        print(f"Accuracy on {path}: {count_correct}/{total_questions} = {count_correct/total_questions:.2%}")
+            accuracy = count_correct / total_questions if total_questions > 0 else -1
+            print(f"Results for file at path {path}:")
+            print(f"Accuracy on {path}: {count_correct}/{total_questions} = {accuracy:.2%}")
+            res[(path, split_mode)] = accuracy
         
+    print("Final aggregated results:")
+    for key, value in res.items():
+        print(f"{key}: {value:.2%}")
+
+
 def main_2048():
     # Fetch the document from squad_utils
     script_dir = os.path.dirname(os.path.abspath(__file__))

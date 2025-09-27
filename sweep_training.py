@@ -6,7 +6,7 @@ import argparse
 
 
 DEFAULTS = {
-    "epochs": 5,
+    "epochs": 20,
     "batch_size": 2,
     "learning_rate": 0.001,
     "adapter_r": 8,
@@ -14,12 +14,20 @@ DEFAULTS = {
 }
 
 
+# SWEEP_VALUES = {
+#     "epochs": [0, 1, 5, 10, 20],
+#     "batch_size": [1, 2, 4],
+#     "learning_rate": [0.01, 0.001, 0.0001],
+#     "adapter_r": [5, 8, 11],
+#     "adapter_layers": [5, 10, 15],
+# }
+
 SWEEP_VALUES = {
-    "epochs": [0, 1, 5, 10, 20],
-    "batch_size": [1, 2, 4],
-    "learning_rate": [0.01, 0.001, 0.0001],
-    "adapter_r": [5, 8, 11],
-    "adapter_layers": [5, 10, 15],
+    "epochs": [20],
+    "batch_size": [2],
+    "learning_rate": [ 0.001],
+    "adapter_r": [8],
+    "adapter_layers": [ 10],
 }
 
 
@@ -29,7 +37,7 @@ def format_lr(value: float) -> str:
     return f"{value:.0e}".replace("+", "").replace("-0", "-")
 
 
-def build_run_name(overrides: dict) -> str:
+def build_run_name(overrides: dict, needle_size: str, needle_type: str) -> str:
     epochs = overrides.get("epochs", DEFAULTS["epochs"])
     batch = overrides.get("batch_size", DEFAULTS["batch_size"])
     lr = overrides.get("learning_rate", DEFAULTS["learning_rate"])
@@ -37,15 +45,15 @@ def build_run_name(overrides: dict) -> str:
     layers = overrides.get("adapter_layers", DEFAULTS["adapter_layers"])
     genqa = overrides.get("use_generated_qa", False)
     genqa_tag = "genQA" if genqa else "noGenQA"
-    return f"ep{epochs}_bs{batch}_lr{format_lr(lr)}_r{r}_layers{layers}_{genqa_tag}"
+    return f"{needle_type}_{needle_size}_ep{epochs}_bs{batch}_lr{format_lr(lr)}_r{r}_layers{layers}_{genqa_tag}"
 
 
 def ensure_dir(path: str) -> None:
     os.makedirs(path, exist_ok=True)
 
 
-def run_single(overrides: dict, logs_root: str, adapters_root: str) -> int:
-    run_name = build_run_name(overrides)
+def run_single(overrides: dict, logs_root: str, adapters_root: str, needle_size: str, needle_type: str) -> int:
+    run_name = build_run_name(overrides, needle_size, needle_type)
     adapter_dir = os.path.join(adapters_root, run_name)
     log_dir = os.path.join(logs_root, run_name)
     ensure_dir(adapter_dir)
@@ -53,7 +61,9 @@ def run_single(overrides: dict, logs_root: str, adapters_root: str) -> int:
 
     # Compose command
     cmd = [
-        "python", "run_training.py",
+        "python", "run_training_and_benchmarks.py",
+        "--needle_size", str(needle_size),
+        "--needle_type", str(needle_type),
         "--epochs", str(overrides.get("epochs", DEFAULTS["epochs"])),
         "--batch_size", str(overrides.get("batch_size", DEFAULTS["batch_size"])),
         "--learning_rate", str(overrides.get("learning_rate", DEFAULTS["learning_rate"])),
@@ -64,7 +74,8 @@ def run_single(overrides: dict, logs_root: str, adapters_root: str) -> int:
     ]
 
     if overrides.get("use_generated_qa", False):
-        cmd += ["--use_generated_qa", "--generated_qa_dir", "outputs/qa_1_2048_fixed"]
+        # Let the underlying training script auto-resolve generated QA dir
+        cmd += ["--use_generated_qa"]
 
     # Log files
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -80,11 +91,17 @@ def run_single(overrides: dict, logs_root: str, adapters_root: str) -> int:
 
 def main():
     parser = argparse.ArgumentParser(description="Hyperparameter sweep runner")
+    parser.add_argument("needle_size", choices=["2048", "32768", "131072"], help="Needle size to train on")
+    parser.add_argument("--needle_type", default="qa_1", choices=[
+        "niah_multikey_1", "niah_multikey_2", "niah_multikey_3",
+        "niah_single_1", "niah_single_2", "niah_single_3", "qa_1"
+    ], help="Needle data type")
     parser.add_argument("--use_generated_qa", action="store_true", help="Enable generated QA augmentation in training runs")
     args = parser.parse_args()
 
-    logs_root = os.path.abspath("logs")
-    adapters_root = os.path.abspath("adapters")
+    # Organize outputs by size/type for clarity
+    logs_root = os.path.abspath(os.path.join("logs", f"{args.needle_type}_{args.needle_size}"))
+    adapters_root = os.path.abspath(os.path.join("adapters", f"{args.needle_type}_{args.needle_size}"))
     ensure_dir(logs_root)
     ensure_dir(adapters_root)
 
@@ -96,7 +113,7 @@ def main():
     # Run the pure defaults ONCE
     default_overrides = DEFAULTS.copy()
     default_overrides["use_generated_qa"] = use_genqa
-    code = run_single(default_overrides, logs_root, adapters_root)
+    code = run_single(default_overrides, logs_root, adapters_root, args.needle_size, args.needle_type)
     if code != 0:
         failures.append(("default", f"genQA={use_genqa}", code))
 
@@ -109,7 +126,7 @@ def main():
             overrides = DEFAULTS.copy()
             overrides[key] = value
             overrides["use_generated_qa"] = use_genqa
-            code = run_single(overrides, logs_root, adapters_root)
+            code = run_single(overrides, logs_root, adapters_root, args.needle_size, args.needle_type)
             if code != 0:
                 failures.append((f"{key}={value} (genQA={use_genqa})", value, code))
 

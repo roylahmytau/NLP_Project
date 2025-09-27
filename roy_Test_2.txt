@@ -1,0 +1,127 @@
+Starting LoRA training with RTX 3090 optimized settings...
+Needle size: 32768, Needle type: niah_single_1
+Epochs: 5, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 32768 --needle_type niah_single_1 --epochs 5 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir adapter
+Using data file: needles/32768/niah_single_1_32768.json
+Loading data...
+Successfully loaded 30 items from JSON file
+Loaded 30 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 5
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 5.3772
+{'loss': 5.3772, 'grad_norm': 3.2388484477996826, 'learning_rate': 0.0, 'epoch': 0.53}
+Step 2: Loss = 5.3772, LR = 0.00e+00
+Step 2 (Epoch 1): Training Loss = 5.4728
+{'loss': 5.4728, 'grad_norm': 3.4990551471710205, 'learning_rate': 2e-05, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 3: Loss = 5.4728, LR = 2.00e-05
+Step 3 (Epoch 2): Training Loss = 5.3098
+{'loss': 5.3098, 'grad_norm': 3.1671385765075684, 'learning_rate': 4e-05, 'epoch': 1.53}
+Step 4: Loss = 5.3098, LR = 4.00e-05
+Step 4 (Epoch 2): Training Loss = 5.2315
+{'loss': 5.2315, 'grad_norm': 3.556011199951172, 'learning_rate': 6e-05, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 5: Loss = 5.2315, LR = 6.00e-05
+Step 5 (Epoch 3): Training Loss = 4.9442
+{'loss': 4.9442, 'grad_norm': 3.416957139968872, 'learning_rate': 8e-05, 'epoch': 2.53}
+Step 6: Loss = 4.9442, LR = 8.00e-05
+Step 6 (Epoch 3): Training Loss = 4.5781
+{'loss': 4.5781, 'grad_norm': 3.4690685272216797, 'learning_rate': 0.0001, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 7: Loss = 4.5781, LR = 1.00e-04
+Step 7 (Epoch 4): Training Loss = 4.1225
+{'loss': 4.1225, 'grad_norm': 3.4365525245666504, 'learning_rate': 0.00012, 'epoch': 3.53}
+Step 8: Loss = 4.1225, LR = 1.20e-04
+Step 8 (Epoch 4): Training Loss = 3.7550
+{'loss': 3.755, 'grad_norm': 3.144052743911743, 'learning_rate': 0.00014000000000000001, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 9: Loss = 3.7550, LR = 1.40e-04
+Step 9 (Epoch 5): Training Loss = 3.3885
+{'loss': 3.3885, 'grad_norm': 3.1356704235076904, 'learning_rate': 0.00016, 'epoch': 4.53}
+Step 10: Loss = 3.3885, LR = 1.60e-04
+Step 10 (Epoch 5): Training Loss = 3.0661
+{'loss': 3.0661, 'grad_norm': 3.069493532180786, 'learning_rate': 0.00017999999999999998, 'epoch': 5.0}
+{'train_runtime': 49.3229, 'train_samples_per_second': 3.041, 'train_steps_per_second': 0.203, 'train_loss': 4.524578094482422, 'epoch': 5.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to adapter
+Using data file: needles/32768/niah_single_1_32768.json
+Loading model...
+
+=== Running QA Benchmark ===
+Loading test data...
+Loading QA data from needles/32768/niah_single_1_32768.json
+Successfully loaded 30 items from JSON file
+Evaluating on 30 samples
+Generating predictions with batch size 2...
+
+--- Sample Results ---
+
+Sample 1:
+Question: What is the special magic number for smiling-prostanoid mentioned in the provided text?
+Expected: 4226067
+Predicted: 666
+</think>
+
+The special magic number for smiling-prostanoid mentioned in the provided text is **666**
+
+Sample 2:
+Question: What is the special magic number for typical-hit mentioned in the provided text?
+Expected: 4823498
+Predicted: </think>
+
+To answer your question, I need the text where the special magic number is hidden. Could you please provide the text? Once you share it, I'll identify the magic number for "typical-hit" and be ready to quiz you about it
+
+Sample 3:
+Question: What is the special magic number for flippant-samurai mentioned in the provided text?
+Expected: 2694522
+Predicted: 666
+</think>
+
+The special magic number for flippant-samurai is **666**
+Evaluating...
+
+=== QA Benchmark Results ===
+Exact Accuracy: 0.000
+Partial Accuracy: 0.000
+Exact Matches: 0/30
+Partial Matches: 0/30
+
+=== Running Perplexity Benchmark ===
+Calculating perplexity on 5 texts...
+Perplexity: 10.681
+Average Loss: 2.368
+Total Tokens: 54
+
+=== Running GLUE Benchmark ===
+Running GLUE task: sst2
+Running GLUE task: mrpc
+Running GLUE task: qnli
+Error in GLUE task qnli: 'premise'
+Average GLUE Score: 0.425
+sst2: 0.750
+mrpc: 0.525
+qnli: 0.000
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with RTX 3090 optimized settings...
+Needle size: 32768, Needle type: niah_single_1
+Epochs: 5, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 32768 --needle_type niah_single_1 --epochs 5 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir adapter
+
+Training completed successfully!
+Starting LoRA training with settings...
+Needle size: 2048, Needle type: qa_1
+Epochs: 5, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 2048 --needle_type qa_1 --epochs 5 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir adapter
