@@ -89,6 +89,10 @@ def load_qa_data(file_path):
 def load_generated_qa_pairs(generated_dir: str):
     """Load generated Q&A text files (record_*.txt) and build few-shot snippets.
 
+    During training we only pass the questions (no documents and no answers),
+    so we parse the generated text and extract only lines that look like
+    questions (e.g., "Q1: ...").
+
     Returns a dict: { index (int) : prompt_snippet (str) }
     where index corresponds to the record index used during generation.
     """
@@ -109,12 +113,38 @@ def load_generated_qa_pairs(generated_dir: str):
         try:
             with open(path, "r", encoding="utf-8") as f:
                 content = f.read().strip()
-            # Wrap as a system-style preface the assistant can condition on
-            snippet = (
-                "Here are related questions and concise answers that pertain to the document.\n"
-                + content
-                + "\n"
-            )
+
+            # Extract only questions (lines starting with Q or Q<number>:)
+            # Keep order; ignore answers and any trailing prose.
+            questions_only = []
+            for line in content.splitlines():
+                stripped = line.strip()
+                if not stripped:
+                    continue
+                # Accept formats like "Q:", "Q1:", "Q2:", case-insensitive
+                if (stripped.startswith("Q:") or stripped.startswith("Q ")
+                        or stripped.lower().startswith("q:")
+                        or (len(stripped) > 2 and stripped[0] in ("Q", "q") and stripped[1].isdigit() and ":" in stripped)):
+                    # Normalize to remove leading "Q...:" prefix
+                    try:
+                        question_text = stripped.split(":", 1)[1].strip()
+                    except Exception:
+                        # Fallback: keep the whole line minus leading token
+                        question_text = stripped.lstrip("Qq:").strip()
+                    if question_text:
+                        questions_only.append(question_text)
+
+            # Wrap as a system-style preface containing only questions
+            if questions_only:
+                bullet_list = "\n".join(f"- {q}" for q in questions_only)
+                snippet = (
+                    "Here are related questions that pertain to the document.\n"
+                    + bullet_list
+                    + "\n"
+                )
+            else:
+                # If parsing failed, provide empty snippet so we don't leak answers
+                snippet = "Here are related questions that pertain to the document.\n\n"
             index_to_prompt[rec_index] = snippet
         except Exception as e:
             print(f"Failed reading {path}: {e}")

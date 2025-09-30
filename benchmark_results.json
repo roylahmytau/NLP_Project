@@ -1,64 +1,35 @@
 {
   "model_name": "Qwen/Qwen3-8B",
-  "adapter_path": "/workspace/NLP_Project/adapters/qa_1_131072/qa_1_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA",
-  "needle_size": "131072",
+  "adapter_path": "/workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep20_bs2_lr1e-3_r8_layers10_genQA",
+  "needle_size": "32768",
   "needle_type": "qa_1",
-  "data_file": "needles/131072/qa_1_131072.json",
+  "data_file": "needles/32768/qa_1_32768.json",
   "benchmark_type": "all",
   "results": {
     "qa": {
-      "exact_accuracy": 0.4,
-      "partial_accuracy": 0.5,
-      "exact_matches": 4,
-      "partial_matches": 1,
-      "total": 10
+      "exact_accuracy": 0.26666666666666666,
+      "partial_accuracy": 0.43333333333333335,
+      "exact_matches": 8,
+      "partial_matches": 5,
+      "total": 30
     },
     "perplexity": {
-      "perplexity": 9.964122526537354,
-      "average_loss": 2.2989908942469843,
-      "total_tokens": 54
+      "perplexity": 33.16213072151442,
+      "average_loss": 3.5014085839782454,
+      "total_tokens": 11644
     },
     "glue": {
-      "average_score": 0.24073059360730595,
+      "average_score": 0.18000000000000002,
       "task_results": {
         "sst2": {
-          "score": 0.64,
+          "score": 0.54,
           "predictions": [
             0,
             0,
-            0,
             1,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
             1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
             0,
             1,
             0,
@@ -69,7 +40,6 @@
             0,
             1,
             0,
-            1,
             0,
             0,
             0,
@@ -84,19 +54,6 @@
             0,
             0,
             0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -104,15 +61,14 @@
             0,
             1,
             0,
+            0,
+            0,
+            0,
+            0,
             1,
             0,
             0,
             1,
-            1,
-            1,
-            0,
-            1,
-            0,
             1,
             0,
             0,
@@ -122,8 +78,52 @@
             0,
             0,
             1,
+            1,
             0,
-            1
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "labels": [
             1,
@@ -229,7 +229,7 @@
           ]
         },
         "mrpc": {
-          "score": 0.0821917808219178,
+          "score": 0.0,
           "predictions": [
             0,
             0,
@@ -237,34 +237,6 @@
             0,
             0,
             0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
             0,
             0,
             0,
@@ -297,13 +269,41 @@
             0,
             0,
             0,
-            1,
             0,
             0,
             0,
             0,
             0,
-            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -446,53 +446,153 @@
   "qa_predictions": [
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: In what country is Normandy located?",
-      "predicted": "Human\nHuman",
+      "predicted": "",
       "expected": "France"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When were the Normans in Normandy?",
-      "predicted": "10th and 11th centuries",
+      "predicted": "10th century",
       "expected": "10th and 11th centuries"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: From which countries did the Norse originate?",
-      "predicted": "Denmark, Iceland and Norway",
+      "predicted": "Oman and China",
       "expected": "Denmark, Iceland and Norway"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the Norse leader?",
-      "predicted": "Human\nassistant\nViking",
+      "predicted": "",
       "expected": "Rollo"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What century did the Normans first gain their separate identity?",
-      "predicted": "10th century",
+      "predicted": "10th",
       "expected": "10th century"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the duke in the battle of Hastings?",
-      "predicted": "Human\nassistant\nViktor von Bismarck",
+      "predicted": "",
       "expected": "William the Conqueror"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who ruled the duchy of Normandy",
-      "predicted": "Richard I",
+      "predicted": "Robert Guiscard",
       "expected": "Richard I"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What religion were the Normans",
-      "predicted": "Human\nHuman\nassistant\n1",
+      "predicted": "",
       "expected": "Catholic"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What is the original meaning of the word Norman?",
-      "predicted": "Human\nHuman\nHuman\nassistant\n10",
+      "predicted": "",
       "expected": "Viking"
     },
     {
       "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When was the Latin version of the word Norman first recorded?",
-      "predicted": "VII century",
+      "predicted": "11th century",
       "expected": "9th century"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When was the Duchy of Normandy founded?",
+      "predicted": "",
+      "expected": "911"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+      "predicted": "King Charles III",
+      "expected": "King Charles III"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What river originally bounded the Duchy",
+      "predicted": "",
+      "expected": "Seine"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who upon arriving gave the original viking settlers a common identity?",
+      "predicted": "Rollo",
+      "expected": "Rollo"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the Norman religion?",
+      "predicted": "",
+      "expected": "Catholicism"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What part of France were the Normans located?",
+      "predicted": "north",
+      "expected": "north"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was one of the Norman's major exports?",
+      "predicted": "",
+      "expected": "fighting horsemen"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?",
+      "predicted": "Seljuk Turks",
+      "expected": "Seljuk Turks"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Herve serve as a Byzantine general?",
+      "predicted": "",
+      "expected": "1050s"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Robert Crispin go up against the Turks?",
+      "predicted": "1060s",
+      "expected": "1060s"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who ruined Roussel de Bailleul's plans for an independent state?",
+      "predicted": "Deabolis et dives, quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit imitari nullus. Quod non potuit im",
+      "expected": "Alexius Komnenos"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the name of the Norman castle?",
+      "predicted": "",
+      "expected": "Afranji"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was the leader when the Franks entered the Euphrates valley?",
+      "predicted": "Oursel",
+      "expected": "Oursel"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who did the Normans team up with in Anatolia?",
+      "predicted": "",
+      "expected": "Turkish forces"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What were the origins of the Raouliii family?",
+      "predicted": "Norman mercenary",
+      "expected": "Norman mercenary"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: What was the name of the count of Apulia ",
+      "predicted": "",
+      "expected": "Robert Guiscard"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: When did Dyrrachium  fall to the Normans?",
+      "predicted": "1072",
+      "expected": "1082"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: How many men were in Robert's army?",
+      "predicted": "",
+      "expected": "30,000"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Where did the Normans and Byzantines sign the peace treaty?",
+      "predicted": "Deabolis",
+      "expected": "Deabolis"
+    },
+    {
+      "question": "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: Who was Robert's son?",
+      "predicted": "",
+      "expected": "Bohemond"
     }
   ]
 }

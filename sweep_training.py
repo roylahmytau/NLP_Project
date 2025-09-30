@@ -7,10 +7,10 @@ import argparse
 
 DEFAULTS = {
     "epochs": 20,
-    "batch_size": 2,
+    "batch_size": 1,
     "learning_rate": 0.001,
-    "adapter_r": 8,
-    "adapter_layers": 10,
+    "adapter_r": 5,
+    "adapter_layers": 5,
 }
 
 
@@ -24,10 +24,10 @@ DEFAULTS = {
 
 SWEEP_VALUES = {
     "epochs": [20],
-    "batch_size": [2],
+    "batch_size": [1],
     "learning_rate": [ 0.001],
-    "adapter_r": [8],
-    "adapter_layers": [ 10],
+    "adapter_r": [5],
+    "adapter_layers": [5],
 }
 
 

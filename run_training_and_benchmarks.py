@@ -58,8 +58,6 @@ def main():
         # run benchmark against the produced adapter
         bench_cmd = ["python", "benchmark_model.py", "--adapter_path", args.output_dir]
         bench_cmd += ["--needle_size", args.needle_size, "--needle_type", args.needle_type]
-        if args.use_generated_qa:
-            bench_cmd += ["--use_generated_qa", "--generated_qa_dir", args.generated_qa_dir]
         bench_cmd += ["--output_file", "benchmark_results.json"]
         bench_cmd += ["--benchmark", "all"]
         bench_cmd += ["--batch_size", str(args.batch_size)]
