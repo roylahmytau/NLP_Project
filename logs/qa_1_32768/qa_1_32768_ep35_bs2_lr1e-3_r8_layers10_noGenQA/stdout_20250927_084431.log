@@ -1,0 +1,370 @@
+Using data file: needles/32768/qa_1_32768.json
+Loading data...
+Successfully loaded 30 items from JSON file
+Loaded 30 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 35
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 4.1519
+{'loss': 4.1519, 'grad_norm': 3.6904120445251465, 'learning_rate': 0.0, 'epoch': 0.53}
+Step 2: Loss = 4.1519, LR = 0.00e+00
+Step 2 (Epoch 1): Training Loss = 4.1354
+{'loss': 4.1354, 'grad_norm': 3.4597344398498535, 'learning_rate': 2e-05, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 3: Loss = 4.1354, LR = 2.00e-05
+Step 3 (Epoch 2): Training Loss = 4.0702
+{'loss': 4.0702, 'grad_norm': 3.3855671882629395, 'learning_rate': 4e-05, 'epoch': 1.53}
+Step 4: Loss = 4.0702, LR = 4.00e-05
+Step 4 (Epoch 2): Training Loss = 3.9443
+{'loss': 3.9443, 'grad_norm': 3.3912453651428223, 'learning_rate': 6e-05, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 5: Loss = 3.9443, LR = 6.00e-05
+Step 5 (Epoch 3): Training Loss = 3.7138
+{'loss': 3.7138, 'grad_norm': 3.1579787731170654, 'learning_rate': 8e-05, 'epoch': 2.53}
+Step 6: Loss = 3.7138, LR = 8.00e-05
+Step 6 (Epoch 3): Training Loss = 3.3871
+{'loss': 3.3871, 'grad_norm': 3.2009572982788086, 'learning_rate': 0.0001, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 7: Loss = 3.3871, LR = 1.00e-04
+Step 7 (Epoch 4): Training Loss = 3.0327
+{'loss': 3.0327, 'grad_norm': 3.579463005065918, 'learning_rate': 0.00012, 'epoch': 3.53}
+Step 8: Loss = 3.0327, LR = 1.20e-04
+Step 8 (Epoch 4): Training Loss = 2.6514
+{'loss': 2.6514, 'grad_norm': 3.2820966243743896, 'learning_rate': 0.00014000000000000001, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 9: Loss = 2.6514, LR = 1.40e-04
+Step 9 (Epoch 5): Training Loss = 2.2593
+{'loss': 2.2593, 'grad_norm': 2.373106002807617, 'learning_rate': 0.00016, 'epoch': 4.53}
+Step 10: Loss = 2.2593, LR = 1.60e-04
+Step 10 (Epoch 5): Training Loss = 1.8536
+{'loss': 1.8536, 'grad_norm': 2.240164279937744, 'learning_rate': 0.00017999999999999998, 'epoch': 5.0}
+
+--- Starting Epoch 6 ---
+Step 11: Loss = 1.8536, LR = 1.80e-04
+Step 11 (Epoch 6): Training Loss = 1.5247
+{'loss': 1.5247, 'grad_norm': 1.866601824760437, 'learning_rate': 0.0002, 'epoch': 5.53}
+Step 12: Loss = 1.5247, LR = 2.00e-04
+Step 12 (Epoch 6): Training Loss = 1.2734
+{'loss': 1.2734, 'grad_norm': 3.3663930892944336, 'learning_rate': 0.00022, 'epoch': 6.0}
+
+--- Starting Epoch 7 ---
+Step 13: Loss = 1.2734, LR = 2.20e-04
+Step 13 (Epoch 7): Training Loss = 1.0110
+{'loss': 1.011, 'grad_norm': 2.465819835662842, 'learning_rate': 0.00024, 'epoch': 6.53}
+Step 14: Loss = 1.0110, LR = 2.40e-04
+Step 14 (Epoch 7): Training Loss = 0.9855
+{'loss': 0.9855, 'grad_norm': 2.42935848236084, 'learning_rate': 0.00026000000000000003, 'epoch': 7.0}
+
+--- Starting Epoch 8 ---
+Step 15: Loss = 0.9855, LR = 2.60e-04
+Step 15 (Epoch 8): Training Loss = 0.8282
+{'loss': 0.8282, 'grad_norm': 1.3907157182693481, 'learning_rate': 0.00028000000000000003, 'epoch': 7.53}
+Step 16: Loss = 0.8282, LR = 2.80e-04
+Step 16 (Epoch 8): Training Loss = 0.6640
+{'loss': 0.664, 'grad_norm': 1.2591851949691772, 'learning_rate': 0.0003, 'epoch': 8.0}
+
+--- Starting Epoch 9 ---
+Step 17: Loss = 0.6640, LR = 3.00e-04
+Step 17 (Epoch 9): Training Loss = 0.6363
+{'loss': 0.6363, 'grad_norm': 1.4121299982070923, 'learning_rate': 0.00032, 'epoch': 8.53}
+Step 18: Loss = 0.6363, LR = 3.20e-04
+Step 18 (Epoch 9): Training Loss = 0.6742
+{'loss': 0.6742, 'grad_norm': 0.9974273443222046, 'learning_rate': 0.00034, 'epoch': 9.0}
+
+--- Starting Epoch 10 ---
+Step 19: Loss = 0.6742, LR = 3.40e-04
+Step 19 (Epoch 10): Training Loss = 0.5617
+{'loss': 0.5617, 'grad_norm': 0.8101493120193481, 'learning_rate': 0.00035999999999999997, 'epoch': 9.53}
+Step 20: Loss = 0.5617, LR = 3.60e-04
+Step 20 (Epoch 10): Training Loss = 0.5701
+{'loss': 0.5701, 'grad_norm': 1.1398305892944336, 'learning_rate': 0.00038, 'epoch': 10.0}
+
+--- Starting Epoch 11 ---
+Step 21: Loss = 0.5701, LR = 3.80e-04
+Step 21 (Epoch 11): Training Loss = 0.5024
+{'loss': 0.5024, 'grad_norm': 1.3413532972335815, 'learning_rate': 0.0004, 'epoch': 10.53}
+Step 22: Loss = 0.5024, LR = 4.00e-04
+Step 22 (Epoch 11): Training Loss = 0.4757
+{'loss': 0.4757, 'grad_norm': 1.1074705123901367, 'learning_rate': 0.00042, 'epoch': 11.0}
+
+--- Starting Epoch 12 ---
+Step 23: Loss = 0.4757, LR = 4.20e-04
+Step 23 (Epoch 12): Training Loss = 0.4240
+{'loss': 0.424, 'grad_norm': 0.9066281318664551, 'learning_rate': 0.00044, 'epoch': 11.53}
+Step 24: Loss = 0.4240, LR = 4.40e-04
+Step 24 (Epoch 12): Training Loss = 0.3676
+{'loss': 0.3676, 'grad_norm': 1.2693079710006714, 'learning_rate': 0.00046, 'epoch': 12.0}
+
+--- Starting Epoch 13 ---
+Step 25: Loss = 0.3676, LR = 4.60e-04
+Step 25 (Epoch 13): Training Loss = 0.3036
+{'loss': 0.3036, 'grad_norm': 0.9776015877723694, 'learning_rate': 0.00048, 'epoch': 12.53}
+Step 26: Loss = 0.3036, LR = 4.80e-04
+Step 26 (Epoch 13): Training Loss = 0.2733
+{'loss': 0.2733, 'grad_norm': 0.7975864410400391, 'learning_rate': 0.0005, 'epoch': 13.0}
+
+--- Starting Epoch 14 ---
+Step 27: Loss = 0.2733, LR = 5.00e-04
+Step 27 (Epoch 14): Training Loss = 0.1934
+{'loss': 0.1934, 'grad_norm': 0.4400061070919037, 'learning_rate': 0.0005200000000000001, 'epoch': 13.53}
+Step 28: Loss = 0.1934, LR = 5.20e-04
+Step 28 (Epoch 14): Training Loss = 0.1917
+{'loss': 0.1917, 'grad_norm': 0.6439680457115173, 'learning_rate': 0.00054, 'epoch': 14.0}
+
+--- Starting Epoch 15 ---
+Step 29: Loss = 0.1917, LR = 5.40e-04
+Step 29 (Epoch 15): Training Loss = 0.1305
+{'loss': 0.1305, 'grad_norm': 0.48181572556495667, 'learning_rate': 0.0005600000000000001, 'epoch': 14.53}
+Step 30: Loss = 0.1305, LR = 5.60e-04
+Step 30 (Epoch 15): Training Loss = 0.1529
+{'loss': 0.1529, 'grad_norm': 1.1426353454589844, 'learning_rate': 0.00058, 'epoch': 15.0}
+
+--- Starting Epoch 16 ---
+Step 31: Loss = 0.1529, LR = 5.80e-04
+Step 31 (Epoch 16): Training Loss = 0.1009
+{'loss': 0.1009, 'grad_norm': 0.5233109593391418, 'learning_rate': 0.0006, 'epoch': 15.53}
+Step 32: Loss = 0.1009, LR = 6.00e-04
+Step 32 (Epoch 16): Training Loss = 0.0874
+{'loss': 0.0874, 'grad_norm': 0.838665246963501, 'learning_rate': 0.00062, 'epoch': 16.0}
+
+--- Starting Epoch 17 ---
+Step 33: Loss = 0.0874, LR = 6.20e-04
+Step 33 (Epoch 17): Training Loss = 0.0825
+{'loss': 0.0825, 'grad_norm': 0.618362307548523, 'learning_rate': 0.00064, 'epoch': 16.53}
+Step 34: Loss = 0.0825, LR = 6.40e-04
+Step 34 (Epoch 17): Training Loss = 0.0850
+{'loss': 0.085, 'grad_norm': 0.8303101062774658, 'learning_rate': 0.00066, 'epoch': 17.0}
+
+--- Starting Epoch 18 ---
+Step 35: Loss = 0.0850, LR = 6.60e-04
+Step 35 (Epoch 18): Training Loss = 0.0704
+{'loss': 0.0704, 'grad_norm': 0.7693911790847778, 'learning_rate': 0.00068, 'epoch': 17.53}
+Step 36: Loss = 0.0704, LR = 6.80e-04
+Step 36 (Epoch 18): Training Loss = 0.0584
+{'loss': 0.0584, 'grad_norm': 0.21858631074428558, 'learning_rate': 0.0007, 'epoch': 18.0}
+
+--- Starting Epoch 19 ---
+Step 37: Loss = 0.0584, LR = 7.00e-04
+Step 37 (Epoch 19): Training Loss = 0.0542
+{'loss': 0.0542, 'grad_norm': 0.17468126118183136, 'learning_rate': 0.0007199999999999999, 'epoch': 18.53}
+Step 38: Loss = 0.0542, LR = 7.20e-04
+Step 38 (Epoch 19): Training Loss = 0.0647
+{'loss': 0.0647, 'grad_norm': 0.2502512037754059, 'learning_rate': 0.00074, 'epoch': 19.0}
+
+--- Starting Epoch 20 ---
+Step 39: Loss = 0.0647, LR = 7.40e-04
+Step 39 (Epoch 20): Training Loss = 0.0568
+{'loss': 0.0568, 'grad_norm': 0.19990378618240356, 'learning_rate': 0.00076, 'epoch': 19.53}
+Step 40: Loss = 0.0568, LR = 7.60e-04
+Step 40 (Epoch 20): Training Loss = 0.0590
+{'loss': 0.059, 'grad_norm': 0.2289334386587143, 'learning_rate': 0.0007800000000000001, 'epoch': 20.0}
+
+--- Starting Epoch 21 ---
+Step 41: Loss = 0.0590, LR = 7.80e-04
+Step 41 (Epoch 21): Training Loss = 0.0536
+{'loss': 0.0536, 'grad_norm': 0.22599224746227264, 'learning_rate': 0.0008, 'epoch': 20.53}
+Step 42: Loss = 0.0536, LR = 8.00e-04
+Step 42 (Epoch 21): Training Loss = 0.0592
+{'loss': 0.0592, 'grad_norm': 0.46610400080680847, 'learning_rate': 0.00082, 'epoch': 21.0}
+
+--- Starting Epoch 22 ---
+Step 43: Loss = 0.0592, LR = 8.20e-04
+Step 43 (Epoch 22): Training Loss = 0.0526
+{'loss': 0.0526, 'grad_norm': 0.20883336663246155, 'learning_rate': 0.00084, 'epoch': 21.53}
+Step 44: Loss = 0.0526, LR = 8.40e-04
+Step 44 (Epoch 22): Training Loss = 0.0514
+{'loss': 0.0514, 'grad_norm': 0.1755719631910324, 'learning_rate': 0.00086, 'epoch': 22.0}
+
+--- Starting Epoch 23 ---
+Step 45: Loss = 0.0514, LR = 8.60e-04
+Step 45 (Epoch 23): Training Loss = 0.0502
+{'loss': 0.0502, 'grad_norm': 0.16508716344833374, 'learning_rate': 0.00088, 'epoch': 22.53}
+Step 46: Loss = 0.0502, LR = 8.80e-04
+Step 46 (Epoch 23): Training Loss = 0.0567
+{'loss': 0.0567, 'grad_norm': 0.2288593202829361, 'learning_rate': 0.0009000000000000001, 'epoch': 23.0}
+
+--- Starting Epoch 24 ---
+Step 47: Loss = 0.0567, LR = 9.00e-04
+Step 47 (Epoch 24): Training Loss = 0.0502
+{'loss': 0.0502, 'grad_norm': 0.1316424161195755, 'learning_rate': 0.00092, 'epoch': 23.53}
+Step 48: Loss = 0.0502, LR = 9.20e-04
+Step 48 (Epoch 24): Training Loss = 0.0530
+{'loss': 0.053, 'grad_norm': 0.22756263613700867, 'learning_rate': 0.00094, 'epoch': 24.0}
+
+--- Starting Epoch 25 ---
+Step 49: Loss = 0.0530, LR = 9.40e-04
+Step 49 (Epoch 25): Training Loss = 0.0495
+{'loss': 0.0495, 'grad_norm': 0.13810554146766663, 'learning_rate': 0.00096, 'epoch': 24.53}
+Step 50: Loss = 0.0495, LR = 9.60e-04
+Step 50 (Epoch 25): Training Loss = 0.0564
+{'loss': 0.0564, 'grad_norm': 0.21398404240608215, 'learning_rate': 0.00098, 'epoch': 25.0}
+
+--- Starting Epoch 26 ---
+Step 51: Loss = 0.0564, LR = 9.80e-04
+Step 51 (Epoch 26): Training Loss = 0.0487
+{'loss': 0.0487, 'grad_norm': 0.16160644590854645, 'learning_rate': 0.001, 'epoch': 25.53}
+Step 52: Loss = 0.0487, LR = 1.00e-03
+Step 52 (Epoch 26): Training Loss = 0.0549
+{'loss': 0.0549, 'grad_norm': 0.17449645698070526, 'learning_rate': 0.00095, 'epoch': 26.0}
+
+--- Starting Epoch 27 ---
+Step 53: Loss = 0.0549, LR = 9.50e-04
+Step 53 (Epoch 27): Training Loss = 0.0488
+{'loss': 0.0488, 'grad_norm': 0.12304899096488953, 'learning_rate': 0.0009000000000000001, 'epoch': 26.53}
+Step 54: Loss = 0.0488, LR = 9.00e-04
+Step 54 (Epoch 27): Training Loss = 0.0522
+{'loss': 0.0522, 'grad_norm': 0.14913755655288696, 'learning_rate': 0.00085, 'epoch': 27.0}
+
+--- Starting Epoch 28 ---
+Step 55: Loss = 0.0522, LR = 8.50e-04
+Step 55 (Epoch 28): Training Loss = 0.0484
+{'loss': 0.0484, 'grad_norm': 0.1183386966586113, 'learning_rate': 0.0008, 'epoch': 27.53}
+Step 56: Loss = 0.0484, LR = 8.00e-04
+Step 56 (Epoch 28): Training Loss = 0.0504
+{'loss': 0.0504, 'grad_norm': 0.13904969394207, 'learning_rate': 0.00075, 'epoch': 28.0}
+
+--- Starting Epoch 29 ---
+Step 57: Loss = 0.0504, LR = 7.50e-04
+Step 57 (Epoch 29): Training Loss = 0.0490
+{'loss': 0.049, 'grad_norm': 0.11088550835847855, 'learning_rate': 0.0007, 'epoch': 28.53}
+Step 58: Loss = 0.0490, LR = 7.00e-04
+Step 58 (Epoch 29): Training Loss = 0.0489
+{'loss': 0.0489, 'grad_norm': 0.1269010603427887, 'learning_rate': 0.0006500000000000001, 'epoch': 29.0}
+
+--- Starting Epoch 30 ---
+Step 59: Loss = 0.0489, LR = 6.50e-04
+Step 59 (Epoch 30): Training Loss = 0.0493
+{'loss': 0.0493, 'grad_norm': 0.1117834746837616, 'learning_rate': 0.0006, 'epoch': 29.53}
+Step 60: Loss = 0.0493, LR = 6.00e-04
+Step 60 (Epoch 30): Training Loss = 0.0488
+{'loss': 0.0488, 'grad_norm': 0.10846260190010071, 'learning_rate': 0.00055, 'epoch': 30.0}
+
+--- Starting Epoch 31 ---
+Step 61: Loss = 0.0488, LR = 5.50e-04
+Step 61 (Epoch 31): Training Loss = 0.0480
+{'loss': 0.048, 'grad_norm': 0.09276290982961655, 'learning_rate': 0.0005, 'epoch': 30.53}
+Step 62: Loss = 0.0480, LR = 5.00e-04
+Step 62 (Epoch 31): Training Loss = 0.0491
+{'loss': 0.0491, 'grad_norm': 0.1252346932888031, 'learning_rate': 0.00045000000000000004, 'epoch': 31.0}
+
+--- Starting Epoch 32 ---
+Step 63: Loss = 0.0491, LR = 4.50e-04
+Step 63 (Epoch 32): Training Loss = 0.0481
+{'loss': 0.0481, 'grad_norm': 0.10200232267379761, 'learning_rate': 0.0004, 'epoch': 31.53}
+Step 64: Loss = 0.0481, LR = 4.00e-04
+Step 64 (Epoch 32): Training Loss = 0.0499
+{'loss': 0.0499, 'grad_norm': 0.1156017854809761, 'learning_rate': 0.00035, 'epoch': 32.0}
+
+--- Starting Epoch 33 ---
+Step 65: Loss = 0.0499, LR = 3.50e-04
+Step 65 (Epoch 33): Training Loss = 0.0464
+{'loss': 0.0464, 'grad_norm': 0.10553037375211716, 'learning_rate': 0.0003, 'epoch': 32.53}
+Step 66: Loss = 0.0464, LR = 3.00e-04
+Step 66 (Epoch 33): Training Loss = 0.0496
+{'loss': 0.0496, 'grad_norm': 0.1408102661371231, 'learning_rate': 0.00025, 'epoch': 33.0}
+
+--- Starting Epoch 34 ---
+Step 67: Loss = 0.0496, LR = 2.50e-04
+Step 67 (Epoch 34): Training Loss = 0.0476
+{'loss': 0.0476, 'grad_norm': 0.08455893397331238, 'learning_rate': 0.0002, 'epoch': 33.53}
+Step 68: Loss = 0.0476, LR = 2.00e-04
+Step 68 (Epoch 34): Training Loss = 0.0480
+{'loss': 0.048, 'grad_norm': 0.10451944917440414, 'learning_rate': 0.00015, 'epoch': 34.0}
+
+--- Starting Epoch 35 ---
+Step 69: Loss = 0.0480, LR = 1.50e-04
+Step 69 (Epoch 35): Training Loss = 0.0467
+{'loss': 0.0467, 'grad_norm': 0.09249667823314667, 'learning_rate': 0.0001, 'epoch': 34.53}
+Step 70: Loss = 0.0467, LR = 1.00e-04
+Step 70 (Epoch 35): Training Loss = 0.0485
+{'loss': 0.0485, 'grad_norm': 0.11397115141153336, 'learning_rate': 5e-05, 'epoch': 35.0}
+{'train_runtime': 292.8535, 'train_samples_per_second': 3.585, 'train_steps_per_second': 0.239, 'train_loss': 0.6739616648959262, 'epoch': 35.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to /workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep35_bs2_lr1e-3_r8_layers10_noGenQA
+Starting benchmark...
+model_name: Qwen/Qwen3-8B
+adapter_path: /workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep35_bs2_lr1e-3_r8_layers10_noGenQA
+needle_size: 32768
+needle_type: qa_1
+max_samples: 100
+output_file: benchmark_results.json
+benchmark: all
+perplexity_texts: None
+mmlu_subset: all
+glue_task: all
+batch_size: 2
+Using data file: needles/32768/qa_1_32768.json
+Loading model...
+
+=== Running QA Benchmark ===
+Loading test data...
+Loading QA data from needles/32768/qa_1_32768.json
+Successfully loaded 30 items from JSON file
+Evaluating on 30 samples
+Generating predictions with batch size 2...
+
+--- Sample Results ---
+
+Sample 1:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+Expected: France
+Predicted: Human
+France
+
+Sample 2:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+Expected: 10th and 11th centuries
+Predicted: 10th and 11th centuries
+
+Sample 3:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+Expected: Denmark, Iceland and Norway
+Predicted: Denmark, Iceland and Norway
+Evaluating...
+
+=== QA Benchmark Results ===
+Exact Accuracy: 0.467
+Partial Accuracy: 0.633
+Exact Matches: 14/30
+Partial Matches: 5/30
+
+=== Running Perplexity Benchmark ===
+Calculating perplexity on 5 texts...
+Perplexity: 607.072
+Average Loss: 6.409
+Total Tokens: 54
+
+=== Running GLUE Benchmark ===
+Running GLUE task: sst2
+Running GLUE task: mrpc
+Running GLUE task: qnli
+Error in GLUE task qnli: 'premise'
+Average GLUE Score: 0.160
+sst2: 0.480
+mrpc: 0.000
+qnli: 0.000
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with settings...
+Needle size: 32768, Needle type: qa_1
+Epochs: 35, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 32768 --needle_type qa_1 --epochs 35 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir /workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep35_bs2_lr1e-3_r8_layers10_noGenQA
+
+Training completed successfully!

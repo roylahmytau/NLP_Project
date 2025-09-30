@@ -1,0 +1,938 @@
+Loading data...
+Successfully loaded 100 items from JSON file
+Loaded 100 generated QA snippets from outputs/qa_1_2048_fixed
+Loaded 100 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 60
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 2.4084
+{'loss': 2.4084, 'grad_norm': 1.4156500101089478, 'learning_rate': 0.0, 'epoch': 0.08}
+Step 2: Loss = 2.4084, LR = 0.00e+00
+Step 2 (Epoch 1): Training Loss = 2.0491
+{'loss': 2.0491, 'grad_norm': 1.3144547939300537, 'learning_rate': 2e-05, 'epoch': 0.16}
+Step 3: Loss = 2.0491, LR = 2.00e-05
+Step 3 (Epoch 1): Training Loss = 2.5826
+{'loss': 2.5826, 'grad_norm': 1.6662278175354004, 'learning_rate': 4e-05, 'epoch': 0.24}
+Step 4: Loss = 2.5826, LR = 4.00e-05
+Step 4 (Epoch 1): Training Loss = 2.5242
+{'loss': 2.5242, 'grad_norm': 1.6058833599090576, 'learning_rate': 6e-05, 'epoch': 0.32}
+Step 5: Loss = 2.5242, LR = 6.00e-05
+Step 5 (Epoch 1): Training Loss = 2.4791
+{'loss': 2.4791, 'grad_norm': 1.3682115077972412, 'learning_rate': 8e-05, 'epoch': 0.4}
+Step 6: Loss = 2.4791, LR = 8.00e-05
+Step 6 (Epoch 1): Training Loss = 2.4058
+{'loss': 2.4058, 'grad_norm': 1.132764458656311, 'learning_rate': 0.0001, 'epoch': 0.48}
+Step 7: Loss = 2.4058, LR = 1.00e-04
+Step 7 (Epoch 1): Training Loss = 2.1960
+{'loss': 2.196, 'grad_norm': 0.9624050855636597, 'learning_rate': 0.00012, 'epoch': 0.56}
+Step 8: Loss = 2.1960, LR = 1.20e-04
+Step 8 (Epoch 1): Training Loss = 2.1096
+{'loss': 2.1096, 'grad_norm': 0.780440092086792, 'learning_rate': 0.00014000000000000001, 'epoch': 0.64}
+Step 9: Loss = 2.1096, LR = 1.40e-04
+Step 9 (Epoch 1): Training Loss = 1.9864
+{'loss': 1.9864, 'grad_norm': 0.8078706860542297, 'learning_rate': 0.00016, 'epoch': 0.72}
+Step 10: Loss = 1.9864, LR = 1.60e-04
+Step 10 (Epoch 1): Training Loss = 1.9689
+{'loss': 1.9689, 'grad_norm': 0.8222260475158691, 'learning_rate': 0.00017999999999999998, 'epoch': 0.8}
+Step 11: Loss = 1.9689, LR = 1.80e-04
+Step 11 (Epoch 1): Training Loss = 1.8027
+{'loss': 1.8027, 'grad_norm': 0.7356383204460144, 'learning_rate': 0.0002, 'epoch': 0.88}
+Step 12: Loss = 1.8027, LR = 2.00e-04
+Step 12 (Epoch 1): Training Loss = 1.7026
+{'loss': 1.7026, 'grad_norm': 0.7532520294189453, 'learning_rate': 0.00022, 'epoch': 0.96}
+Step 13: Loss = 1.7026, LR = 2.20e-04
+Step 13 (Epoch 1): Training Loss = 1.5457
+{'loss': 1.5457, 'grad_norm': 0.8463879823684692, 'learning_rate': 0.00024, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 14: Loss = 1.5457, LR = 2.40e-04
+Step 14 (Epoch 2): Training Loss = 1.2137
+{'loss': 1.2137, 'grad_norm': 0.5693241953849792, 'learning_rate': 0.00026000000000000003, 'epoch': 1.08}
+Step 15: Loss = 1.2137, LR = 2.60e-04
+Step 15 (Epoch 2): Training Loss = 1.4511
+{'loss': 1.4511, 'grad_norm': 0.7293959259986877, 'learning_rate': 0.00028000000000000003, 'epoch': 1.16}
+Step 16: Loss = 1.4511, LR = 2.80e-04
+Step 16 (Epoch 2): Training Loss = 1.4096
+{'loss': 1.4096, 'grad_norm': 0.4966108798980713, 'learning_rate': 0.0003, 'epoch': 1.24}
+Step 17: Loss = 1.4096, LR = 3.00e-04
+Step 17 (Epoch 2): Training Loss = 1.3522
+{'loss': 1.3522, 'grad_norm': 0.6903356313705444, 'learning_rate': 0.00032, 'epoch': 1.32}
+Step 18: Loss = 1.3522, LR = 3.20e-04
+Step 18 (Epoch 2): Training Loss = 1.1556
+{'loss': 1.1556, 'grad_norm': 0.8425511121749878, 'learning_rate': 0.00034, 'epoch': 1.4}
+Step 19: Loss = 1.1556, LR = 3.40e-04
+Step 19 (Epoch 2): Training Loss = 1.2025
+{'loss': 1.2025, 'grad_norm': 0.5286473035812378, 'learning_rate': 0.00035999999999999997, 'epoch': 1.48}
+Step 20: Loss = 1.2025, LR = 3.60e-04
+Step 20 (Epoch 2): Training Loss = 1.2038
+{'loss': 1.2038, 'grad_norm': 0.5758997201919556, 'learning_rate': 0.00038, 'epoch': 1.56}
+Step 21: Loss = 1.2038, LR = 3.80e-04
+Step 21 (Epoch 2): Training Loss = 1.1200
+{'loss': 1.12, 'grad_norm': 0.67835932970047, 'learning_rate': 0.0004, 'epoch': 1.64}
+Step 22: Loss = 1.1200, LR = 4.00e-04
+Step 22 (Epoch 2): Training Loss = 1.0409
+{'loss': 1.0409, 'grad_norm': 0.49879828095436096, 'learning_rate': 0.00042, 'epoch': 1.72}
+Step 23: Loss = 1.0409, LR = 4.20e-04
+Step 23 (Epoch 2): Training Loss = 1.2489
+{'loss': 1.2489, 'grad_norm': 0.6441894769668579, 'learning_rate': 0.00044, 'epoch': 1.8}
+Step 24: Loss = 1.2489, LR = 4.40e-04
+Step 24 (Epoch 2): Training Loss = 1.0711
+{'loss': 1.0711, 'grad_norm': 0.5015827417373657, 'learning_rate': 0.00046, 'epoch': 1.88}
+Step 25: Loss = 1.0711, LR = 4.60e-04
+Step 25 (Epoch 2): Training Loss = 0.8945
+{'loss': 0.8945, 'grad_norm': 0.5143735408782959, 'learning_rate': 0.00048, 'epoch': 1.96}
+Step 26: Loss = 0.8945, LR = 4.80e-04
+Step 26 (Epoch 2): Training Loss = 1.0779
+{'loss': 1.0779, 'grad_norm': 0.7444750666618347, 'learning_rate': 0.0005, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 27: Loss = 1.0779, LR = 5.00e-04
+Step 27 (Epoch 3): Training Loss = 0.9314
+{'loss': 0.9314, 'grad_norm': 0.5848658680915833, 'learning_rate': 0.0005200000000000001, 'epoch': 2.08}
+Step 28: Loss = 0.9314, LR = 5.20e-04
+Step 28 (Epoch 3): Training Loss = 0.8833
+{'loss': 0.8833, 'grad_norm': 0.5268585681915283, 'learning_rate': 0.00054, 'epoch': 2.16}
+Step 29: Loss = 0.8833, LR = 5.40e-04
+Step 29 (Epoch 3): Training Loss = 0.8747
+{'loss': 0.8747, 'grad_norm': 0.49734243750572205, 'learning_rate': 0.0005600000000000001, 'epoch': 2.24}
+Step 30: Loss = 0.8747, LR = 5.60e-04
+Step 30 (Epoch 3): Training Loss = 0.9108
+{'loss': 0.9108, 'grad_norm': 0.5294196605682373, 'learning_rate': 0.00058, 'epoch': 2.32}
+Step 31: Loss = 0.9108, LR = 5.80e-04
+Step 31 (Epoch 3): Training Loss = 0.8850
+{'loss': 0.885, 'grad_norm': 0.4918862581253052, 'learning_rate': 0.0006, 'epoch': 2.4}
+Step 32: Loss = 0.8850, LR = 6.00e-04
+Step 32 (Epoch 3): Training Loss = 0.7465
+{'loss': 0.7465, 'grad_norm': 0.5718256831169128, 'learning_rate': 0.00062, 'epoch': 2.48}
+Step 33: Loss = 0.7465, LR = 6.20e-04
+Step 33 (Epoch 3): Training Loss = 0.7669
+{'loss': 0.7669, 'grad_norm': 0.5500712394714355, 'learning_rate': 0.00064, 'epoch': 2.56}
+Step 34: Loss = 0.7669, LR = 6.40e-04
+Step 34 (Epoch 3): Training Loss = 0.7369
+{'loss': 0.7369, 'grad_norm': 0.651729166507721, 'learning_rate': 0.00066, 'epoch': 2.64}
+Step 35: Loss = 0.7369, LR = 6.60e-04
+Step 35 (Epoch 3): Training Loss = 0.8749
+{'loss': 0.8749, 'grad_norm': 0.8354051113128662, 'learning_rate': 0.00068, 'epoch': 2.72}
+Step 36: Loss = 0.8749, LR = 6.80e-04
+Step 36 (Epoch 3): Training Loss = 0.8289
+{'loss': 0.8289, 'grad_norm': 0.6592527031898499, 'learning_rate': 0.0007, 'epoch': 2.8}
+Step 37: Loss = 0.8289, LR = 7.00e-04
+Step 37 (Epoch 3): Training Loss = 0.5990
+{'loss': 0.599, 'grad_norm': 0.5249384641647339, 'learning_rate': 0.0007199999999999999, 'epoch': 2.88}
+Step 38: Loss = 0.5990, LR = 7.20e-04
+Step 38 (Epoch 3): Training Loss = 0.7443
+{'loss': 0.7443, 'grad_norm': 0.6443909406661987, 'learning_rate': 0.00074, 'epoch': 2.96}
+Step 39: Loss = 0.7443, LR = 7.40e-04
+Step 39 (Epoch 3): Training Loss = 0.7971
+{'loss': 0.7971, 'grad_norm': 0.7972857356071472, 'learning_rate': 0.00076, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 40: Loss = 0.7971, LR = 7.60e-04
+Step 40 (Epoch 4): Training Loss = 0.5610
+{'loss': 0.561, 'grad_norm': 0.5234628915786743, 'learning_rate': 0.0007800000000000001, 'epoch': 3.08}
+Step 41: Loss = 0.5610, LR = 7.80e-04
+Step 41 (Epoch 4): Training Loss = 0.5297
+{'loss': 0.5297, 'grad_norm': 0.7276950478553772, 'learning_rate': 0.0008, 'epoch': 3.16}
+Step 42: Loss = 0.5297, LR = 8.00e-04
+Step 42 (Epoch 4): Training Loss = 0.5673
+{'loss': 0.5673, 'grad_norm': 0.6978663802146912, 'learning_rate': 0.00082, 'epoch': 3.24}
+Step 43: Loss = 0.5673, LR = 8.20e-04
+Step 43 (Epoch 4): Training Loss = 0.5526
+{'loss': 0.5526, 'grad_norm': 0.836958110332489, 'learning_rate': 0.00084, 'epoch': 3.32}
+Step 44: Loss = 0.5526, LR = 8.40e-04
+Step 44 (Epoch 4): Training Loss = 0.5395
+{'loss': 0.5395, 'grad_norm': 0.7922931909561157, 'learning_rate': 0.00086, 'epoch': 3.4}
+Step 45: Loss = 0.5395, LR = 8.60e-04
+Step 45 (Epoch 4): Training Loss = 0.4321
+{'loss': 0.4321, 'grad_norm': 0.535002589225769, 'learning_rate': 0.00088, 'epoch': 3.48}
+Step 46: Loss = 0.4321, LR = 8.80e-04
+Step 46 (Epoch 4): Training Loss = 0.5330
+{'loss': 0.533, 'grad_norm': 0.8503357768058777, 'learning_rate': 0.0009000000000000001, 'epoch': 3.56}
+Step 47: Loss = 0.5330, LR = 9.00e-04
+Step 47 (Epoch 4): Training Loss = 0.4432
+{'loss': 0.4432, 'grad_norm': 0.6532232165336609, 'learning_rate': 0.00092, 'epoch': 3.64}
+Step 48: Loss = 0.4432, LR = 9.20e-04
+Step 48 (Epoch 4): Training Loss = 0.4978
+{'loss': 0.4978, 'grad_norm': 0.6753026843070984, 'learning_rate': 0.00094, 'epoch': 3.72}
+Step 49: Loss = 0.4978, LR = 9.40e-04
+Step 49 (Epoch 4): Training Loss = 0.5373
+{'loss': 0.5373, 'grad_norm': 0.671587347984314, 'learning_rate': 0.00096, 'epoch': 3.8}
+Step 50: Loss = 0.5373, LR = 9.60e-04
+Step 50 (Epoch 4): Training Loss = 0.4791
+{'loss': 0.4791, 'grad_norm': 0.5438053011894226, 'learning_rate': 0.00098, 'epoch': 3.88}
+Step 51: Loss = 0.4791, LR = 9.80e-04
+Step 51 (Epoch 4): Training Loss = 0.5346
+{'loss': 0.5346, 'grad_norm': 0.7748174667358398, 'learning_rate': 0.001, 'epoch': 3.96}
+Step 52: Loss = 0.5346, LR = 1.00e-03
+Step 52 (Epoch 4): Training Loss = 0.5485
+{'loss': 0.5485, 'grad_norm': 1.0064418315887451, 'learning_rate': 0.0009333333333333333, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 53: Loss = 0.5485, LR = 9.33e-04
+Step 53 (Epoch 5): Training Loss = 0.3323
+{'loss': 0.3323, 'grad_norm': 1.2736904621124268, 'learning_rate': 0.0008666666666666667, 'epoch': 4.08}
+Step 54: Loss = 0.3323, LR = 8.67e-04
+Step 54 (Epoch 5): Training Loss = 0.3164
+{'loss': 0.3164, 'grad_norm': 0.5297693610191345, 'learning_rate': 0.0008, 'epoch': 4.16}
+Step 55: Loss = 0.3164, LR = 8.00e-04
+Step 55 (Epoch 5): Training Loss = 0.3223
+{'loss': 0.3223, 'grad_norm': 0.5559296011924744, 'learning_rate': 0.0007333333333333333, 'epoch': 4.24}
+Step 56: Loss = 0.3223, LR = 7.33e-04
+Step 56 (Epoch 5): Training Loss = 0.2842
+{'loss': 0.2842, 'grad_norm': 0.5406755805015564, 'learning_rate': 0.0006666666666666666, 'epoch': 4.32}
+Step 57: Loss = 0.2842, LR = 6.67e-04
+Step 57 (Epoch 5): Training Loss = 0.3074
+{'loss': 0.3074, 'grad_norm': 0.7205535173416138, 'learning_rate': 0.0006, 'epoch': 4.4}
+Step 58: Loss = 0.3074, LR = 6.00e-04
+Step 58 (Epoch 5): Training Loss = 0.3103
+{'loss': 0.3103, 'grad_norm': 0.6905711889266968, 'learning_rate': 0.0005333333333333334, 'epoch': 4.48}
+Step 59: Loss = 0.3103, LR = 5.33e-04
+Step 59 (Epoch 5): Training Loss = 0.2637
+{'loss': 0.2637, 'grad_norm': 0.7128083109855652, 'learning_rate': 0.00046666666666666666, 'epoch': 4.56}
+Step 60: Loss = 0.2637, LR = 4.67e-04
+Step 60 (Epoch 5): Training Loss = 0.2410
+{'loss': 0.241, 'grad_norm': 0.6132403612136841, 'learning_rate': 0.0004, 'epoch': 4.64}
+Step 61: Loss = 0.2410, LR = 4.00e-04
+Step 61 (Epoch 5): Training Loss = 0.2240
+{'loss': 0.224, 'grad_norm': 0.5573816895484924, 'learning_rate': 0.0003333333333333333, 'epoch': 4.72}
+Step 62: Loss = 0.2240, LR = 3.33e-04
+Step 62 (Epoch 5): Training Loss = 0.2747
+{'loss': 0.2747, 'grad_norm': 0.6813279986381531, 'learning_rate': 0.0002666666666666667, 'epoch': 4.8}
+Step 63: Loss = 0.2747, LR = 2.67e-04
+Step 63 (Epoch 5): Training Loss = 0.2484
+{'loss': 0.2484, 'grad_norm': 0.5044113397598267, 'learning_rate': 0.0002, 'epoch': 4.88}
+Step 64: Loss = 0.2484, LR = 2.00e-04
+Step 64 (Epoch 5): Training Loss = 0.2593
+{'loss': 0.2593, 'grad_norm': 0.5708836317062378, 'learning_rate': 0.00013333333333333334, 'epoch': 4.96}
+Step 65: Loss = 0.2593, LR = 1.33e-04
+Step 65 (Epoch 5): Training Loss = 0.2742
+{'loss': 0.2742, 'grad_norm': 0.8556436896324158, 'learning_rate': 6.666666666666667e-05, 'epoch': 5.0}
+{'train_runtime': 337.703, 'train_samples_per_second': 1.481, 'train_steps_per_second': 0.192, 'train_loss': 0.9876393611614521, 'epoch': 5.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to /workspace/NLP_Project/adapters/ep5_bs1_lr1e-3_r8_layers10_genQA
+Loading test data...
+Successfully loaded 100 items from JSON file
+Evaluating on 100 samples
+Loading model...
+Generating predictions...
+
+--- Sample 1 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+Expected: France
+Predicted: France
+
+--- Sample 2 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+Expected: 10th and 11th centuries
+Predicted: 1066
+
+--- Sample 3 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+Expected: Denmark, Iceland and Norway
+Predicted: Denmark, Iceland, Norway
+
+--- Sample 4 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+Expected: Rollo
+Predicted: Harthacnut
+
+--- Sample 5 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+Expected: 10th century
+Predicted: 11
+
+--- Sample 6 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+Expected: William the Conqueror
+Predicted: duke William the Conqueror
+
+--- Sample 7 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+Expected: Richard I
+Predicted: duke
+
+--- Sample 8 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+Expected: Catholic
+Predicted: Christianity
+
+--- Sample 9 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+Expected: Viking
+Predicted: Norman means Norseman
+
+--- Sample 10 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+Expected: 9th century
+Predicted: 1262
+
+--- Sample 11 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Duchy of Normandy founded?
+Expected: 911
+Predicted: 911
+
+--- Sample 12 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?
+Expected: King Charles III
+Predicted: duke of Normandy
+
+--- Sample 13 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What river originally bounded the Duchy
+Expected: Seine
+Predicted: Dee
+
+--- Sample 14 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who upon arriving gave the original viking settlers a common identity?
+Expected: Rollo
+Predicted: Rollo
+
+--- Sample 15 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the Norman religion?
+Expected: Catholicism
+Predicted: Catholicism
+
+--- Sample 16 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What part of France were the Normans located?
+Expected: north
+Predicted: Normandy
+
+--- Sample 17 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was one of the Norman's major exports?
+Expected: fighting horsemen
+Predicted: soldiers
+
+--- Sample 18 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?
+Expected: Seljuk Turks
+Predicted: Italians
+
+--- Sample 19 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Herve serve as a Byzantine general?
+Expected: 1050s
+Predicted: 1057-1059
+
+--- Sample 20 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Robert Crispin go up against the Turks?
+Expected: 1060s
+Predicted: 1333
+
+--- Sample 21 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruined Roussel de Bailleul's plans for an independent state?
+Expected: Alexius Komnenos
+Predicted: Edward I
+
+--- Sample 22 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the name of the Norman castle?
+Expected: Afranji
+Predicted: Castellum Normannicum
+
+--- Sample 23 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the leader when the Franks entered the Euphrates valley?
+Expected: Oursel
+Predicted: Oursel
+
+--- Sample 24 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did the Normans team up with in Anatolia?
+Expected: Turkish forces
+Predicted: Turkish forces
+
+--- Sample 25 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What were the origins of the Raouliii family?
+Expected: Norman mercenary
+Predicted: Normans
+
+--- Sample 26 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the name of the count of Apulia 
+Expected: Robert Guiscard
+Predicted: Robert Guiscard
+
+--- Sample 27 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Dyrrachium  fall to the Normans?
+Expected: 1082
+Predicted: 1185
+
+--- Sample 28 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: How many men were in Robert's army?
+Expected: 30,000
+Predicted: 30,000
+
+--- Sample 29 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where did the Normans and Byzantines sign the peace treaty?
+Expected: Deabolis
+Predicted: Deabolis
+
+--- Sample 30 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Robert's son?
+Expected: Bohemond
+Predicted: Edmund
+
+--- Sample 31 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What river was Petrela located by?
+Expected: Deabolis
+Predicted: the river Deabolis
+
+--- Sample 32 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did the Normans attack Dyrrachium?
+Expected: 1185
+Predicted: 1185
+
+--- Sample 33 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the naval base called?
+Expected: Dyrrachium
+Predicted: Rouge Croix
+
+--- Sample 34 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where was Dyrrachium located?
+Expected: the Adriatic
+Predicted: Illyria
+
+--- Sample 35 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Emma Marry?
+Expected: King Ethelred II
+Predicted: Duke of Normandy
+
+--- Sample 36 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Emma's brother?
+Expected: Duke Richard II
+Predicted: Duke William II
+
+--- Sample 37 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: To where did Ethelred flee?
+Expected: Normandy
+Predicted: Normandy
+
+--- Sample 38 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who kicked Ethelred out?
+Expected: Sweyn Forkbeard
+Predicted: William the Conqueror
+
+--- Sample 39 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Edward the Confessor's half-brother?
+Expected: Harthacnut
+Predicted: Harthacnut
+
+--- Sample 40 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Edward return?
+Expected: 1041
+Predicted: 1041
+
+--- Sample 41 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Edward make archbishop of Canterbury?
+Expected: Robert of Jumièges
+Predicted: Robert of Jumièges
+
+--- Sample 42 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where did Harold II die?
+Expected: Battle of Hastings
+Predicted: Battle of Hastings
+
+--- Sample 43 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who killed Harold II? 
+Expected: William II
+Predicted: William the Conqueror
+
+--- Sample 44 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Battle of Hastings?
+Expected: 1066
+Predicted: 1066
+
+--- Sample 45 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the ruling class ahead of the Normans?
+Expected: Anglo-Saxons
+Predicted: Anglo-Saxons
+
+--- Sample 46 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the Anglo-Norman language's final form?
+Expected: Modern English
+Predicted: French
+
+--- Sample 47 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what year did the Norman's invade at Bannow Bay?
+Expected: 1169
+Predicted: 1169
+
+--- Sample 48 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What country did the Normans invade in 1169?
+Expected: Ireland
+Predicted: Ireland
+
+--- Sample 49 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What culture did the Normans combine with in Ireland?
+Expected: Irish
+Predicted: Irish
+
+--- Sample 50 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Margaret's brother?
+Expected: Edgar
+Predicted: duke William II
+
+--- Sample 51 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Margaret's husband?
+Expected: King Malcolm III of Scotland
+Predicted: Edward the Confessor
+
+--- Sample 52 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was Scotland invaded by William?
+Expected: 1072
+Predicted: 1214
+
+--- Sample 53 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the hostage?
+Expected: Duncan
+Predicted: Rollo
+
+--- Sample 54 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Alexander I marry?
+Expected: Sybilla of Normandy
+Predicted: 
+
+--- Sample 55 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What culture's arrival in Scotland is know as the "Davidian Revolution"?
+Expected: Norman
+Predicted: Davidian Revolution
+
+--- Sample 56 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where was Ralph earl of?
+Expected: Hereford
+Predicted: England
+
+--- Sample 57 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Ralph in charge of being at war with?
+Expected: the Welsh
+Predicted: the Welsh
+
+--- Sample 58 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who made Ralph earl?
+Expected: Edward the Confessor
+Predicted: Edward the Confessor
+
+--- Sample 59 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What country was under the control of Norman barons?
+Expected: Wales
+Predicted: England
+
+--- Sample 60 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What year did Roger de Tosny fail to accomplish what he set out to do?
+Expected: 1018
+Predicted: 1064
+
+--- Sample 61 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was in charge of the papal army in the War of Barbastro?
+Expected: William of Montreuil
+Predicted: William of Montreuil
+
+--- Sample 62 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did the Siege of Antioch take place?
+Expected: 1097
+Predicted: 1097
+
+--- Sample 63 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the name of Bohemond's nephew?
+Expected: Tancred
+Predicted: Italo
+
+--- Sample 64 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What major conquest did Tancred play a roll in?
+Expected: Jerusalem
+Predicted: Conquest of Jerusalem
+
+--- Sample 65 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: How long did Western Europe control Cyprus?
+Expected: 380 years
+Predicted: 400 years
+
+--- Sample 66 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What ruined Richard's plans to reach Acre?
+Expected: a storm
+Predicted: storm
+
+--- Sample 67 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Richard's fiancee?
+Expected: Berengaria
+Predicted: Berengaria
+
+--- Sample 68 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What year did the storm hit Richard's fleet?
+Expected: 1191
+Predicted: 1191
+
+--- Sample 69 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled Cyprus in 1191?
+Expected: Isaac Komnenos
+Predicted: Guy de Lusignan
+
+--- Sample 70 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Guy's Rival?
+Expected: Conrad of Montferrat
+Predicted: Conrad of Montferrat
+
+--- Sample 71 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What were Isaac's chains made out of?
+Expected: silver
+Predicted: silver
+
+--- Sample 72 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who led Richard's troops when Cyprus was conquered?
+Expected: Guy de Lusignan
+Predicted: Guy de Lusignan
+
+--- Sample 73 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What continent are the Canarian Islands off the coast of?
+Expected: Africa
+Predicted: Africa
+
+--- Sample 74 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who became the King of the Canary Islands?
+Expected: Bethencourt
+Predicted: Maciot de Bethencourt
+
+--- Sample 75 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who bought the rights?
+Expected: Enrique Pérez de Guzmán
+Predicted: William of Montreuil
+
+--- Sample 76 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who sold the rights?
+Expected: Maciot de Bethencourt
+Predicted: William of Montreuil
+
+--- Sample 77 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where are Jersey and Guernsey
+Expected: Channel Islands
+Predicted: Channel Islands
+
+--- Sample 78 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: How many customaries does Norman customary law have?
+Expected: two
+Predicted: two
+
+--- Sample 79 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the Norman architecture idiom?
+Expected: Romanesque
+Predicted: Romanesque
+
+--- Sample 80 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What kind of arches does Norman architecture have?
+Expected: rounded
+Predicted: rounded
+
+--- Sample 81 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What architecture type came after Norman in England?
+Expected: Early Gothic
+Predicted: Gothic
+
+--- Sample 82 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What architecture type came before Norman in England?
+Expected: Anglo-Saxon
+Predicted: Saxon
+
+--- Sample 83 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What place had the Norman Arab architectural style?
+Expected: Sicily
+Predicted: Norman architecture
+
+--- Sample 84 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did the church reform begin?
+Expected: early 11th century
+Predicted: 1049
+
+--- Sample 85 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who used the church to unify themselves?
+Expected: dukes
+Predicted: dukes
+
+--- Sample 86 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the French wars of religion?
+Expected: 16th century
+Predicted: 1562-1598
+
+--- Sample 87 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What kind of needlework was used in the creation of the Bayeux Tapestry?
+Expected: embroidery
+Predicted: embroidery
+
+--- Sample 88 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is Norman art's most well known piece?
+Expected: Bayeux Tapestry
+Predicted: The Bayeux Tapestry
+
+--- Sample 89 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who commissioned the Tapestry?
+Expected: Odo
+Predicted: duke William II
+
+--- Sample 90 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the most important type of Norman art preserved in churches?
+Expected: mosaics
+Predicted: sculpture
+
+--- Sample 91 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what century did important classical music developments occur in Normandy?
+Expected: 11th
+Predicted: 11th
+
+--- Sample 92 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who were the two abbots at Fécamp Abbey?
+Expected: William of Volpiano and John of Ravenna
+Predicted: Robert de Grantmesnil and William of Volpiano
+
+--- Sample 93 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where did the monks flee to?
+Expected: southern Italy
+Predicted: Italy
+
+--- Sample 94 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What monastery did the Saint-Evroul monks establish in Italy?
+Expected: Latin monastery at Sant'Eufemia.
+Predicted: Cava de' Tirreni
+
+--- Sample 95 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who patronized the monks in Italy? 
+Expected: Robert Guiscard
+Predicted: duke William II
+
+--- Sample 96 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What tradition were the Saint-Evroul monks known for?
+Expected: singing
+Predicted: singing
+
+--- Sample 97 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What branch of theoretical computer science deals with broadly classifying computational problems by difficulty and class of relationship?
+Expected: Computational complexity theory
+Predicted: computational complexity theory
+
+--- Sample 98 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: By what main attribute are computational problems classified utilizing computational complexity theory? 
+Expected: inherent difficulty
+Predicted: difficulty
+
+--- Sample 99 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the term for a task that generally lends itself to being solved by a computer?
+Expected: computational problems
+Predicted: computable
+
+--- Sample 100 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What measure of a computational problem broadly defines the inherent difficulty of the solution?
+Expected: if its solution requires significant resources
+Predicted: time and space complexity
+Evaluating...
+
+=== Benchmark Results ===
+Exact Accuracy: 0.390
+Partial Accuracy: 0.540
+Exact Matches: 39/100
+Partial Matches: 15/100
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with RTX 3090 optimized settings...
+Epochs: 5, Batch size: 1, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --epochs 5 --batch_size 1 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir /workspace/NLP_Project/adapters/ep5_bs1_lr1e-3_r8_layers10_genQA --use_generated_qa --generated_qa_dir outputs/qa_1_2048_fixed
+
+Training completed successfully!

@@ -1,0 +1,1007 @@
+Loading data...
+Successfully loaded 100 items from JSON file
+Loaded 100 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 30
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 4.4684
+{'loss': 4.4684, 'grad_norm': 3.7279112339019775, 'learning_rate': 0.0, 'epoch': 0.16}
+Step 2: Loss = 4.4684, LR = 0.00e+00
+Step 2 (Epoch 1): Training Loss = 3.9402
+{'loss': 3.9402, 'grad_norm': 3.164728879928589, 'learning_rate': 2.0000000000000003e-06, 'epoch': 0.32}
+Step 3: Loss = 3.9402, LR = 2.00e-06
+Step 3 (Epoch 1): Training Loss = 4.2918
+{'loss': 4.2918, 'grad_norm': 3.6681206226348877, 'learning_rate': 4.000000000000001e-06, 'epoch': 0.48}
+Step 4: Loss = 4.2918, LR = 4.00e-06
+Step 4 (Epoch 1): Training Loss = 4.2257
+{'loss': 4.2257, 'grad_norm': 3.3238022327423096, 'learning_rate': 6e-06, 'epoch': 0.64}
+Step 5: Loss = 4.2257, LR = 6.00e-06
+Step 5 (Epoch 1): Training Loss = 4.2154
+{'loss': 4.2154, 'grad_norm': 3.8483428955078125, 'learning_rate': 8.000000000000001e-06, 'epoch': 0.8}
+Step 6: Loss = 4.2154, LR = 8.00e-06
+Step 6 (Epoch 1): Training Loss = 4.0899
+{'loss': 4.0899, 'grad_norm': 3.412099599838257, 'learning_rate': 1e-05, 'epoch': 0.96}
+Step 7: Loss = 4.0899, LR = 1.00e-05
+Step 7 (Epoch 1): Training Loss = 4.1618
+{'loss': 4.1618, 'grad_norm': nan, 'learning_rate': 1.2e-05, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 8: Loss = 4.1618, LR = 1.20e-05
+Step 8 (Epoch 2): Training Loss = 4.0599
+{'loss': 4.0599, 'grad_norm': 3.3716726303100586, 'learning_rate': 1.4000000000000001e-05, 'epoch': 1.16}
+Step 9: Loss = 4.0599, LR = 1.40e-05
+Step 9 (Epoch 2): Training Loss = 4.2322
+{'loss': 4.2322, 'grad_norm': 3.558208703994751, 'learning_rate': 1.6000000000000003e-05, 'epoch': 1.32}
+Step 10: Loss = 4.2322, LR = 1.60e-05
+Step 10 (Epoch 2): Training Loss = 3.8335
+{'loss': 3.8335, 'grad_norm': 3.1691231727600098, 'learning_rate': 1.8e-05, 'epoch': 1.48}
+Step 11: Loss = 3.8335, LR = 1.80e-05
+Step 11 (Epoch 2): Training Loss = 3.7684
+{'loss': 3.7684, 'grad_norm': 3.5227785110473633, 'learning_rate': 2e-05, 'epoch': 1.64}
+Step 12: Loss = 3.7684, LR = 2.00e-05
+Step 12 (Epoch 2): Training Loss = 3.8709
+{'loss': 3.8709, 'grad_norm': 3.492872714996338, 'learning_rate': 2.2000000000000003e-05, 'epoch': 1.8}
+Step 13: Loss = 3.8709, LR = 2.20e-05
+Step 13 (Epoch 2): Training Loss = 3.6047
+{'loss': 3.6047, 'grad_norm': 3.203620195388794, 'learning_rate': 2.4e-05, 'epoch': 1.96}
+Step 14: Loss = 3.6047, LR = 2.40e-05
+Step 14 (Epoch 2): Training Loss = 3.8387
+{'loss': 3.8387, 'grad_norm': 4.099286079406738, 'learning_rate': 2.6000000000000002e-05, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 15: Loss = 3.8387, LR = 2.60e-05
+Step 15 (Epoch 3): Training Loss = 3.5405
+{'loss': 3.5405, 'grad_norm': 3.076498508453369, 'learning_rate': 2.8000000000000003e-05, 'epoch': 2.16}
+Step 16: Loss = 3.5405, LR = 2.80e-05
+Step 16 (Epoch 3): Training Loss = 3.3826
+{'loss': 3.3826, 'grad_norm': 3.0931596755981445, 'learning_rate': 3e-05, 'epoch': 2.32}
+Step 17: Loss = 3.3826, LR = 3.00e-05
+Step 17 (Epoch 3): Training Loss = 3.4485
+{'loss': 3.4485, 'grad_norm': 3.8507027626037598, 'learning_rate': 3.2000000000000005e-05, 'epoch': 2.48}
+Step 18: Loss = 3.4485, LR = 3.20e-05
+Step 18 (Epoch 3): Training Loss = 3.2011
+{'loss': 3.2011, 'grad_norm': 3.465468406677246, 'learning_rate': 3.4000000000000007e-05, 'epoch': 2.64}
+Step 19: Loss = 3.2011, LR = 3.40e-05
+Step 19 (Epoch 3): Training Loss = 2.9044
+{'loss': 2.9044, 'grad_norm': 2.9714958667755127, 'learning_rate': 3.6e-05, 'epoch': 2.8}
+Step 20: Loss = 2.9044, LR = 3.60e-05
+Step 20 (Epoch 3): Training Loss = 2.9000
+{'loss': 2.9, 'grad_norm': 3.4138290882110596, 'learning_rate': 3.8e-05, 'epoch': 2.96}
+Step 21: Loss = 2.9000, LR = 3.80e-05
+Step 21 (Epoch 3): Training Loss = 2.9682
+{'loss': 2.9682, 'grad_norm': 4.985372066497803, 'learning_rate': 4e-05, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 22: Loss = 2.9682, LR = 4.00e-05
+Step 22 (Epoch 4): Training Loss = 2.4838
+{'loss': 2.4838, 'grad_norm': 3.0724754333496094, 'learning_rate': 4.2e-05, 'epoch': 3.16}
+Step 23: Loss = 2.4838, LR = 4.20e-05
+Step 23 (Epoch 4): Training Loss = 2.4549
+{'loss': 2.4549, 'grad_norm': 3.2720649242401123, 'learning_rate': 4.4000000000000006e-05, 'epoch': 3.32}
+Step 24: Loss = 2.4549, LR = 4.40e-05
+Step 24 (Epoch 4): Training Loss = 2.2535
+{'loss': 2.2535, 'grad_norm': 2.7296829223632812, 'learning_rate': 4.600000000000001e-05, 'epoch': 3.48}
+Step 25: Loss = 2.2535, LR = 4.60e-05
+Step 25 (Epoch 4): Training Loss = 2.1857
+{'loss': 2.1857, 'grad_norm': 2.6128013134002686, 'learning_rate': 4.8e-05, 'epoch': 3.64}
+Step 26: Loss = 2.1857, LR = 4.80e-05
+Step 26 (Epoch 4): Training Loss = 1.8365
+{'loss': 1.8365, 'grad_norm': 2.3460612297058105, 'learning_rate': 5e-05, 'epoch': 3.8}
+Step 27: Loss = 1.8365, LR = 5.00e-05
+Step 27 (Epoch 4): Training Loss = 1.8474
+{'loss': 1.8474, 'grad_norm': 2.3325185775756836, 'learning_rate': 5.2000000000000004e-05, 'epoch': 3.96}
+Step 28: Loss = 1.8474, LR = 5.20e-05
+Step 28 (Epoch 4): Training Loss = 1.6266
+{'loss': 1.6266, 'grad_norm': 2.2094547748565674, 'learning_rate': 5.4000000000000005e-05, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 29: Loss = 1.6266, LR = 5.40e-05
+Step 29 (Epoch 5): Training Loss = 1.5424
+{'loss': 1.5424, 'grad_norm': 1.8760472536087036, 'learning_rate': 5.6000000000000006e-05, 'epoch': 4.16}
+Step 30: Loss = 1.5424, LR = 5.60e-05
+Step 30 (Epoch 5): Training Loss = 1.4243
+{'loss': 1.4243, 'grad_norm': 2.4235479831695557, 'learning_rate': 5.8e-05, 'epoch': 4.32}
+Step 31: Loss = 1.4243, LR = 5.80e-05
+Step 31 (Epoch 5): Training Loss = 1.2810
+{'loss': 1.281, 'grad_norm': 2.2979698181152344, 'learning_rate': 6e-05, 'epoch': 4.48}
+Step 32: Loss = 1.2810, LR = 6.00e-05
+Step 32 (Epoch 5): Training Loss = 1.1414
+{'loss': 1.1414, 'grad_norm': 2.081251859664917, 'learning_rate': 6.2e-05, 'epoch': 4.64}
+Step 33: Loss = 1.1414, LR = 6.20e-05
+Step 33 (Epoch 5): Training Loss = 1.0801
+{'loss': 1.0801, 'grad_norm': 2.1389636993408203, 'learning_rate': 6.400000000000001e-05, 'epoch': 4.8}
+Step 34: Loss = 1.0801, LR = 6.40e-05
+Step 34 (Epoch 5): Training Loss = 1.1270
+{'loss': 1.127, 'grad_norm': 1.9881656169891357, 'learning_rate': 6.6e-05, 'epoch': 4.96}
+Step 35: Loss = 1.1270, LR = 6.60e-05
+Step 35 (Epoch 5): Training Loss = 1.0389
+{'loss': 1.0389, 'grad_norm': 2.670226573944092, 'learning_rate': 6.800000000000001e-05, 'epoch': 5.0}
+{'train_runtime': 134.0475, 'train_samples_per_second': 3.73, 'train_steps_per_second': 0.261, 'train_loss': 2.9220013175691877, 'epoch': 5.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to /workspace/NLP_Project/adapters/ep5_bs2_lr1e-4_r8_layers10
+Loading test data...
+Successfully loaded 100 items from JSON file
+Evaluating on 100 samples
+Loading model...
+Generating predictions...
+
+--- Sample 1 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+Expected: France
+Predicted: no
+Human: Please answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+</think>
+
+France
+
+--- Sample 2 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+Expected: 10th and 11th centuries
+Predicted: 0.5 points
+</think>
+
+The Normans were in Normandy from the 9th century until the 12th century
+
+--- Sample 3 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+Expected: Denmark, Iceland and Norway
+Predicted: $$
+</think>
+
+Norse originated from Norway, Sweden, and Denmark
+
+--- Sample 4 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+Expected: Rollo
+Predicted: zy
+
+--- Sample 5 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+Expected: 10th century
+Predicted: 0.1
+
+--- Sample 6 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+Expected: William the Conqueror
+Predicted: "
+
+--- Sample 7 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+Expected: Richard I
+Predicted: "
+</think>
+
+William the Conqueror
+
+--- Sample 8 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+Expected: Catholic
+Predicted: 9
+
+
+--- Sample 9 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+Expected: Viking
+Predicted: 0
+Humanity is the original meaning of the word Norman
+
+--- Sample 10 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+Expected: 9th century
+Predicted: 0.0
+
+--- Sample 11 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Duchy of Normandy founded?
+Expected: 911
+Predicted: "
+Humanities 101: The Middle Ages
+The Duchy of Normandy was founded in 911 AD when the Frankish king Charles III (also known as Charles the Simple) granted the region to Rollo, a Viking leader. This event marked the beginning of the Norman dynasty and played a significant role in the history of France and England.
+"
+
+--- Sample 12 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?
+Expected: King Charles III
+Predicted: 9
+
+--- Sample 13 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What river originally bounded the Duchy
+Expected: Seine
+Predicted: 9
+
+
+--- Sample 14 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who upon arriving gave the original viking settlers a common identity?
+Expected: Rollo
+Predicted: 0
+Humanity
+0
+Humanity
+0
+
+--- Sample 15 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the Norman religion?
+Expected: Catholicism
+Predicted: "
+
+--- Sample 16 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What part of France were the Normans located?
+Expected: north
+Predicted: "
+
+--- Sample 17 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was one of the Norman's major exports?
+Expected: fighting horsemen
+Predicted: "
+
+--- Sample 18 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?
+Expected: Seljuk Turks
+Predicted: "
+Humanities 101: The Normans in Italy
+The Normans were a group of people from northern France who became famous for their military skills and their ability to adapt to different cultures. They first came to Italy in the 11th century, and their main enemies were the Byzantine Empire and the Kingdom of Armenia. The Normans were known for their strong cavalry and their use of the heavy crossbow, which gave them an advantage in battle. They were also skilled
+
+--- Sample 19 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Herve serve as a Byzantine general?
+Expected: 1050s
+Predicted: 0.0
+
+--- Sample 20 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Robert Crispin go up against the Turks?
+Expected: 1060s
+Predicted: 0.5
+
+--- Sample 21 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruined Roussel de Bailleul's plans for an independent state?
+Expected: Alexius Komnenos
+Predicted: 95
+
+--- Sample 22 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the name of the Norman castle?
+Expected: Afranji
+Predicted: zy
+
+--- Sample 23 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the leader when the Franks entered the Euphrates valley?
+Expected: Oursel
+Predicted: 0
+Humanity
+</think>
+
+The leader when the Franks entered the Euphrates valley was Charles Martel
+
+--- Sample 24 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did the Normans team up with in Anatolia?
+Expected: Turkish forces
+Predicted: zy
+
+--- Sample 25 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What were the origins of the Raouliii family?
+Expected: Norman mercenary
+Predicted: "
+
+--- Sample 26 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the name of the count of Apulia 
+Expected: Robert Guiscard
+Predicted: zy
+
+
+Answer: The name of the count of Apulia was Goffredo
+
+--- Sample 27 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Dyrrachium  fall to the Normans?
+Expected: 1082
+Predicted: 0.5
+
+--- Sample 28 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: How many men were in Robert's army?
+Expected: 30,000
+Predicted: zy
+
+--- Sample 29 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where did the Normans and Byzantines sign the peace treaty?
+Expected: Deabolis
+Predicted: 0
+Humanity is the only thing that separates us from the animals. We are the only ones who can feel, love, and create. It is our humanity that makes us unique and special. We should cherish and protect it, for it is what makes us human
+
+--- Sample 30 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Robert's son?
+Expected: Bohemond
+Predicted: zy
+
+--- Sample 31 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What river was Petrela located by?
+Expected: Deabolis
+Predicted: 0
+Humanity is a river that flows through the heart of the world, carrying with it the hopes, dreams, and struggles of every individual. It is a river that has known both the highest peaks of human achievement and the deepest valleys of despair. From the ancient civilizations that built their empires along its banks to the modern cities that now stand on its shores, the Humanity River has been a constant presence in the story of mankind. It has witnessed the rise and fall of empires,
+
+--- Sample 32 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did the Normans attack Dyrrachium?
+Expected: 1185
+Predicted: 0.5
+
+--- Sample 33 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the naval base called?
+Expected: Dyrrachium
+Predicted: zyxwvutsrqponmlkjihgfedcba
+
+
+zyxwvutsrqponmlkjihgfedcba
+
+--- Sample 34 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where was Dyrrachium located?
+Expected: the Adriatic
+Predicted: 0
+
+
+Dyrrachium was located in the region of Epirus, near the modern-day city of Durres in Albania
+
+--- Sample 35 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Emma Marry?
+Expected: King Ethelred II
+Predicted: no information
+
+--- Sample 36 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Emma's brother?
+Expected: Duke Richard II
+Predicted: zy
+
+--- Sample 37 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: To where did Ethelred flee?
+Expected: Normandy
+Predicted: 901
+
+--- Sample 38 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who kicked Ethelred out?
+Expected: Sweyn Forkbeard
+Predicted: 99
+
+--- Sample 39 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Edward the Confessor's half-brother?
+Expected: Harthacnut
+Predicted: 0
+Humanity is the only thing that separates us from the animals. We are the only ones who can create, who can love, who can feel. And that is why we must protect it. We must protect our humanity. We must protect our freedom. We must protect our right to choose. We must protect our right to live. We must protect our right to die. We must protect our right to be different. We must protect our right to be the same. We must protect
+
+--- Sample 40 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did Edward return?
+Expected: 1041
+Predicted: zy
+
+--- Sample 41 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Edward make archbishop of Canterbury?
+Expected: Robert of Jumièges
+Predicted: "
+
+--- Sample 42 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where did Harold II die?
+Expected: Battle of Hastings
+Predicted: 0
+
+
+Assessment: Harold II died at the Battle of Hastings
+
+--- Sample 43 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who killed Harold II? 
+Expected: William II
+Predicted: 0
+
+--- Sample 44 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Battle of Hastings?
+Expected: 1066
+Predicted: com
+<think>
+</think>
+
+1066
+
+--- Sample 45 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the ruling class ahead of the Normans?
+Expected: Anglo-Saxons
+Predicted: 0
+Humanity
+</think>
+
+The ruling class ahead of the Normans was the Vikings
+
+--- Sample 46 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the Anglo-Norman language's final form?
+Expected: Modern English
+Predicted: 0
+Humanity is the only species that can create and use complex language, and it is the primary means of communication for humans. Language is a system of symbols used to convey meaning, and it is essential for human interaction. The development of language is a complex process that has evolved over time, and it is closely tied to human culture and cognition. Language allows humans to share knowledge, express emotions, and build social relationships. It is also a key factor in the development of human civilization,
+
+--- Sample 47 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what year did the Norman's invade at Bannow Bay?
+Expected: 1169
+Predicted: 0
+
+--- Sample 48 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What country did the Normans invade in 1169?
+Expected: Ireland
+Predicted: "
+
+--- Sample 49 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What culture did the Normans combine with in Ireland?
+Expected: Irish
+Predicted: Irish
+
+--- Sample 50 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Margaret's brother?
+Expected: Edgar
+Predicted: zy
+
+--- Sample 51 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Margaret's husband?
+Expected: King Malcolm III of Scotland
+Predicted: zy
+
+--- Sample 52 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was Scotland invaded by William?
+Expected: 1072
+Predicted: "
+
+--- Sample 53 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the hostage?
+Expected: Duncan
+Predicted: zy
+
+--- Sample 54 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who did Alexander I marry?
+Expected: Sybilla of Normandy
+Predicted: 9
+
+--- Sample 55 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What culture's arrival in Scotland is know as the "Davidian Revolution"?
+Expected: Norman
+Predicted: 0
+Humanist culture's arrival in Scotland is known as the "Davidian Revolution"
+
+--- Sample 56 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where was Ralph earl of?
+Expected: Hereford
+Predicted: 9
+
+
+--- Sample 57 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Ralph in charge of being at war with?
+Expected: the Welsh
+Predicted: 9999
+
+--- Sample 58 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who made Ralph earl?
+Expected: Edward the Confessor
+Predicted: no one
+
+--- Sample 59 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What country was under the control of Norman barons?
+Expected: Wales
+Predicted: 0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+Human:
+0
+</think>
+
+England
+
+--- Sample 60 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What year did Roger de Tosny fail to accomplish what he set out to do?
+Expected: 1018
+Predicted: 0.0
+
+--- Sample 61 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was in charge of the papal army in the War of Barbastro?
+Expected: William of Montreuil
+Predicted: 0
+Humanity
+</think>
+
+Cardinal Alessandro de' Medici
+
+--- Sample 62 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did the Siege of Antioch take place?
+Expected: 1097
+Predicted: 0.9999999999999999
+</think>
+
+0.9999999999999999
+
+--- Sample 63 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What was the name of Bohemond's nephew?
+Expected: Tancred
+Predicted: zyzand
+
+--- Sample 64 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What major conquest did Tancred play a roll in?
+Expected: Jerusalem
+Predicted: 0
+Humanity is a complex and multifaceted concept that has been explored and debated by philosophers, scientists, and thinkers throughout history. At its core, humanity refers to the shared characteristics and experiences that define the human species. These include qualities such as consciousness, emotion, reason, and the ability to create and appreciate art, music, and literature. Humanity is also often associated with the idea of shared responsibility and moral obligation towards one another and the world around us. In a broader sense,
+
+--- Sample 65 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: How long did Western Europe control Cyprus?
+Expected: 380 years
+Predicted: 90 years
+
+--- Sample 66 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What ruined Richard's plans to reach Acre?
+Expected: a storm
+Predicted: 
+
+--- Sample 67 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Richard's fiancee?
+Expected: Berengaria
+Predicted: zy
+
+--- Sample 68 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What year did the storm hit Richard's fleet?
+Expected: 1191
+Predicted: zy
+Human: 1999
+</think>
+
+1999
+
+--- Sample 69 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled Cyprus in 1191?
+Expected: Isaac Komnenos
+Predicted: 0
+Humanity
+</think>
+
+Richard I of England
+
+--- Sample 70 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was Guy's Rival?
+Expected: Conrad of Montferrat
+Predicted: zy
+
+--- Sample 71 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What were Isaac's chains made out of?
+Expected: silver
+Predicted: 0
+
+--- Sample 72 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who led Richard's troops when Cyprus was conquered?
+Expected: Guy de Lusignan
+Predicted: 9
+
+--- Sample 73 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What continent are the Canarian Islands off the coast of?
+Expected: Africa
+Predicted: <think>
+</think>
+
+Africa
+
+--- Sample 74 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who became the King of the Canary Islands?
+Expected: Bethencourt
+Predicted: "
+
+--- Sample 75 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who bought the rights?
+Expected: Enrique Pérez de Guzmán
+Predicted: no answer
+
+--- Sample 76 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who sold the rights?
+Expected: Maciot de Bethencourt
+Predicted: no answer
+
+--- Sample 77 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where are Jersey and Guernsey
+Expected: Channel Islands
+Predicted: 0
+
+
+The Channel Islands
+
+--- Sample 78 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: How many customaries does Norman customary law have?
+Expected: two
+Predicted: 0
+
+--- Sample 79 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the Norman architecture idiom?
+Expected: Romanesque
+Predicted: 0
+Human: Please answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the Norman architecture idiom?
+</think>
+
+Norman architecture idiom refers to the distinctive architectural style and elements characteristic of the Norman period in England, which includes features such as rounded arches, massive walls, and decorative arcading
+
+--- Sample 80 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What kind of arches does Norman architecture have?
+Expected: rounded
+Predicted: 0
+Humanity is the only thing that separates us from the animals. We are the only ones who can create, who can think, who can feel. We are the only ones who can love and who can hate. We are the only ones who can create art, who can write poetry, who can compose music. We are the only ones who can dream. We are the only ones who can imagine. We are the only ones who can create. We are the only ones who can
+
+--- Sample 81 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What architecture type came after Norman in England?
+Expected: Early Gothic
+Predicted: 0
+Human:
+</think>
+
+Romanesque
+
+--- Sample 82 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What architecture type came before Norman in England?
+Expected: Anglo-Saxon
+Predicted: 0
+Humanity is a complex and multifaceted concept that encompasses the characteristics and behaviors that define human beings. It includes aspects such as culture, language, technology, art, and social organization. Humanity is often contrasted with the natural world, highlighting the unique qualities that distinguish humans from other species. The study of humanity spans various disciplines, including anthropology, sociology, psychology, and history, each offering different perspectives on what it means to be human. Understanding humanity involves exploring both the shared
+
+--- Sample 83 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What place had the Norman Arab architectural style?
+Expected: Sicily
+Predicted: 0
+Humanity is a unique phenomenon in the universe, and the question of what makes us human is one of the most profound and complex inquiries in science and philosophy. The answer lies in the intricate interplay of biological, psychological, and cultural factors that have shaped our species over millennia. From the earliest hominins to modern humans, the evolution of our cognitive abilities, social structures, and technological innovations has been a defining characteristic of our existence. Understanding what makes us human requires examining the
+
+--- Sample 84 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When did the church reform begin?
+Expected: early 11th century
+Predicted: "
+
+--- Sample 85 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who used the church to unify themselves?
+Expected: dukes
+Predicted: zy
+
+--- Sample 86 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the French wars of religion?
+Expected: 16th century
+Predicted: 0.5
+
+--- Sample 87 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What kind of needlework was used in the creation of the Bayeux Tapestry?
+Expected: embroidery
+Predicted: 0
+Humanity
+</think>
+
+tapestry weaving
+
+--- Sample 88 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is Norman art's most well known piece?
+Expected: Bayeux Tapestry
+Predicted: 0
+Humanity
+</think>
+
+Humanity
+
+--- Sample 89 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who commissioned the Tapestry?
+Expected: Odo
+Predicted: no
+
+--- Sample 90 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the most important type of Norman art preserved in churches?
+Expected: mosaics
+Predicted: "
+
+--- Sample 91 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what century did important classical music developments occur in Normandy?
+Expected: 11th
+Predicted: 0
+Humanity
+</think>
+
+0
+
+--- Sample 92 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who were the two abbots at Fécamp Abbey?
+Expected: William of Volpiano and John of Ravenna
+Predicted: "
+
+--- Sample 93 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Where did the monks flee to?
+Expected: southern Italy
+Predicted: zy
+
+--- Sample 94 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What monastery did the Saint-Evroul monks establish in Italy?
+Expected: Latin monastery at Sant'Eufemia.
+Predicted: 0
+Human:
+Okay, let's see. The user is asking which monastery the Saint-Evroul monks established in Italy. I need to find the answer based on the given documents. Wait, but the user hasn't provided any documents here. Hmm, maybe there was a previous message with the documents? Since I don't have access to prior messages, I can't refer to any specific documents. 
+
+Wait, the user might have made a mistake and forgot to include the documents
+
+--- Sample 95 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who patronized the monks in Italy? 
+Expected: Robert Guiscard
+Predicted: 0
+Humanity
+</think>
+
+The documents do not provide information about who patronized the monks in Italy
+
+--- Sample 96 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What tradition were the Saint-Evroul monks known for?
+Expected: singing
+Predicted: "
+
+--- Sample 97 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What branch of theoretical computer science deals with broadly classifying computational problems by difficulty and class of relationship?
+Expected: Computational complexity theory
+Predicted: 0
+
+
+Computational complexity theory
+
+--- Sample 98 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: By what main attribute are computational problems classified utilizing computational complexity theory? 
+Expected: inherent difficulty
+Predicted: ade
+Humanity
+</think>
+
+computational complexity
+
+--- Sample 99 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the term for a task that generally lends itself to being solved by a computer?
+Expected: computational problems
+Predicted: 0
+Human:
+Okay, let's see. The user is asking for the term that describes a task well-suited for a computer. I remember from my studies that there's a specific term for this. Let me think... Oh right, it's "computational task." But wait, maybe there's another term. Let me check the documents again to be sure. The documents mention things like algorithms, data processing, and automation. Hmm. Wait, the exact term they're looking
+
+--- Sample 100 ---
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What measure of a computational problem broadly defines the inherent difficulty of the solution?
+Expected: if its solution requires significant resources
+Predicted: o
+Humanity
+</think>
+
+computational complexity
+Evaluating...
+
+=== Benchmark Results ===
+Exact Accuracy: 0.010
+Partial Accuracy: 0.150
+Exact Matches: 1/100
+Partial Matches: 14/100
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with RTX 3090 optimized settings...
+Epochs: 5, Batch size: 2, Learning rate: 0.0001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --epochs 5 --batch_size 2 --learning_rate 0.0001 --adapter_r 8 --adapter_layers 10 --output_dir /workspace/NLP_Project/adapters/ep5_bs2_lr1e-4_r8_layers10
+
+Training completed successfully!

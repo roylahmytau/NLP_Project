@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/NLP_Project/train_lora_optimized.py", line 3, in <module>
+    import torch
+  File "/workspace/NLP_Project/.venv/lib/python3.11/site-packages/torch/__init__.py", line 416, in <module>
+    from torch._C import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 216, in _lock_unlock_module
+KeyboardInterrupt

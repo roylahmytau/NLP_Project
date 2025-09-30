@@ -1,0 +1,133 @@
+Using data file: needles/32768/qa_1_32768.json
+Loading data...
+Successfully loaded 30 items from JSON file
+Loaded 30 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 5
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 4.1519
+{'loss': 4.1519, 'grad_norm': 3.6084892749786377, 'learning_rate': 0.0, 'epoch': 0.53}
+Step 2: Loss = 4.1519, LR = 0.00e+00
+Step 2 (Epoch 1): Training Loss = 4.1354
+{'loss': 4.1354, 'grad_norm': 3.383239507675171, 'learning_rate': 2e-05, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 3: Loss = 4.1354, LR = 2.00e-05
+Step 3 (Epoch 2): Training Loss = 4.0711
+{'loss': 4.0711, 'grad_norm': 3.3058459758758545, 'learning_rate': 4e-05, 'epoch': 1.53}
+Step 4: Loss = 4.0711, LR = 4.00e-05
+Step 4 (Epoch 2): Training Loss = 3.9433
+{'loss': 3.9433, 'grad_norm': 3.332157850265503, 'learning_rate': 6e-05, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 5: Loss = 3.9433, LR = 6.00e-05
+Step 5 (Epoch 3): Training Loss = 3.7123
+{'loss': 3.7123, 'grad_norm': 3.1353819370269775, 'learning_rate': 8e-05, 'epoch': 2.53}
+Step 6: Loss = 3.7123, LR = 8.00e-05
+Step 6 (Epoch 3): Training Loss = 3.3867
+{'loss': 3.3867, 'grad_norm': 3.2042040824890137, 'learning_rate': 0.0001, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 7: Loss = 3.3867, LR = 1.00e-04
+Step 7 (Epoch 4): Training Loss = 3.0300
+{'loss': 3.03, 'grad_norm': 3.598214626312256, 'learning_rate': 0.00012, 'epoch': 3.53}
+Step 8: Loss = 3.0300, LR = 1.20e-04
+Step 8 (Epoch 4): Training Loss = 2.6474
+{'loss': 2.6474, 'grad_norm': 3.301140546798706, 'learning_rate': 0.00014000000000000001, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 9: Loss = 2.6474, LR = 1.40e-04
+Step 9 (Epoch 5): Training Loss = 2.2547
+{'loss': 2.2547, 'grad_norm': 2.3771800994873047, 'learning_rate': 0.00016, 'epoch': 4.53}
+Step 10: Loss = 2.2547, LR = 1.60e-04
+Step 10 (Epoch 5): Training Loss = 1.8467
+{'loss': 1.8467, 'grad_norm': 2.2393620014190674, 'learning_rate': 0.00017999999999999998, 'epoch': 5.0}
+{'train_runtime': 50.3309, 'train_samples_per_second': 2.98, 'train_steps_per_second': 0.199, 'train_loss': 3.3179595828056336, 'epoch': 5.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to /workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep5_bs2_lr1e-3_r8_layers10_noGenQA
+Starting benchmark...
+model_name: Qwen/Qwen3-8B
+adapter_path: /workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep5_bs2_lr1e-3_r8_layers10_noGenQA
+needle_size: 32768
+needle_type: qa_1
+max_samples: 100
+output_file: benchmark_results.json
+benchmark: all
+perplexity_texts: None
+mmlu_subset: all
+glue_task: all
+batch_size: 2
+Using data file: needles/32768/qa_1_32768.json
+Loading model...
+
+=== Running QA Benchmark ===
+Loading test data...
+Loading QA data from needles/32768/qa_1_32768.json
+Successfully loaded 30 items from JSON file
+Evaluating on 30 samples
+Generating predictions with batch size 2...
+
+--- Sample Results ---
+
+Sample 1:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+Expected: France
+Predicted: The answer is France
+
+Sample 2:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+Expected: 10th and 11th centuries
+Predicted: <think>
+Okay, let's see. The user is asking when the Normans were in Normandy. I need to answer based on the given documents, but there are no documents provided here. Wait, maybe the user forgot to include them? Since there's no context, I should rely on general knowledge.
+
+The Normans are a historical group from the region of Normandy in France. The term "Normans" refers to the people who inhabited Normandy during the early medieval period. The region
+
+Sample 3:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+Expected: Denmark, Iceland and Norway
+Predicted: <think>
+Okay, the user is asking about the countries from which the Norse originated. Let me recall what I know. The Norse people, also known as Vikings, were from the regions of Scandinavia. That includes present-day Norway, Sweden, and Denmark. I should check if the documents mention any other areas, but based on my existing knowledge, those three countries are the primary ones. The answer should list these three countries. Let me make sure there's no confusion with other regions like Iceland or
+Evaluating...
+
+=== QA Benchmark Results ===
+Exact Accuracy: 0.000
+Partial Accuracy: 0.233
+Exact Matches: 0/30
+Partial Matches: 7/30
+
+=== Running Perplexity Benchmark ===
+Calculating perplexity on 5 texts...
+Perplexity: 10.757
+Average Loss: 2.376
+Total Tokens: 54
+
+=== Running GLUE Benchmark ===
+Running GLUE task: sst2
+Running GLUE task: mrpc
+Running GLUE task: qnli
+Error in GLUE task qnli: 'premise'
+Average GLUE Score: 0.422
+sst2: 0.750
+mrpc: 0.515
+qnli: 0.000
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with settings...
+Needle size: 32768, Needle type: qa_1
+Epochs: 5, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 32768 --needle_type qa_1 --epochs 5 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir /workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep5_bs2_lr1e-3_r8_layers10_noGenQA
+
+Training completed successfully!

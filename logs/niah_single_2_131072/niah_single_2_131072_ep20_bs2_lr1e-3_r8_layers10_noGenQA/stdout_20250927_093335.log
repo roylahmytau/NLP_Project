@@ -1,0 +1,183 @@
+Using data file: needles/131072/niah_single_2_131072.json
+Loading data...
+Successfully loaded 10 items from JSON file
+Loaded 10 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 0
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 5.4040
+{'loss': 5.404, 'grad_norm': 3.270240068435669, 'learning_rate': 0.0, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 2: Loss = 5.4040, LR = 0.00e+00
+Step 2 (Epoch 2): Training Loss = 5.3865
+{'loss': 5.3865, 'grad_norm': 3.4261248111724854, 'learning_rate': 2e-05, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 3: Loss = 5.3865, LR = 2.00e-05
+Step 3 (Epoch 3): Training Loss = 5.3176
+{'loss': 5.3176, 'grad_norm': 3.327688694000244, 'learning_rate': 4e-05, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 4: Loss = 5.3176, LR = 4.00e-05
+Step 4 (Epoch 4): Training Loss = 5.1287
+{'loss': 5.1287, 'grad_norm': 3.073443651199341, 'learning_rate': 6e-05, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 5: Loss = 5.1287, LR = 6.00e-05
+Step 5 (Epoch 5): Training Loss = 4.8333
+{'loss': 4.8333, 'grad_norm': 3.040473461151123, 'learning_rate': 8e-05, 'epoch': 5.0}
+
+--- Starting Epoch 6 ---
+Step 6: Loss = 4.8333, LR = 8.00e-05
+Step 6 (Epoch 6): Training Loss = 4.4836
+{'loss': 4.4836, 'grad_norm': 3.451406955718994, 'learning_rate': 0.0001, 'epoch': 6.0}
+
+--- Starting Epoch 7 ---
+Step 7: Loss = 4.4836, LR = 1.00e-04
+Step 7 (Epoch 7): Training Loss = 4.0323
+{'loss': 4.0323, 'grad_norm': 3.2922184467315674, 'learning_rate': 0.00012, 'epoch': 7.0}
+
+--- Starting Epoch 8 ---
+Step 8: Loss = 4.0323, LR = 1.20e-04
+Step 8 (Epoch 8): Training Loss = 3.6273
+{'loss': 3.6273, 'grad_norm': 2.9466640949249268, 'learning_rate': 0.00014000000000000001, 'epoch': 8.0}
+
+--- Starting Epoch 9 ---
+Step 9: Loss = 3.6273, LR = 1.40e-04
+Step 9 (Epoch 9): Training Loss = 3.3220
+{'loss': 3.322, 'grad_norm': 3.016545057296753, 'learning_rate': 0.00016, 'epoch': 9.0}
+
+--- Starting Epoch 10 ---
+Step 10: Loss = 3.3220, LR = 1.60e-04
+Step 10 (Epoch 10): Training Loss = 2.9800
+{'loss': 2.98, 'grad_norm': 2.6154725551605225, 'learning_rate': 0.00017999999999999998, 'epoch': 10.0}
+
+--- Starting Epoch 11 ---
+Step 11: Loss = 2.9800, LR = 1.80e-04
+Step 11 (Epoch 11): Training Loss = 2.6422
+{'loss': 2.6422, 'grad_norm': 2.216460943222046, 'learning_rate': 0.0002, 'epoch': 11.0}
+
+--- Starting Epoch 12 ---
+Step 12: Loss = 2.6422, LR = 2.00e-04
+Step 12 (Epoch 12): Training Loss = 2.3157
+{'loss': 2.3157, 'grad_norm': 1.8865926265716553, 'learning_rate': 0.00022, 'epoch': 12.0}
+
+--- Starting Epoch 13 ---
+Step 13: Loss = 2.3157, LR = 2.20e-04
+Step 13 (Epoch 13): Training Loss = 1.9900
+{'loss': 1.99, 'grad_norm': 1.839633822441101, 'learning_rate': 0.00024, 'epoch': 13.0}
+
+--- Starting Epoch 14 ---
+Step 14: Loss = 1.9900, LR = 2.40e-04
+Step 14 (Epoch 14): Training Loss = 1.6593
+{'loss': 1.6593, 'grad_norm': 2.24124813079834, 'learning_rate': 0.00026000000000000003, 'epoch': 14.0}
+
+--- Starting Epoch 15 ---
+Step 15: Loss = 1.6593, LR = 2.60e-04
+Step 15 (Epoch 15): Training Loss = 1.3382
+{'loss': 1.3382, 'grad_norm': 9.126411437988281, 'learning_rate': 0.00028000000000000003, 'epoch': 15.0}
+
+--- Starting Epoch 16 ---
+Step 16: Loss = 1.3382, LR = 2.80e-04
+Step 16 (Epoch 16): Training Loss = 1.1316
+{'loss': 1.1316, 'grad_norm': 6.126347541809082, 'learning_rate': 0.0003, 'epoch': 16.0}
+
+--- Starting Epoch 17 ---
+Step 17: Loss = 1.1316, LR = 3.00e-04
+Step 17 (Epoch 17): Training Loss = 0.9428
+{'loss': 0.9428, 'grad_norm': 3.4263525009155273, 'learning_rate': 0.00032, 'epoch': 17.0}
+
+--- Starting Epoch 18 ---
+Step 18: Loss = 0.9428, LR = 3.20e-04
+Step 18 (Epoch 18): Training Loss = 0.8290
+{'loss': 0.829, 'grad_norm': 4.011786937713623, 'learning_rate': 0.00034, 'epoch': 18.0}
+
+--- Starting Epoch 19 ---
+Step 19: Loss = 0.8290, LR = 3.40e-04
+Step 19 (Epoch 19): Training Loss = 0.7729
+{'loss': 0.7729, 'grad_norm': 3.860168933868408, 'learning_rate': 0.00035999999999999997, 'epoch': 19.0}
+
+--- Starting Epoch 20 ---
+Step 20: Loss = 0.7729, LR = 3.60e-04
+Step 20 (Epoch 20): Training Loss = 0.6705
+{'loss': 0.6705, 'grad_norm': 1.4879482984542847, 'learning_rate': 0.00038, 'epoch': 20.0}
+{'train_runtime': 60.3544, 'train_samples_per_second': 3.314, 'train_steps_per_second': 0.331, 'train_loss': 2.940369737148285, 'epoch': 20.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to /workspace/NLP_Project/adapters/niah_single_2_131072/niah_single_2_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA
+Starting benchmark...
+model_name: Qwen/Qwen3-8B
+adapter_path: /workspace/NLP_Project/adapters/niah_single_2_131072/niah_single_2_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA
+needle_size: 131072
+needle_type: niah_single_2
+max_samples: 100
+output_file: benchmark_results.json
+benchmark: all
+perplexity_texts: None
+mmlu_subset: all
+glue_task: all
+batch_size: 2
+Using data file: needles/131072/niah_single_2_131072.json
+Loading model...
+
+=== Running QA Benchmark ===
+Loading test data...
+Loading QA data from needles/131072/niah_single_2_131072.json
+Successfully loaded 10 items from JSON file
+Evaluating on 10 samples
+Generating predictions with batch size 2...
+
+--- Sample Results ---
+
+Sample 1:
+Question: What is the special magic number for roasted-drill mentioned in the provided text?
+Expected: 5107245
+Predicted: 9418762
+
+Sample 2:
+Question: What is the special magic number for lovely-basil mentioned in the provided text?
+Expected: 5528972
+Predicted: 9418767
+
+Sample 3:
+Question: What is the special magic number for aggressive-position mentioned in the provided text?
+Expected: 6292423
+Predicted: user
+Evaluating...
+
+=== QA Benchmark Results ===
+Exact Accuracy: 0.000
+Partial Accuracy: 0.000
+Exact Matches: 0/10
+Partial Matches: 0/10
+
+=== Running Perplexity Benchmark ===
+Calculating perplexity on 5 texts...
+Perplexity: 9.938
+Average Loss: 2.296
+Total Tokens: 54
+
+=== Running GLUE Benchmark ===
+Running GLUE task: sst2
+Running GLUE task: mrpc
+Running GLUE task: qnli
+Error in GLUE task qnli: 'premise'
+Average GLUE Score: 0.167
+sst2: 0.500
+mrpc: 0.000
+qnli: 0.000
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with settings...
+Needle size: 131072, Needle type: niah_single_2
+Epochs: 20, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 131072 --needle_type niah_single_2 --epochs 20 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir /workspace/NLP_Project/adapters/niah_single_2_131072/niah_single_2_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA
+
+Training completed successfully!

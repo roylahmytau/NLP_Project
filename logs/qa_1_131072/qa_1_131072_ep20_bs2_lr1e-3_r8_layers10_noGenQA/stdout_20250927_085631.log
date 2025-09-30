@@ -1,0 +1,190 @@
+Using data file: needles/131072/qa_1_131072.json
+Loading data...
+Successfully loaded 10 items from JSON file
+Loaded 10 examples
+Creating model...
+Trainable parameters: 21,823,488
+Total parameters: 4,739,675,136
+Trainable %: 0.46%
+Starting training...
+Total training steps: 0
+==================================================
+
+--- Starting Epoch 1 ---
+Step 1 (Epoch 1): Training Loss = 4.0011
+{'loss': 4.0011, 'grad_norm': 3.7630081176757812, 'learning_rate': 0.0, 'epoch': 1.0}
+
+--- Starting Epoch 2 ---
+Step 2: Loss = 4.0011, LR = 0.00e+00
+Step 2 (Epoch 2): Training Loss = 4.0793
+{'loss': 4.0793, 'grad_norm': 3.8667991161346436, 'learning_rate': 2e-05, 'epoch': 2.0}
+
+--- Starting Epoch 3 ---
+Step 3: Loss = 4.0793, LR = 2.00e-05
+Step 3 (Epoch 3): Training Loss = 3.9885
+{'loss': 3.9885, 'grad_norm': 3.7978386878967285, 'learning_rate': 4e-05, 'epoch': 3.0}
+
+--- Starting Epoch 4 ---
+Step 4: Loss = 3.9885, LR = 4.00e-05
+Step 4 (Epoch 4): Training Loss = 3.7440
+{'loss': 3.744, 'grad_norm': 3.6119344234466553, 'learning_rate': 6e-05, 'epoch': 4.0}
+
+--- Starting Epoch 5 ---
+Step 5: Loss = 3.7440, LR = 6.00e-05
+Step 5 (Epoch 5): Training Loss = 3.4347
+{'loss': 3.4347, 'grad_norm': 3.1510939598083496, 'learning_rate': 8e-05, 'epoch': 5.0}
+
+--- Starting Epoch 6 ---
+Step 6: Loss = 3.4347, LR = 8.00e-05
+Step 6 (Epoch 6): Training Loss = 3.0404
+{'loss': 3.0404, 'grad_norm': 2.790018081665039, 'learning_rate': 0.0001, 'epoch': 6.0}
+
+--- Starting Epoch 7 ---
+Step 7: Loss = 3.0404, LR = 1.00e-04
+Step 7 (Epoch 7): Training Loss = 2.8259
+{'loss': 2.8259, 'grad_norm': 2.981192111968994, 'learning_rate': 0.00012, 'epoch': 7.0}
+
+--- Starting Epoch 8 ---
+Step 8: Loss = 2.8259, LR = 1.20e-04
+Step 8 (Epoch 8): Training Loss = 2.4643
+{'loss': 2.4643, 'grad_norm': 2.9011099338531494, 'learning_rate': 0.00014000000000000001, 'epoch': 8.0}
+
+--- Starting Epoch 9 ---
+Step 9: Loss = 2.4643, LR = 1.40e-04
+Step 9 (Epoch 9): Training Loss = 2.0272
+{'loss': 2.0272, 'grad_norm': 2.5244836807250977, 'learning_rate': 0.00016, 'epoch': 9.0}
+
+--- Starting Epoch 10 ---
+Step 10: Loss = 2.0272, LR = 1.60e-04
+Step 10 (Epoch 10): Training Loss = 1.6339
+{'loss': 1.6339, 'grad_norm': 2.4398465156555176, 'learning_rate': 0.00017999999999999998, 'epoch': 10.0}
+
+--- Starting Epoch 11 ---
+Step 11: Loss = 1.6339, LR = 1.80e-04
+Step 11 (Epoch 11): Training Loss = 1.2462
+{'loss': 1.2462, 'grad_norm': 1.9522755146026611, 'learning_rate': 0.0002, 'epoch': 11.0}
+
+--- Starting Epoch 12 ---
+Step 12: Loss = 1.2462, LR = 2.00e-04
+Step 12 (Epoch 12): Training Loss = 0.9755
+{'loss': 0.9755, 'grad_norm': 1.9587000608444214, 'learning_rate': 0.00022, 'epoch': 12.0}
+
+--- Starting Epoch 13 ---
+Step 13: Loss = 0.9755, LR = 2.20e-04
+Step 13 (Epoch 13): Training Loss = 0.7654
+{'loss': 0.7654, 'grad_norm': 2.6862399578094482, 'learning_rate': 0.00024, 'epoch': 13.0}
+
+--- Starting Epoch 14 ---
+Step 14: Loss = 0.7654, LR = 2.40e-04
+Step 14 (Epoch 14): Training Loss = 0.6221
+{'loss': 0.6221, 'grad_norm': 2.2361910343170166, 'learning_rate': 0.00026000000000000003, 'epoch': 14.0}
+
+--- Starting Epoch 15 ---
+Step 15: Loss = 0.6221, LR = 2.60e-04
+Step 15 (Epoch 15): Training Loss = 0.5945
+{'loss': 0.5945, 'grad_norm': 2.2641730308532715, 'learning_rate': 0.00028000000000000003, 'epoch': 15.0}
+
+--- Starting Epoch 16 ---
+Step 16: Loss = 0.5945, LR = 2.80e-04
+Step 16 (Epoch 16): Training Loss = 0.5213
+{'loss': 0.5213, 'grad_norm': 1.8158189058303833, 'learning_rate': 0.0003, 'epoch': 16.0}
+
+--- Starting Epoch 17 ---
+Step 17: Loss = 0.5213, LR = 3.00e-04
+Step 17 (Epoch 17): Training Loss = 0.4525
+{'loss': 0.4525, 'grad_norm': 1.1140111684799194, 'learning_rate': 0.00032, 'epoch': 17.0}
+
+--- Starting Epoch 18 ---
+Step 18: Loss = 0.4525, LR = 3.20e-04
+Step 18 (Epoch 18): Training Loss = 0.4002
+{'loss': 0.4002, 'grad_norm': 0.8628241419792175, 'learning_rate': 0.00034, 'epoch': 18.0}
+
+--- Starting Epoch 19 ---
+Step 19: Loss = 0.4002, LR = 3.40e-04
+Step 19 (Epoch 19): Training Loss = 0.3534
+{'loss': 0.3534, 'grad_norm': 0.7167896032333374, 'learning_rate': 0.00035999999999999997, 'epoch': 19.0}
+
+--- Starting Epoch 20 ---
+Step 20: Loss = 0.3534, LR = 3.60e-04
+Step 20 (Epoch 20): Training Loss = 0.2957
+{'loss': 0.2957, 'grad_norm': 0.6812992691993713, 'learning_rate': 0.00038, 'epoch': 20.0}
+{'train_runtime': 62.4095, 'train_samples_per_second': 3.205, 'train_steps_per_second': 0.32, 'train_loss': 1.8732962787151337, 'epoch': 20.0}
+==================================================
+Saving adapter...
+Training complete! Adapter saved to /workspace/NLP_Project/adapters/qa_1_131072/qa_1_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA
+Starting benchmark...
+model_name: Qwen/Qwen3-8B
+adapter_path: /workspace/NLP_Project/adapters/qa_1_131072/qa_1_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA
+needle_size: 131072
+needle_type: qa_1
+max_samples: 100
+output_file: benchmark_results.json
+benchmark: all
+perplexity_texts: None
+mmlu_subset: all
+glue_task: all
+batch_size: 2
+Using data file: needles/131072/qa_1_131072.json
+Loading model...
+
+=== Running QA Benchmark ===
+Loading test data...
+Loading QA data from needles/131072/qa_1_131072.json
+Successfully loaded 10 items from JSON file
+Evaluating on 10 samples
+Generating predictions with batch size 2...
+
+--- Sample Results ---
+
+Sample 1:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+Expected: France
+Predicted: Human
+Human
+
+Sample 2:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+Expected: 10th and 11th centuries
+Predicted: 10th and 11th centuries
+
+Sample 3:
+Question: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+Expected: Denmark, Iceland and Norway
+Predicted: Denmark, Iceland and Norway
+Evaluating...
+
+=== QA Benchmark Results ===
+Exact Accuracy: 0.400
+Partial Accuracy: 0.500
+Exact Matches: 4/10
+Partial Matches: 1/10
+
+=== Running Perplexity Benchmark ===
+Calculating perplexity on 5 texts...
+Perplexity: 9.964
+Average Loss: 2.299
+Total Tokens: 54
+
+=== Running GLUE Benchmark ===
+Running GLUE task: sst2
+Running GLUE task: mrpc
+Running GLUE task: qnli
+Error in GLUE task qnli: 'premise'
+Average GLUE Score: 0.241
+sst2: 0.640
+mrpc: 0.082
+qnli: 0.000
+
+Detailed results saved to benchmark_results.json
+Starting LoRA training with settings...
+Needle size: 131072, Needle type: qa_1
+Epochs: 20, Batch size: 2, Learning rate: 0.001
+Command: python train_lora_optimized.py --model_name Qwen/Qwen3-8B --needle_size 131072 --needle_type qa_1 --epochs 20 --batch_size 2 --learning_rate 0.001 --adapter_r 8 --adapter_layers 10 --output_dir /workspace/NLP_Project/adapters/qa_1_131072/qa_1_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA
+
+Training completed successfully!
