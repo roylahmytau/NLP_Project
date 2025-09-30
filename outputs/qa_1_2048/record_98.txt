@@ -1,0 +1,40 @@
+To date, it remains unsolved.
+Q1: What does the complexity class P represent?
+A1: Computational tasks that admit an efficient algorithm.
+Q2: According to the Cobham-Edmonds thesis, what is the relationship between the complexity class P and efficient algorithms?
+A2: P is often seen as a mathematical abstraction modeling those computational tasks that admit an efficient algorithm.
+Q3: Which complexity class contains problems that people would like to solve efficiently, but for which no efficient algorithm is known?
+A3: NP.
+Q4: How does the complexity class NP relate to deterministic Turing machines?
+A4: NP contains problems that are not necessarily solvable by deterministic Turing machines efficiently.
+Q5: What is a deterministic Turing machine?
+A5: A deterministic Turing machine is the most basic Turing machine, which uses a fixed set of rules to determine its future actions.
+Q6: Can a deterministic Turing machine solve all problems in the class NP?
+A6: No, deterministic Turing machines cannot solve all problems in the class NP efficiently.
+Q7: What is a non-deterministic Turing machine?
+A7: A non-deterministic Turing machine is a deterministic Turing machine with an added feature of non-determinism, allowing multiple possible future actions from a given state.
+Q8: How does a non-deterministic Turing machine solve problems?
+A8: A non-deterministic Turing machine solves a problem if it finds a solution in any of its computational paths.
+Q9: Is the non-deterministic Turing machine a physically realizable model?
+A9: No, it is a theoretically interesting abstract machine.
+Q10: What is the worst-case time complexity T(n) defined as?
+A10: The worst-case time complexity T(n) is defined as the maximum time taken over all inputs of size n.
+Q11: Under what condition is an algorithm considered a polynomial time algorithm?
+A11: An algorithm is considered a polynomial time algorithm if T(n) is a polynomial in n.
+Q12: What does Cobham's thesis state about problems with polynomial time algorithms?
+A12: Cobham's thesis states that a problem can be solved with a feasible amount of resources if it admits a polynomial time algorithm.
+Q13: What is a function problem?
+A13: A function problem is a computational problem where a single output (of a total function) is expected for every input, and the output is more complex than a simple yes or no.
+Q14: What does the big O notation hide when expressing the time complexity of an algorithm?
+A14: Big O notation hides constant factors and smaller terms.
+Q15: What is the relationship between computational problems and Turing machines?
+A15: Computational problems are understood to be tasks that are in principle amenable to being solved by a computer, equivalent to solving problems by mechanical application of mathematical steps, such as an algorithm.
+Q16: What are some examples of complexity classes mentioned in the document?
+A16: Examples include P, NP, BPP, ZPP, RP, AC, NC, BQP, QMA, #P, IP, AM, ALL.
+Q17: What is the significance of the P versus NP problem?
+A17: The P versus NP problem is one of the most important open questions in theoretical computer science because a solution could lead to more efficient solutions for many important problems.
+Q18: Why is the P versus NP problem considered one of the Millennium Prize Problems?
+A18: It is considered one of the Millennium Prize Problems proposed by the Clay Mathematics Institute, with a US$1,000,000 prize for resolving the problem.
+Q19: What does the complexity class L represent?
+A19: L represents the set of all problems that can be solved in logarithmic space.
+Q20: What is the status of the relationship

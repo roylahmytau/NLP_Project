@@ -1,0 +1,15 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": "/workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep20_bs2_lr1e-3_r8_layers10_noGenQA",
+  "needle_size": "2048",
+  "needle_type": "qa_1",
+  "data_file": "needles/2048/qa_1_2048.json",
+  "benchmark_type": "perplexity",
+  "results": {
+    "perplexity": {
+      "perplexity": 18.363590500695814,
+      "average_loss": 2.910369927112854,
+      "total_tokens": 11644
+    }
+  }
+}

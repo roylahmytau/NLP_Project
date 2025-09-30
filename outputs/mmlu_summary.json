@@ -1,0 +1,72 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": "adapter",
+  "needle_size": "2048",
+  "needle_type": "qa_1",
+  "data_file": "needles/2048/qa_1_2048.json",
+  "benchmark_type": "mmlu",
+  "results": {
+    "mmlu_multi_adapter": {
+      "adapter_1": {
+        "adapter_path": "/workspace/NLP_Project/adapters/ep0_bs2_lr1e-3_r8_layers10",
+        "results": {
+          "anatomy": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 100
+          },
+          "astronomy": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 100
+          },
+          "abstract_algebra": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 100
+          }
+        }
+      },
+      "adapter_2": {
+        "adapter_path": "/workspace/NLP_Project/adapters/qa_1_32768/qa_1_32768_ep20_bs2_lr1e-3_r8_layers10_noGenQA",
+        "results": {
+          "anatomy": {
+            "accuracy": 0.52,
+            "correct": 52,
+            "total": 100
+          },
+          "astronomy": {
+            "accuracy": 0.59,
+            "correct": 59,
+            "total": 100
+          },
+          "abstract_algebra": {
+            "accuracy": 0.51,
+            "correct": 51,
+            "total": 100
+          }
+        }
+      },
+      "adapter_3": {
+        "adapter_path": "/workspace/NLP_Project/adapters/qa_1_131072/qa_1_131072_ep20_bs2_lr1e-3_r8_layers10_noGenQA",
+        "results": {
+          "anatomy": {
+            "accuracy": 0.27,
+            "correct": 27,
+            "total": 100
+          },
+          "astronomy": {
+            "accuracy": 0.1,
+            "correct": 10,
+            "total": 100
+          },
+          "abstract_algebra": {
+            "accuracy": 0.01,
+            "correct": 1,
+            "total": 100
+          }
+        }
+      }
+    }
+  }
+}

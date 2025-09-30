@@ -1,0 +1,10 @@
+Q1: What measure of a computational problem broadly defines the inherent difficulty of the solution?
+A1: The amount of resources required to solve the problem, such as time and storage.
+Q2: According to Document 9, what is a key reason why Turing machines are widely used in complexity theory?
+A2: Turing machines are easy to analyze mathematically and are believed to be as powerful as any other model of computation.
+Q3: From Document 10, what aspect of computational problems does complexity theory primarily focus on when measuring difficulty?
+A3: Complexity theory focuses on how algorithms scale with an increase in the input size.
+Q4: In Document 11, what is the significance of non-deterministic Turing machines in computational problem analysis?
+A4: Non-deterministic Turing machines capture many of the mathematical models we want to analyze, making non-deterministic time an important resource in analyzing computational problems.
+Q5: Based on Document 12, under what condition is a computational problem considered inherently difficult?
+A5: A problem is considered inherently difficult if its solution requires significant resources, regardless of the algorithm used.

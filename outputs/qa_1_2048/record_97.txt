@@ -1,0 +1,29 @@
+Document 15:
+In 1994, Peter Shor discovered a polynomial-time quantum algorithm for factoring integers, which would allow any integer factorization problem to be efficiently solved by a quantum computer. This algorithm has profound implications for cryptography because it enables efficient solutions to problems which were long thought to be intractable, including the integer factorization and discrete logarithm problems. This implies that public key cryptography, which relies on the difficulty of these problems, would be insecure against an attack by a quantum computer. Shor's algorithm represents a dramatic departure from classical computation, where there is no known polynomial-time algorithm for factorization.
+
+Document 16:
+Quantum Turing machines are similar to ordinary Turing machines except that the memory tape is a quantum system. In contrast to the usual case in which the state of the machine is classical, the state of a quantum Turing machine is described by a superposition of states. Quantum Turing machines have been used to prove lower bounds on the quantum query complexity of Boolean functions.
+
+Document 17:
+It is widely believed that P ≠ NP. However, this has never been proven. The Clay Mathematics Institute has offered a $1,000,000 prize for resolving the question of whether P equals NP. Despite extensive efforts by theoretical computer scientists to find a proof, the question remains open. It is one of the seven Millennium Prize Problems.
+
+Document 18:
+There are several ways to define complexity classes. One way is to use Turing machines as the foundation. Another approach is to use Boolean circuits, which are a model of parallel computation. Still another approach is to use interactive proof systems, where a prover and a verifier interact to determine whether a statement is true or false. Each of these approaches gives rise to different complexity classes, such as P, NP, BPP, and IP.
+
+Document 19:
+Another important complexity class is NP-hard. A problem is NP-hard if every problem in NP can be reduced to it in polynomial time. An NP-complete problem is an NP-hard problem that is also in NP. Therefore, if any NP-complete problem can be solved in polynomial time, then all problems in NP can be solved in polynomial time. This would imply that P = NP, which is a famous open question in computer science.
+
+Document 20:
+The complexity class BQP (bounded-error quantum polynomial time) is the set of decision problems solvable by a quantum computer in polynomial time, with an error probability of at most 1/3 for all instances. It is the quantum analogue of the classical complexity class BPP. BQP contains P, BPP, and is contained in PP and EF. The existence of BQP raises interesting questions about the power of quantum computers compared to classical ones.
+Q1: What is a non-deterministic Turing machine?
+A1: A computational model that is allowed to branch out to check many different possibilities at once.
+Q2: How does non-deterministic time relate to analyzing computational problems?
+A2: Non-deterministic time is a very important resource in analyzing computational problems because its branching captures many of the mathematical models we want to analyze.
+Q3: What is the significance of the P versus NP problem according to Document 2?
+A3: It is one of the most important open questions in theoretical computer science due to its wide implications.
+Q4: What kind of problems can be efficiently solved if P equals NP?
+A4: Many important problems can be shown to have more efficient solutions, including various types of integer programming problems, problems in logistics, protein structure prediction, and finding formal proofs of pure mathematics theorems.
+Q5: How much money is offered for solving the P versus NP problem?
+A5: US$1,000,000.
+Q6: What is an example of a decision problem mentioned in Document 3?
+A6: The problem of deciding whether a given graph

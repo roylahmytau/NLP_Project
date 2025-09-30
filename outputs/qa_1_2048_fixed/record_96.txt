@@ -1,0 +1,14 @@
+Q1: What branch of theoretical computer science deals with broadly classifying computational problems by difficulty and class of relationship?
+A1: Computational complexity theory
+
+Q2: According to the document, what does Cobham's thesis state about problems that admit a polynomial time algorithm?
+A2: Cobham's thesis states that a problem can be solved with a feasible amount of resources if it admits a polynomial time algorithm.
+
+Q3: Which theorem helps in understanding the relationship between time and space requirements for solving problems?
+A3: The time and space hierarchy theorems help in understanding the relationship between time and space requirements for solving problems.
+
+Q4: What is the time complexity of the best known quantum algorithm for integer factorization, as mentioned in the document?
+A4: The best known quantum algorithm for integer factorization, Shor's algorithm, runs in polynomial time.
+
+Q5: How is the worst-case time complexity T(n) defined for a given input size n?
+A5: The worst-case time complexity T(n) is defined to be the maximum time taken over all inputs of size n.

@@ -1,0 +1,1696 @@
+⏱️  Imports started at 1758913833.88
+⏱️  Transformers imported at 1758913924.64
+⏱️  All imports completed at 1758913924.70
+Using existing Hugging Face cache directory: /root/.cache/huggingface
+🚀 Initializing RAG model (this happens only once)...
+Using device: cuda
+GPU: NVIDIA RTX 4000 Ada Generation
+GPU Memory: 19.7 GB
+📥 Loading Qwen3-8B model using train_lora_optimized.py approach...
+✅ Model loaded successfully!
+Extracted 100 complete Q&A pairs from needles/2048/qa_1_2048.jsonl
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5800.2 MB allocated, 7330.0 MB reserved
+GPU Memory before inference: 5800.2 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: n which country Normandy is located. Let me check the provided context first. The documents mention Norman mercenaries serving in the Byzantine Empire, places like Trebizond, Georgia, Malatya, Edessa, and Asia Minor. There's also reference to French Wars of Religion and French Revolution. 
+
+Wait, the question is about the country where Normandy is located. The context doesn't explicitly state the country. However, Normandy is a region in France. But the documents provided don't mention France directly. They talk about Normans being mercenaries in the Byzantine Empire, which is in modern-day Turkey and surrounding areas. The French Wars of Religion and French Revolution are mentioned, which are events in France. But the context doesn't explicitly say that Normandy is in France. Since the answer isn't in the context, I should respond with 'I don't know' based on the instructions. But wait, the user might expect common knowledge.
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7408.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: ion is asking when the Normans were in Normandy. The context provided talks about the Normans giving their name to Normandy in the 10th and 11th centuries. It mentions that they were the people who named the region during that time. The rest of the context discusses the customary law developed between the 10th and 13th centuries, but the key point here is the time period when the Normans were present.
+
+So, the answer should be the 10th and 11th centuries. The documents state that the Normans gave their name to Normandy during those centuries, which indicates when they were there. The other dates mentioned (like the 1200-1245 for the customaries) are about legal records, not the original presence of the Normans. Therefore, the correct answer is the 10th and 11th centuries.
+</think>
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 11 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7408.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the countries from which the Norse originated. The context provided talks about the Norman aristocracy, Anglo-Norman language, and mentions Norse language as one of the influences on Middle English. But wait, the question is about the Norse people's origin countries.
+
+Looking at the context, it mentions "the Norse language of the earlier Anglo-Norse settlers." The term "Anglo-Norse" suggests a mix of Anglo-Saxon and Norse, but the original Norse people were from Scandinavia. However, the context doesn't explicitly name the countries. The documents refer to Normans, who were from Normandy, France, but that's a different group. The Norse settlers in England were from Scandinavia, but the context doesn't specify which countries. Since the answer isn't directly stated in the provided text, I should check if there's any mention of specific countries. The context mentions Trebizond and Georgia, but those are regions,
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking, "Who was the Norse leader?" based on the provided context.
+
+First, I need to look through the context given. The documents mention the Normans, who are descended from Norse people. The text talks about Hervé, Robert Crispin, and Roussel de Bailleul as Norman mercenaries. There's also mention of Isaac Komnenos and Alexius Komnenos as Byzantine generals. 
+
+Wait, the question is about a Norse leader. The context starts by explaining that the Normans were descended from Norse (Viking) settlers. However, the specific leaders mentioned in the context are Hervé, Robert Crispin, and Roussel de Bailleul. But are these considered Norse leaders? The text refers to them as Norman mercenaries, not necessarily Norse leaders. The Norse leader might be someone else mentioned, but the context doesn't explicitly name a Norse leader. 
+
+The key point here is that
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: estion. The user is asking about the century when the Normans first gained their separate identity based on the provided context.
+
+First, I need to look at the context given. The documents mention that in the early 11th century, the dukes started a programme of church reform. They talk about Cluniac reform of monasteries, scriptoria, and compiling manuscripts. The church was used as a unifying force for the duchy. 
+
+The key point here is the time period mentioned: early 11th century. The question is about when the Normans first gained their separate identity. The context doesn't explicitly state the century when they gained their identity, but it does mention the early 11th century as when the dukes initiated these reforms. However, the Normans' separate identity might have been formed earlier, perhaps during their time in Normandy before the conquest of England. But the context provided doesn't mention
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: ion is asking who the duke was in the Battle of Hastings. From the context provided, it mentions Duke William II of Normandy conquered England in 1066. The Battle of Hastings is where he defeated King Harold II. So the duke involved there would be William, Duke of Normandy. The answer should be William the Conqueror, but the context refers to him as Duke William II. Wait, the title here might be a bit confusing. The context says "Duke William II of Normandy," so his full title would be William II, Duke of Normandy. But historically, he's known as William the Conqueror. However, the question is based strictly on the given context. The context doesn't mention his nickname "the Conqueror," but it does refer to him as Duke William II. So according to the documents provided, the answer should be William II, Duke of Normandy. I need to make
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: ion is asking who ruled the Duchy of Normandy based on the provided context.
+
+First, I need to go through the context documents again. The first part talks about Emma of Normandy and her marriage to King Ethelred II, but that's more about the connection between Normandy and England. Then it mentions the Norman dynasty's impact, their language, and the Duchy of Normandy. 
+
+Looking for specific rulers mentioned. The text says, "The Duchy of Normandy, which they formed by treaty with the French crown, was a great fief of medieval France, and under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure." So Richard I of Normandy is mentioned as the ruler under whom the Duchy was forged. 
+
+Wait, but the question is about who ruled the Duchy. The context mentions Richard I of Normandy in the context of forming the Duchy. However,
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: ion is asking what religion the Normans were. I need to check the provided context to find the answer.
+
+Looking through the context, the first paragraph mentions that the Normans "becoming exponents of the Catholic orthodoxy into which they assimilated." That suggests they were Catholic. Later, it also talks about their Christian piety. There's also mention of their adoption of the Gallo-Romance language and their cultural aspects, but the key point here is the reference to Catholic orthodoxy. 
+
+I don't see any mention of them being followers of another religion like Islam or something else. The context focuses on their Christian practices and their influence in the Catholic Church. So the answer should be Catholic.
+</think>
+
+Catholic
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." The context provided talks about the Normans invading Ireland in 1169 and their cultural impact. It mentions they initially maintained a distinct culture but later merged into Irish culture. However, the context doesn't seem to explain the etymology or original meaning of the term "Norman." The documents given are about their historical influence, not the linguistic roots of the word. Since the question is about the original meaning, which isn't addressed in the provided context, the answer should be that it's not covered here. So, I should respond with "I don't know" as per the instructions.
+</think>
+
+I don't know.
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. The context provided talks about the Normans entering Italy, their battles with the Pechenegs, Bulgars, and Seljuk Turks, their service under George Maniaces in 1038–40, and some debates about their origins.
+
+Wait, but the question is about the Latin term "Norman." The context doesn't mention anything about the etymology of the word or its Latin usage. It discusses historical events and military campaigns involving Normans but not the linguistic origin. The documents talk about their activities in Sicily, their mercenaries, and interactions with Byzantine Empire, but there's no information on when the Latin term was first recorded. 
+
+Since the answer isn't in the provided context, I should respond with "I don't know." The user might be expecting a historical linguistics answer, but the given documents don
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/2048/qa_1_2048.jsonl:
+Accuracy on needles/2048/qa_1_2048.jsonl: 5/10 = 50.00%
+Extracted 30 complete Q&A pairs from needles/32768/qa_1_32768.jsonl
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: is asking in which country Normandy is located. The context provided talks about civil disobedience and mentions courts distinguishing between two types. Wait, but there's no mention of Normandy or any country in the context. The documents given are about legal distinctions, not geographical locations. So the answer isn't in the context. I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: is asking when the Normans were in Normandy. The context provided talks about Germanic tribes crossing the Rhine during the Migration period in the 5th century, establishing kingdoms like Francia, Burgundy, and Alemannia. But the question is about the Normans in Normandy.
+
+Wait, the context doesn't mention the Normans at all. It's about Germanic tribes and kingdoms in the 5th century. The Normans are a different group, right? They were Norsemen who settled in Normandy, which is in northern France. But the given documents here don't talk about the Normans or their arrival in Normandy. So the answer isn't in the context. The user said if the answer isn't there, say 'I don't know'. So the answer should be that.
+</think>
+
+I don't know.
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the countries from which the Norse originated. I need to check the provided context to find the answer.
+
+Looking at the context documents: the first one talks about the Rhine-Meuse Delta and tidal influences. The second document discusses Warsaw's multicultural population with percentages of different religious groups. Neither of these documents mention anything about the Norse people or their origins. The Norse are typically associated with the North Germanic peoples, mainly from regions like modern-day Norway, Sweden, and Denmark, but the given context doesn't cover that. Since the question isn't addressed in the provided texts, the correct response should be 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking, "Who was the Norse leader?" and they provided some documents. But wait, the context mentioned here is just that the following are given documents, but there's no actual content in the documents provided. The user hasn't included any specific texts or information about Norse leaders.
+
+Hmm, the question is about a Norse leader. The Norse people were the ancient Germanic tribes, so possible leaders could be figures like Ragnar Lothbrok, Odin, or maybe someone from the Viking Age. But without any specific documents provided, I can't reference any particular text. The user might have forgotten to include the documents or there's a mistake. Since the answer must be based solely on the given context, and there's no context here except the mention of documents, which aren't actually provided, I can't derive any information. Therefore, the correct response would be 'I don't know' because there's no data to base the answer on
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: what century the Normans first gained their separate identity based on the given context. Let me start by recalling what I know about the Normans. The Normans were a people from the region of Normandy in France. Their history is closely tied to the Duchy of Normandy.
+
+The key point here is when they developed their separate identity. I remember that the Normans were originally Vikings who settled in Normandy. The Viking raids in the 9th century led to the establishment of the duchy. The first Duke of Normandy was Rollo, who was given the region by the French king in 911. This is significant because it marks the beginning of the duchy's formation, which would later become the foundation of the Norman identity.
+
+So, the 10th century would be when the duchy was established. The question is about the century when they first gained their separate identity. Since Rollo's
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: is asking about the duke in the battle of Hastings. The context provided is about the IPCC, the Intergovernmental Panel on Climate Change. It talks about its establishment, member organizations like WMO and UNEP, and its role in climate change reports.
+
+Wait, the question is about the Battle of Hastings. That historical event happened in 1066, right? The Battle of Hastings was a key event in the Norman conquest of England. The main figures involved were William the Conqueror, who was the Duke of Normandy. He defeated King Harold II of England. But the context given here is entirely about the IPCC and climate change. There's no mention of the Battle of Hastings, the Normans, or any historical events. 
+
+Since the answer isn't in the provided documents, I need to check if the user might be tricking me. But the instructions say if the answer isn't in the context, say
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: is asking, "Who ruled the duchy of Normandy?" I need to check the provided context to find the answer.
+
+Looking through the context given, the first part talks about Warsaw's architecture, communist authorities, and some historical buildings. Then there's a section about the 1340s with natural disasters, the Red Turban Rebellion, Toghtogha, Toghun Temür, and the Ming dynasty. The last part mentions Yingchang and some royal family members in Henan. 
+
+Wait, there's no mention of the duchy of Normandy here. The context is about Poland's architecture and a historical event in China. The duchy of Normandy is related to medieval French history, possibly the Normans. But none of the documents provided discuss Normandy or its rulers. The names mentioned are Toghun Temür, Zhu Yuanzhang, and others related to the Yuan dynasty and
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking, "What religion were the Normans?" I need to answer based on the given context. Let me check the context provided.
+
+The context mentions the Muslim Brotherhood in Palestine and the First Intifada in 1987. It talks about a historical period related to Palestinian politics and the Muslim Brotherhood. However, there's no mention of the Normans here. The Normans refer to the Norman people, who were a medieval European people, primarily from the region of Normandy in France. They were known for their involvement in the Crusades and other historical events. The context given doesn't provide any information about the Normans or their religion. Since the question is about the Normans and the context is about Palestinian history and the Muslim Brotherhood, there's no overlap. Therefore, the answer isn't in the context. The user might be testing if I can recognize when the context doesn't cover the question. So, I should
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." I need to check the provided context to find the answer.
+
+Looking at the context, the first paragraph talks about the Norman dynasty and their origins. It mentions that the Normans were a people who settled in Frankish land, adopting the Gallo-Romance language. The text says they formed the Duchy of Normandy through a treaty with the French crown. The term "Norman" is mentioned as a dialect that became Norman French. 
+
+Wait, the question is about the original meaning. The context doesn't explicitly state the original meaning of the word. It explains their cultural and military impact, their language, and their history. However, the term "Norman" refers to the people from the duchy of Normandy, which was established by the Rollo family. The original meaning would relate to their origin in Normandy. But the context doesn't provide the
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. The context provided mentions that in 1900, the Los Angeles Times defined southern California. But the question is about the Latin term for Norman.
+
+First, I need to check if the context documents have any information related to the Latin word "Norman." The given context only talks about the Los Angeles Times defining southern California in 1900. There's no mention of Latin terms or historical records of the word "Norman" in Latin. 
+
+Since the question is about the Latin version of "Norman," I should consider if the context provides any relevant data. The documents provided don't discuss Latin etymology or historical records of the word. Therefore, the answer isn't in the context. The user might be expecting knowledge beyond the given documents, but according to instructions, if the answer isn't in the context, I should say
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/32768/qa_1_32768.jsonl:
+Accuracy on needles/32768/qa_1_32768.jsonl: 2/10 = 20.00%
+Extracted 10 complete Q&A pairs from needles/131072/qa_1_131072.jsonl
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: this out. The user is asking in which country Normandy is located. The context provided talks about the English Channel and North Sea being re-inundated, and mentions Europe, the Rhine River, and events around 22,000 years ago. However, there's no direct mention of Normandy in the given documents.
+
+Wait, the user's question is about Normandy's location. From my general knowledge, Normandy is a region in northern France, bordering the English Channel. But the context here doesn't mention Normandy at all. The documents discuss climate changes, glaciers, river systems, and coastal areas like the English Channel and North Sea. However, there's no specific reference to Normandy. Since the answer isn't in the context provided, I should respond with 'I don't know' as per the instructions. But wait, maybe I'm missing something. Let me check again. The context mentions the English
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: is asking, "When were the Normans in Normandy?" I need to check the provided context to see if there's any information about the Normans or their presence in Normandy.
+
+Looking at the first document, it's about plant immune responses, talking about things like PAMPs, hypersensitive response, and systemic acquired resistance. Then the second document is about pharmacy informatics, discussing the role of pharmacy informaticists and their work in medication management systems. 
+
+Hmm, there's no mention of the Normans, Normandy, historical events, or anything related to that. The context is entirely focused on biology and pharmacy topics. Since the question is about the Normans in Normandy, which is a historical question, and the provided documents don't cover that, the answer would be that it's not in the context. The user also specified that if the answer isn't in the context, I should say 'I don't know
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the countries from which the Norse originated. I need to check the provided context to find the answer.
+
+Looking at the context given, the first part talks about earthquakes in southern California, the Northridge earthquake in 1994, and some details about a protest at a nuclear test site in 1957. The second part mentions the Committee for Non-Violent Action and the protest in Nevada. 
+
+Wait, there's no mention of the Norse people or their origins in any of these documents. The context is entirely about earthquakes and a protest. The Norse are ancient Germanic peoples, but the documents provided don't discuss their origins. Since the answer isn't in the context, I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking, "Who was the Norse leader?" I need to check the provided context to find the answer.
+
+Looking at the first document, it talks about the First British Empire, mercantilism, colonies in North America, the Caribbean, India. Then mentions the loss of American colonies in 1776, gains in India, Australia, and an informal empire in Latin America. Then free trade policy in the 1840s, dominance in world trade, expansion in Asia, Africa, Pacific. Defeat of Napoleon in 1815, a century of dominance, internal autonomy in colonies in the 20th century. 
+
+The second document discusses civil disobedience cases, consent searches, talking to police, Thoreau's writings. 
+
+Wait, the question is about the Norse leader. The Norse people were Vikings, right? But the context given here is about British Empire, colonial history, legal cases
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: is asking about when the Normans first gained their separate identity. The question is based on the provided context.
+
+Looking at the context given, it starts by talking about Paul Revere's ancestry, Huguenot refugees, Henry Laurens, Jack Jouett, Francis Marion, and other American Revolution figures. Then it mentions the Huguenot Society in America and some details about Major League Soccer teams in Los Angeles. 
+
+Wait, there's no mention of the Normans here. The documents discuss Huguenots, which are French Protestants, and their descendants in America. The Normans are a different group, related to the Norman Conquest of England in 1066. However, the provided context doesn't talk about the Normans at all. 
+
+The user's question is about the century when the Normans first gained their separate identity. Since the context doesn't provide any information about the Normans, their history
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: is asking about the duke in the battle of Hastings. First, I need to check the provided context documents to see if there's any mention of that.
+
+Looking at the first document, it's about the Ottoman Empire, mentioning Suleiman the Magnificent and the empire's territories. The second document talks about oxygen's electronegativity, metal oxidation, and FeO. Neither of these documents mention the Battle of Hastings or any dukes related to it. The Battle of Hastings is historically associated with William the Conqueror, but since the context doesn't include that information, I can't reference it. The answer must be based solely on the given documents. Since there's no relevant info here, the answer should be 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: is asking, "Who ruled the duchy of Normandy?" I need to check the provided context to find the answer.
+
+Looking at the context given, it's about Treaties, Directives, TFEU article 288, and stuff related to EU law. There's mention of Directives not giving citizens standing to sue other citizens, but nothing about historical regions like Normandy. The duchy of Normandy refers to a historical territory in northern France, which was part of the Frankish Empire and later became a duchy under various rulers. The most famous ruler associated with Normandy is William the Conqueror, Duke of Normandy, who became King of England after the Norman Conquest in 1066. However, the context provided doesn't mention any of this. It's focused on EU legal concepts, not medieval history. Since the answer isn't in the context, the correct response is
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: this out. The user is asking, "What religion were the Normans?" I need to check the provided context to see if there's any information about the Normans' religion.
+
+Looking at the context given: It mentions Federal safety standards, NHTSA, Federal Motor Vehicle Safety Standard 215, the 1974 Mustang I, and the DOT. There's nothing here about the Normans or their religion. The documents are all related to automotive safety regulations. 
+
+Since the question is about the Normans and their religion, but the context provided doesn't include any information on that topic, I can't derive the answer from the given documents. The answer isn't present here. I should respond with 'I don't know' as instructed.
+</think>
+
+I don't know
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." I need to check the provided context to find the answer.
+
+Looking at the context, the first part talks about complexity classes P and NP, then shifts to agricultural data about Victorian farmland, crops like wheat, barley, pears, tomatoes, etc. There's a mention of stone fruits, vegetables, and production statistics. 
+
+Wait, the entire context is about computer science concepts and Australian farming. There's no mention of the word "Norman" or its historical meaning. The term "Norman" might relate to a people group, like the Normans in medieval history, but that's not covered here. Since the documents provided don't contain any information about the origin or meaning of "Norman," the answer isn't in the context. 
+
+The user instructed that if the answer isn't in the context, I should say "I don't know." So, the
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. I need to check the provided context documents to find the answer.
+
+Looking at the first document, it talks about the origin of the word "pharmacy" and mentions Greek roots like pharmakos and pharmakeia. Then there's a part about Harvard's endowment history, including losses during the 2008 recession and budget cuts. The second document is about the word "pharmacy" and its roots, and the third is about Harvard's financials. 
+
+Wait, none of the documents mention the word "Norman" or anything related to Latin recordings of that term. The context is all about pharmacy etymology and Harvard's endowment. There's no information on the Latin version of "Norman" here. So the answer isn't in the provided texts. I should respond that I don't know.
+</think>
+
+I don't
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/131072/qa_1_131072.jsonl:
+Accuracy on needles/131072/qa_1_131072.jsonl: 2/10 = 20.00%
+Extracted 100 complete Q&A pairs from needles/2048/qa_1_2048.jsonl
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 8 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: is asking in which country Normandy is located. The documents provided talk about the French Wars of Religion and the French Revolution, mentioning places like Malatya and Edessa under the Byzantine duke. There's also a mention of a Norman mercenary named Hervé in the 1050s.
+
+Wait, the question is about the country where Normandy is located. The documents refer to "Norman creativity" and "Norman mercenaries," which suggests that Normandy is a region in France. The French Wars of Religion and French Revolution are historical events in France. However, the documents also mention Byzantine locations like Malatya and Edessa, which are in modern-day Turkey. But the user is asking about Normandy's location. Since the context doesn't explicitly state the country where Normandy is located, but the term "Norman" is associated with France, the answer would be France. However, the documents don
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 10 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: ion is asking when the Normans were in Normandy. I need to check the documents provided.
+
+Looking at Document 4, it mentions that the Normans gave their name to Normandy in the 10th and 11th centuries. Also, Document 3 says that the customary law of Normandy was developed between the 10th and 13th centuries. Document 1 talks about Richard the Lion-hearted leaving Messina in April 1191, which is within the 12th century. So putting this together, the Normans were in Normandy during the 10th to 11th centuries when they established the region, and their influence continued into the 12th and 13th centuries as seen in the development of customary law. The answer should be the 10th and 11th centuries.
+</think>
+
+The Normans were in Normandy between the
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 33 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking, "From which countries did the Norse originate?" They provided some documents, but I need to check if any of them mention the origin of the Norse.
+
+Looking at Document 1: It talks about the Normans under Bohemond, their military actions in Valona and Dyrrachium, their bases in Malatya and Edessa, and mentions the Byzantine duke Isaac Komnenos. There's also a line about pitch representation in English- and German-speaking countries. But nowhere does it mention the Norse or their origin. The term "Norse" isn't used here. The document refers to Normans, which are a different group, part of the broader Norse culture but not the origin countries.
+
+The other documents aren't mentioned, but the user only provided Document 1. Since the context doesn't include any information about the origin of the Norse people, the answer would have to be that it's not in the
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 13 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking, "Who was the Norse leader?" based on the provided documents.
+
+Looking at Document 1, it mentions Hervé as one of the first Norman mercenaries serving as a Byzantine general in the 1050s. The context also states they were based at Malatya and Edessa under Isaac Komnenos, the Byzantine duke of Antioch. 
+
+The question is about the Norse leader. The term "Norse" here might refer to Vikings or Norse people, but the document refers to "Norman mercenaries." Wait, Normans were Norse descendants, right? They were from Scandinavia, so sometimes called Norse. So Hervé is mentioned as a Norman mercenary. But the question is about the Norse leader. 
+
+But the document doesn't explicitly state that Hervé is the Norse leader. It just says he was a Norman mercenary serving as a Byzantine general. The term "
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: ion is asking about the century when the Normans first gained their separate identity. The context provided is from Document 1, which talks about the Normans in the early 11th century. It mentions that in the early 11th century, the dukes started a church reform program, encouraging Cluniac monasteries and intellectual pursuits like scriptoria and compiling manuscripts. The church was used as a unifying force for their duchy.
+
+Wait, the question is about when they gained their separate identity. The document mentions the early 11th century as the time when these reforms began. But does that directly answer when they gained their identity? The text says the dukes began the church reform in the early 11th century. But the Normans' separate identity might have been formed earlier. However, the context given doesn't mention anything before the 11th century. The documents provided only talk about the
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 6 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: ion is asking who the duke was in the Battle of Hastings. The context provided refers to Duke William II of Normandy conquering England and killing King Harold II at Hastings. So, the key here is to identify the duke mentioned in that context.
+
+Wait, the document says "Duke William II of Normandy" and mentions the Battle of Hastings. So the answer should be William II. But wait, I should make sure there's no confusion with other dukes. The context doesn't mention any other dukes related to Hastings. The answer is William II, but I need to check if the name is correctly spelled as William II. The context says "Duke William II of Normandy," so the full name is William II. But sometimes he's referred to as William the Conqueror. However, the document specifically says William II, so I should stick with that. The answer is William II.
+</think>
+
+William II
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 13 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: ion is asking who ruled the Duchy of Normandy. The context provided mentions Richard I of Normandy, stating that under him the Duchy was forged into a cohesive principality. But I need to check the documents given to confirm.
+
+Looking at Document 1, it talks about Jean de Bethencourt and Gadifer de la Salle conquering the Canaries, but that's about the 15th century. The context mentions Richard I of Normandy, but the documents don't explicitly state who ruled the Duchy. Wait, the context says "under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure." So the answer here would be Richard I of Normandy. But the documents provided don't mention Richard I. The documents talk about Jean de Bethencourt and the Norman dynasty's impact. However, the context given in the problem includes Richard I, but the documents might not. Wait,
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 19 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking what religion the Normans were. I need to check the provided documents to find the answer.
+
+Looking at Document 1, the first sentence mentions that the Normans became exponents of the Catholic orthodoxy. It also says they assimilated into this orthodoxy. The other parts talk about their culture and military, but the key part here is the mention of Catholic orthodoxy. 
+
+So the answer should be Catholic. The documents don't mention any other religions, so I can confirm that the Normans were Catholic based on the context given.
+</think>
+
+Catholic
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." The context provided includes Document 1, which talks about the Normans invading Ireland in 1169 and their cultural integration. But the question is about the original meaning of the term "Norman."
+
+First, I need to recall what the word "Norman" refers to. From history, I know that the Normans were a people from the region of Normandy in France. The term "Norman" originally comes from the Latin "Normannus," which is derived from "Normandia," the Latin name for Normandy. The name Normandy itself is thought to come from the Norse word "Nornland," meaning "land of the Norsemen." So the original meaning would relate to the Norse settlers in the region that became Normandy.
+
+But wait, the context given doesn't mention any of this. The documents provided only discuss the Normans'
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking when the Latin version of the word "Norman" was first recorded. I need to check the provided documents to find the answer.
+
+Looking at Document 1, the content talks about the Normans entering Italy, their battles with the Pechenegs, Bulgars, and Seljuk Turks. It mentions their service in the Byzantine Empire, Armenia, and Sicily. There's a part about debate on whether the Normans in Greek service were from Norman Italy, and that only a few came from there. Also, it says Norman mercenaries were encouraged by the Lombards to fight against the Byzantines but later fought for the Byzantines in Sicily.
+
+Wait, but none of this mentions anything about the Latin word "Norman" or its first recording. The documents discuss historical events involving Normans but not the etymology or linguistic history of the term. The question is about the Latin version of the word "
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/2048/qa_1_2048.jsonl:
+Accuracy on needles/2048/qa_1_2048.jsonl: 5/10 = 50.00%
+Extracted 30 complete Q&A pairs from needles/32768/qa_1_32768.jsonl
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: is asking in which country Normandy is located. The context provided includes a document mentioning courts distinguishing between two types of civil disobedience. But wait, that's Document 1. The question is about Normandy's country.
+
+Looking at the documents given, Document 1 talks about civil disobedience types. There's no mention of Normandy or any country in that document. The other documents aren't listed here. Since the context doesn't provide any information about Normandy's location, the answer isn't in the given documents. So I should respond with 'I don't know' as per the instructions.
+</think>
+
+I don't know
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: is asking when the Normans were in Normandy. The context provided talks about Germanic tribes crossing the Rhine during the Migration period in the 5th century, establishing kingdoms like Francia, Burgundy, and Alemannia. But the question is about the Normans in Normandy.
+
+Wait, the Normans are a different group. The context mentions Francia, which is the Latin name for the Frankish kingdom. The Normans were Norsemen who settled in Normandy, which is in northern France. But the given documents don't mention the Normans or Normandy. The documents only talk about Germanic tribes in the 5th century. The Normans became significant later, around the 10th century when Rollo the Norseman established the duchy of Normandy. But since the context doesn't include that information, I can't answer based on the provided documents. So the answer should be '
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 9 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the origin of the Norse people. The context provided includes documents about the Rhine-Meuse Delta, tidal currents, and the Delta Works. Document 1 talks about the geographical features of the delta and tidal influences, mentioning places like Nijmegen. But there's no mention of Norse origins, Norway, Sweden, Denmark, or any other countries. The documents are all about river systems and tidal effects in the Netherlands. Since the question is about the Norse people's countries of origin, which isn't covered in the given context, the answer should be that it's not mentioned. I need to check if there's any indirect reference, but I don't see any. So the answer is 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking, "Who was the Norse leader?" and they provided some documents. Let me check the context given.
+
+Looking at Document 1, the content is just "The English name \". That seems incomplete or maybe there's a typo. There's no mention of a Norse leader here. The other documents aren't listed, so I can't check them. Since the context doesn't provide any information about a Norse leader, the answer should be that it's not known based on the given documents. I should respond with "I don't know" as per the instructions.
+</think>
+
+I don't know
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: estion. The user is asking about the century when the Normans first gained their separate identity. The context provided includes Document 1, but the content of that document isn't visible here. The user mentioned that if the answer isn't in the context, I should say 'I don't know'. 
+
+Since I can't see the actual content of Document 1, I need to rely on my existing knowledge. The Normans are a historical group, originally from Scandinavia, who later settled in Normandy, France. Their separate identity as a distinct group is often associated with their establishment in Normandy. The key event here is the Danelaw, which was the area in England under Danish rule, but that's more about the Danes.
+
+Wait, the Normans were descendants of the Vikings who settled in Normandy. The formation of the Norman identity is tied to their establishment in the region of Normandy. The earliest records of Normandy date
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: is asking about the duke in the Battle of Hastings. The context provided is about the IPCC, WMO, and UNEP. The documents mention the IPCC's establishment in 1988 by WMO and UNEP, and membership details.
+
+Wait, the Battle of Hastings happened in 1066, right? That was during the Norman Conquest. The key figures there were William the Conqueror, who was the Duke of Normandy. But the context given doesn't mention anything about the Battle of Hastings or historical figures. The documents are all about the IPCC and its formation. Since there's no information in the context about the Battle of Hastings or any dukes involved, the answer can't be derived from the provided documents. So I should respond with 'I don't know' because the context doesn't cover that topic.
+</think>
+
+I don't know
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 12 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: is asking, "Who ruled the duchy of Normandy?" I need to check the provided documents to find the answer. Let me look through the context again.
+
+Document 1 talks about bourgeois architecture, communist authorities, restoration of buildings, and mentions Warsaw University of Technology and some 19th-century buildings in Praga. There's a mention of socialist realism style and some historical buildings, but nothing about the Duchy of Normandy. The time periods discussed are late 19th century and post-war restoration. The duchy of Normandy is a historical region, but the documents provided don't mention any rulers of Normandy. The closest thing is the mention of "Insurance Company Rosja building" and "Warsaw Philharmony edifice," but those are buildings, not related to Normandy's rulers. Since the context doesn't have any information about the Duchy of Normandy or its rulers, the answer should
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking about the religion of the Normans. The context provided includes a document snippet mentioning the Muslim Brotherhood in Palestine and the First Intifada in 1987. However, the question is about the Normans.
+
+First, I need to recall historical information. The Normans were a people from the region of Normandy in France. They were primarily Christian, as that was the dominant religion in Western Europe during the medieval period. However, I should check if the provided documents mention anything about the Normans. 
+
+Looking at the given context, Document 1 talks about the Muslim Brotherhood and the Intifada, which is related to Palestinian history. There's no mention of the Normans here. The user's question is about the Normans' religion, but the available documents don't provide any information on that. 
+
+Since the answer isn't in the context, the correct response is to say 'I don't know' as
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 14 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." They provided some documents, so I need to check those.
+
+Looking at Document 1: It mentions the Norman dynasty, their impact on Europe and the Near East, and refers to their original Viking brethren. It also says they occupied ports opposite England across the English Channel. But does it explain the origin of the word "Norman"? 
+
+The document talks about the Normans being related to Vikings, which might hint that the term comes from their Viking origins. The word "Norman" itself is often associated with the people who settled in Normandy, France. The term "Normandy" comes from "Northmen," referring to the Vikings. So the original meaning might be related to "Northmen" or "Vikings." However, the documents provided don't explicitly state the etymology of the word. The context mentions their Viking connections but doesn't break down the word
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. The context provided includes a document from the Los Angeles Times in 1900 defining southern California. But the question is about the Latin term for Norman.
+
+First, I need to check if the context documents mention anything related to the Latin word "Norman." Document 1 talks about southern California in 1900, but that's about geography, not linguistics. The question is about the historical recording of a Latin term. Since the context doesn't discuss Latin terms or historical linguistics, there's no information here. The user might be confused if they think the document relates to the question, but the documents provided don't cover that topic. So the answer should be that it's not in the context.
+</think>
+
+I don't know.
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/32768/qa_1_32768.jsonl:
+Accuracy on needles/32768/qa_1_32768.jsonl: 2/10 = 20.00%
+Extracted 10 complete Q&A pairs from needles/131072/qa_1_131072.jsonl
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 7 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: is asking in which country Normandy is located. The context provided includes documents about geological changes in northwest Europe, mentioning the Rhine and areas like alpine glaciers and vegetation changes. However, none of the documents specifically mention Normandy or its location. The documents talk about regions in northwest Europe, which could include countries like France, Belgium, the Netherlands, etc., but without explicit reference to Normandy. Since the answer isn't in the context, I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 8 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: is asking when the Normans were in Normandy. I need to check the provided documents to find the answer.
+
+Looking at Document 1, it talks about plant immune responses, PAMPs, and hypersensitive responses. There's nothing about history, Normans, or Normandy here. The other documents aren't mentioned, but the user only provided Document 1. Since the context is about biology, not history, the answer isn't in the given text. I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 7 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the origin of the Norse people. The context provided includes information about earthquakes in southern California, mentioning numbers and magnitudes. But the question is about the Norse origin.
+
+First, I need to check if the documents provided have any information related to the Norse. Document 1 talks about earthquakes, their frequency, and magnitudes. There's no mention of Norse people, their origin, countries, or anything related to history, geography, or ethnicity. The documents given are solely about seismic activity. 
+
+Since the question is about the origin of the Norse, which is a historical and cultural question, and the context doesn't provide any relevant data, the answer can't be derived from the given documents. The user might have intended to provide different documents but accidentally included the earthquake one. However, based on the given context, there's no information to answer the question. Therefore, the correct response is to state that the answer isn't in the
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 11 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking, "Who was the Norse leader?" I need to check the provided documents to find the answer.
+
+Looking at Document 1, it talks about the First British Empire, mercantilism, colonies in North America, the Caribbean, India. It mentions the loss of American colonies in 1776, gains in India, Australia, and control of trade in Latin America after 1820. There's no mention of Norse leaders here. The document is focused on British imperial history, not Norse people or their leaders. 
+
+The question is about a Norse leader, which refers to Viking leaders or figures from Norse mythology. Since the context provided doesn't include any information about Norse leaders, the answer isn't in the documents. The user wants me to say 'I don't know' if the answer isn't in the context. So the correct response here is 'I don't know'.
+</think>
+
+I don't know
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: is asking about when the Normans first gained their separate identity. The context provided talks about Huguenots, Paul Revere, Henry Laurens, Jack Jouett, Francis Marion, and some churches in Charleston and Virginia. It mentions the Huguenot Society of America and Manakin Episcopal Church.
+
+Wait, the question is about the Normans, but the documents are all about Huguenots. The Huguenots were French Protestants, right? The Normans are a different group, part of the Anglo-Saxon people. The context here doesn't mention Normans at all. The documents talk about Huguenot descendants and churches but not the Normans. So the answer isn't in the given context. I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 9 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: is asking about the duke in the battle of Hastings. First, I need to check the provided documents to see if there's any information related to the Battle of Hastings or the duke involved.
+
+Looking at Document 1, it's about the Ottoman Empire, its history, provinces, and mentions Suleiman the Magnificent. The battle of Hastings is related to the Norman conquest of England in 1066. The key figure there was William the Conqueror, who was the Duke of Normandy. However, the documents provided don't mention anything about the Battle of Hastings or William the Conqueror. Since the context only covers the Ottoman Empire and doesn't include information about the Battle of Hastings, the answer isn't in the given documents. Therefore, I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: is asking, "Who ruled the duchy of Normandy?" I need to check the provided documents to find the answer. Let me look at the context given.
+
+Document 1 talks about Treaties, Directives, and TFEU article 288. It mentions Directives not giving citizens standing to sue other citizens. There's nothing about the duchy of Normandy here. The other documents aren't mentioned, but the user only provided Document 1. Since the context doesn't include any information about the duchy of Normandy or its ruler, the answer isn't in the given documents. So, I should respond with "I don't know."
+</think>
+
+I don't know.
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking, "What religion were the Normans?" I need to check the provided documents to find the answer. The context given includes Document 1, which mentions Federal safety standards and the 1974 Mustang I. There's also a mention of the DOT. But wait, the Normans are a historical group, right? They were a people in medieval Europe, part of the Norman conquest of England. The documents provided here seem to be about car safety standards and a specific car model. There's no mention of religion, the Normans, or anything related to that in the context. The user's question is about the religion of the Normans, but the available documents don't cover that. So the answer should be that it's not in the context. I need to make sure I don't include any extra information. The answer is 'I don't know' because the documents don't provide that information.
+</think>
+
+I
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 16 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." I need to check the provided documents to find the answer.
+
+Looking at Document 1, it talks about complexity classes P and NP, mentioning the Cobham–Edmonds thesis and some problems like Boolean satisfiability. There's no mention of the word "Norman" here. The other documents aren't provided, so I can't check them. Since the context doesn't include any information about the origin of the word "Norman," the answer isn't in the given texts. I should respond with "I don't know."
+</think>
+
+I don't know.
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: sentence, min_length: 20)...
+Created 18 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. I need to check the provided documents to find the answer.
+
+Looking at Document 1: It talks about Harvard's endowment and the relocation of Parliament. No mention of Norman or Latin terms here.
+
+Document 3: Discusses the origin of the word "pharmacy" from Greek roots. Also mentions "pharma" and "pharmakeia". But nothing about the word "Norman" or its Latin version.
+
+Wait, there are only three documents provided. The question is about the Latin version of "Norman". The documents given don't seem to cover that. Document 1 is about Harvard and Parliament moves. Document 3 is about pharmacy etymology. There's no document here that talks about the word Norman or its Latin recording. 
+
+So, since none of the provided documents mention the Latin version of "Norman" or its
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/131072/qa_1_131072.jsonl:
+Accuracy on needles/131072/qa_1_131072.jsonl: 2/10 = 20.00%
+Extracted 100 complete Q&A pairs from needles/2048/qa_1_2048.jsonl
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 11 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: is asking in which country Normandy is located. The context provided mentions "Norman creativity" and refers to places like Malatya and Edessa under the Byzantine duke of Antioch, Isaac Komnenos. It also talks about the French Wars of Religion and the French Revolution. 
+
+Wait, the key here is that the context mentions "French Wars of Religion" and "French Revolution." The term "Norman" might be related to the Normans, who were a people from the region of Normandy in France. But the context doesn't explicitly state where Normandy is located. The documents talk about French history but don't directly mention the country of Normandy.
+
+But wait, Normandy is a region in France. However, the context given doesn't explicitly state that. The user's question is about the country, not the region. The context mentions "French" in the Wars of Religion and Revolution, so maybe implying
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 14 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: ion is asking when the Normans were in Normandy. The context provided mentions that the Normans gave their name to Normandy in the 10th and 11th centuries. So, the answer should be during those centuries. I need to make sure that's the correct time frame based on the documents given. There's no other information about their presence in Normandy in the context, so the answer is definitely the 10th and 11th centuries.
+</think>
+
+The Normans were in Normandy in the 10th and 11th centuries.
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 43 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking, "From which countries did the Norse originate?" I need to answer this based on the provided context. Let me check the context again.
+
+The context mentions two documents. The first one talks about locations like Malatya and Edessa under the Byzantine duke Isaac Komnenos. The second part says that a certain form of pitch representation is still common in English- and German-speaking countries. 
+
+Wait, the question is about the origin of the Norse people. The context given doesn't mention anything about Norse origins. The documents refer to Byzantine territories and pitch representation in some countries. There's no information about where the Norse came from. So, the answer isn't in the context. The user wants me to say 'I don't know' if the answer isn't in the context. So, the correct response here is 'I don't know'.
+</think>
+
+I don't know
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 17 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: is asking about the Norse leader based on the provided context. The context mentions that the documents refer to people descended from Norse, and they were based at Malatya and Edessa under the Byzantine duke of Antioch, Isaac Komnenos.
+
+Wait, the key point here is that the Norse descendants were under Isaac Komnenos. The question is asking for the Norse leader. But the context doesn't explicitly name a leader. It says they were based under Isaac Komnenos, who was the Byzantine duke. But does that mean Isaac was their leader? Or was he the overlord?
+
+The documents state they were "under the Byzantine duke of Antioch, Isaac Komnenos." So Isaac Komnenos was the Byzantine duke, and the Norse descendants were based in those cities under his authority. However, the Norse leader isn't directly mentioned. The answer might be that there's no specific Norse leader named in
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: is asking about the century when the Normans first gained their separate identity based on the provided context.
+
+Looking at the context given, it mentions that in the early 11th century, the dukes began a program of church reform, encouraging Cluniac monastic reforms and supporting intellectual pursuits like scriptoria and compiling manuscripts. The key point here is the early 11th century. The question is about when the Normans developed their separate identity. The context talks about their church reforms and cultural activities in the early 11th century, which might indicate that this period was when they started to establish their distinct identity through these initiatives. However, the context doesn't explicitly state the century when they first gained their identity. It only mentions the early 11th century as the time when these reforms started. But the question is about the formation of their separate identity. Since the context doesn't provide a specific century for the formation of
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 8 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: ion is asking who the duke was in the Battle of Hastings. The context provided mentions that in 1066, Duke William II of Normandy conquered England and killed King Harold II at the Battle of Hastings. So the key point here is that the duke involved was William II.
+
+Wait, but I should make sure there's no confusion with other figures. The Battle of Hastings is famously associated with William the Conqueror, right? But the context here specifically refers to him as Duke William II. That might be a bit confusing because William the Conqueror was the Duke of Normandy, and his title might have been William II, but that's not correct. Wait, no. William the Conqueror was the Duke of Normandy, and he became King of England after the battle. His title as Duke was William II? Wait, maybe the context is using "William II" to refer to him, but that's actually a
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 17 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: ion is asking who ruled the Duchy of Normandy based on the provided context.
+
+Looking at the first document: It mentions "Richard I of Normandy" as someone under whom the Duchy was forged into a cohesive principality. The second document talks about his stay in Normandy until 1016 and his sons by Emma staying there after Cnut's conquest. 
+
+So, the key point here is that Richard I of Normandy is mentioned as the ruler who shaped the Duchy. The second part refers to his sons, but the question is about who ruled. The documents don't mention any other rulers specifically. The answer should be Richard I of Normandy.
+</think>
+
+Richard I of Normandy
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 23 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking what religion the Normans were. I need to check the provided context.
+
+Looking at the first document: It mentions that the Normans became exponents of the Catholic orthodoxy. The second document doesn't talk about religion directly. So the answer should be Catholic. Wait, but the first sentence says they assimilated into Catholic orthodoxy. So their religion was Catholic. I should confirm there's no other mention. The context doesn't mention any other religions, so the answer is Catholic.
+</think>
+
+Catholic
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: estion. The user is asking about the original meaning of the word "Norman." The context provided talks about the Normans invading Ireland in 1169 and their cultural impact. It mentions they maintained a distinct culture and ethnicity initially.
+
+Hmm, the documents given here discuss the historical impact of the Normans in Ireland, their invasion, and cultural distinctiveness. But the question is about the original meaning of the word "Norman." The context doesn't mention the etymology or the original meaning of the term. It focuses on their actions and influence in Ireland, not the linguistic roots of the word. 
+
+Since the answer isn't provided in the context, I should check if there's any implicit information. The term "Norman" refers to people from Normandy, a region in France. But the context doesn't explain that. The user's documents only discuss their historical actions, not the origin of the word. Therefore, the answer isn
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 6 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. I need to check the provided context to find the answer.
+
+Looking at the context given, there are two documents. The first one talks about debates regarding Normans in Greek service and their origin from Norman Italy. The second document mentions Norman mercenaries being encouraged by the Lombards to act against the Byzantines and later fighting in Byzantine service in Sicily.
+
+Neither of these documents mentions anything about the Latin word "Norman" or its recording dates. The context is focused on the historical movements and conflicts involving Normans, not linguistic terms or their etymology. Since there's no information about the Latin term's first recording, the answer isn't in the provided context. Therefore, the correct response is to say "I don't know."
+</think>
+
+I don't know.
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/2048/qa_1_2048.jsonl:
+Accuracy on needles/2048/qa_1_2048.jsonl: 5/10 = 50.00%
+Extracted 30 complete Q&A pairs from needles/32768/qa_1_32768.jsonl
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: is asking in which country Normandy is located. The context provided talks about civil disobedience and mentions courts distinguishing between two types. But there's no mention of Normandy or any country. The documents given don't have any information about geographical locations. So I need to check if the answer is in the context. Since it's not, the correct response is 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: is asking when the Normans were in Normandy. The context provided talks about Germanic tribes crossing the Rhine during the Migration period in the 5th century, establishing kingdoms like Francia, Burgundy, and Alemannia. But the question is about the Normans in Normandy.
+
+Wait, the Normans are a different group. The context mentions Francia, which is related to the Frankish people. The Normans were actually a group of Vikings who settled in Normandy, which is in northern France. But the given documents don't mention the Normans or their arrival in Normandy. The context only discusses the Germanic tribes in the 5th century. The Normans became significant later, around the 9th to 11th centuries, but that's not covered in the provided information. Since the answer isn't in the context, I should respond with 'I don't know'.
+</think>
+
+I
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 11 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the origin countries of the Norse. The context provided talks about the Rhine-Meuse Delta, tidal currents, and high tides affecting land areas. There's no mention of Norse people, their origins, or any countries related to them in the given documents. The answer isn't in the context, so I should respond with 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: this out. The user is asking, "Who was the Norse leader?" and they provided some documents. But wait, the context given is just that there are documents provided. However, the actual documents aren't listed here. The user might have intended to include some texts but forgot.
+
+Since there's no specific content in the context, I can't determine the answer from the given information. The question is about a Norse leader, which could refer to various figures like Ragnar Lodbrock, Loki, Odin, or someone else. But without the documents, I can't check. The user's instruction says if the answer isn't in the context, say 'I don't know'. So the answer here would be that since there's no context provided, I don't know.
+</think>
+
+I don't know.
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 1 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: what century the Normans first gained their separate identity based on the given context. Let me start by recalling what I know about the Normans. The Normans were a people from the region of Normandy in France. Their history is often tied to the Dukes of Normandy, especially William the Conqueror, who invaded England in 1066.
+
+But the question is about when they first gained their separate identity. The term "Normans" itself comes from "Normandy," which was a duchy in France. The area became a separate entity under the Viking settlers. The Vikings, or Norsemen, settled in the region that became Normandy in the 9th and 10th centuries. The duchy was established around the year 911 when King Robert the Great of France gave the region to Rollo, a Viking leader. This would place the establishment of Normandy in the 10
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 6 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: is asking about the duke in the Battle of Hastings. The context provided is about the IPCC, established in 1988 by WMO and UNEP. There's no mention of the Battle of Hastings or any historical figures related to that event. The documents given are all about the IPCC's formation and its parent organizations. Since the question is about a historical battle and the answer isn't in the context, I should respond that I don't know. The user wants only the answer, so I'll make sure to state that clearly.
+</think>
+
+I don't know.
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 14 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: is asking, "Who ruled the duchy of Normandy?" I need to check the provided context to find the answer. Let me read through the context again.
+
+The context talks about bourgeois architecture in Warsaw, communist authorities not restoring certain buildings, socialist realism styles, and mentions the Warsaw University of Technology building. There's a mention of Kronenberg Palace and Insurance Company Rosja building not being restored, and the Philharmony edifice inspired by Palais Garnier. Then it mentions the Warsaw University of Technology building from 1899–1902 as the most interesting of late 19th-century architecture.
+
+Wait, none of this seems to mention the duchy of Normandy. The duchy of Normandy is a historical region in France, and the rulers there would be figures like the dukes of Normandy, such as William the Conqueror. But the context provided doesn't discuss any of
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking about the religion of the Normans. The context provided mentions the Muslim Brotherhood in Palestine and the Intifada, but that's about a different topic. The question is about the Normans, which refers to the Norman people, historically. The context given doesn't mention anything related to the Normans or their religion. Since the answer isn't in the provided documents, I should respond with 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 17 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." They provided two documents. Let me check the first one: it talks about IPCC report authors assessing climate change based on published sources. That doesn't seem related to the word Norman. The second document mentions Viking brethren ravaging English coasts and occupying ports opposite England across the English Channel. 
+
+Hmm, the question is about the origin of the word "Norman." The documents don't mention the etymology of the word. The second document refers to Vikings and their activities, but that's about historical events, not the meaning of the word. The first document is about climate change reports. Neither of them explains where the term "Norman" comes from.
+
+So, since the context doesn't provide any information about the original meaning of "Norman," the correct answer should be "I don't know."
+</think>
+
+I don't know.
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: is asking about when the Latin version of the word "Norman" was first recorded. The context provided mentions that in 1900, the Los Angeles Times defined southern California. But the question is about the Latin term for Norman.
+
+First, I need to check if the context has any information related to the Latin word "Norman" or its recording. The context given is about a newspaper's definition of southern California in 1900. There's no mention of Latin terms, historical records, or etymology here. 
+
+Since the question is about the Latin version of "Norman," I should consider if the context provides any relevant data. The documents mentioned are from 1900 regarding geography. There's no information on Latin language usage, historical recordings, or any references to the word "Norman" in Latin. 
+
+Therefore, the answer isn't in the provided context. The user might be expecting knowledge
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/32768/qa_1_32768.jsonl:
+Accuracy on needles/32768/qa_1_32768.jsonl: 2/10 = 20.00%
+Extracted 10 complete Q&A pairs from needles/131072/qa_1_131072.jsonl
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 9 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: this out. The user is asking in which country Normandy is located. The context provided talks about northwest Europe warming up 22,000 years ago, thawing subsoil, glaciers, and snowmelt into the Rhine and its downstream extension. 
+
+First, I need to recall if the context mentions Normandy. The documents given discuss geographical features like the Rhine River, alpine glaciers, and northwest Europe. Normandy is a region in France, but the context doesn't explicitly mention France or Normandy. The Rhine flows through several countries, including Germany, the Netherlands, and France, but the context doesn't specify Normandy's location.
+
+Since the answer isn't directly stated in the provided documents, I should check if there's any indirect reference. The mention of the Rhine's downstream extension might relate to areas like the Netherlands or northern France, but without explicit mention of Normandy, I can't confirm
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 11 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: is asking when the Normans were in Normandy. The context provided talks about plant immune responses, PAMPs, and phagocytic cells. There's nothing here about history, the Normans, or Normandy. The documents given are related to biology, not historical events. So the answer isn't in the context. I should respond with 'I don't know' because the information isn't provided here.
+</think>
+
+I don't know
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 9 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: is asking about the countries from which the Norse originated. The context provided talks about earthquakes in southern California, mentioning that there are about 10,000 earthquakes each year, mostly too small to feel. Hmm, that's all about geology and earthquakes. The question is about the Norse people's origin countries.
+
+Wait, the documents given don't mention anything about the Norse or their origins. The only information is about earthquakes in California. So there's no data here about the Norse. The answer isn't in the context. I should check again to make sure I didn't miss any part. The context is only the two sentences about earthquakes. Yep, nothing about Norse origins. So the correct response is to say 'I don't know' because the answer isn't provided in the given documents.
+</think>
+
+I don't know
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 13 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: this out. The user is asking, "Who was the Norse leader?" I need to check the provided context to see if there's any information about a Norse leader.
+
+Looking at the context, it talks about the First British Empire, mercantilism, colonies in North America, the Caribbean, and India. It mentions the loss of American colonies in 1776. There's nothing here about the Norse people or any leaders from Norse culture. The Norse are often associated with Viking Age Scandinavians, but the context given doesn't mention any leaders like Leif Erikson or Ragnar Lothbrok. Since the documents provided don't have any information related to Norse leaders, the answer should be that it's not known based on the given context.
+</think>
+
+I don't know.
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 8 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: is asking about when the Normans first gained their separate identity. The context provided talks about Paul Revere's descendants, Huguenot refugees, Henry Laurens, Jack Jouett, Francis Marion, and mentions the last Huguenot congregation in Charleston from 1844. But there's nothing here about the Normans or their history. The documents are about American Revolution figures and Huguenots, not Normans. So the answer isn't in the context. I should say I don't know.
+</think>
+
+I don't know.
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 13 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: is asking about the duke in the battle of Hastings. First, I need to check the provided context.
+
+The context talks about the Ottoman Empire from 1299 to 1923, mentioning Suleiman the Magnificent and its power during the 16th and 17th centuries. It covers regions like Southeast Europe, Western Asia, etc. But there's no mention of the Battle of Hastings. The Battle of Hastings is historically significant as it led to the Norman Conquest of England in 1066. The key figures there would be William the Conqueror, who was the Duke of Normandy, and King Harold II of England. However, the given documents don't discuss this battle or these figures. Since the answer isn't in the context, I should respond with 'I don't know'.
+</think>
+
+I don't know.
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: is asking, "Who ruled the duchy of Normandy?" I need to check the provided context to find the answer.
+
+Looking at the context given, it's about legal documents: Treaties, Directives, TFEU article 288. The discussion is about Directives not giving citizens standing to sue other citizens. There's mention of member states and the TFEU. But nothing about the duchy of Normandy. The context doesn't mention any historical rulers, Norman dukes, or related terms. 
+
+Since the question is about the ruler of Normandy, which is a historical region, and the context is entirely about EU law, there's no information here that answers that. The answer must be that the context doesn't provide the information. So the correct response is "I don't know."
+</think>
+
+I don't know.
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: is asking about the religion of the Normans. The context provided mentions Federal safety standards, NHTSA, and a 1974 Mustang I. There's nothing here about the Normans or their religion. The documents given are related to vehicle safety standards, not historical groups or religions. So the answer isn't in the context. I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 20 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." The context provided talks about the complexity class P and the Cobham–Edmonds thesis. There's nothing here about the word Norman or its etymology. The documents given are related to computational complexity, not linguistics or history. So, the answer isn't in the context. I should respond that I don't know.
+</think>
+
+I don't know.
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: both, min_length: 20)...
+Created 21 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7422.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: estion. The user is asking about when the Latin version of the word "Norman" was first recorded. Let me check the provided context.
+
+Looking at the context given, it talks about the origin of the word "pharmacy" and its roots in Greek terms like "Pharmakeia" and "pharmakon." There's no mention of the word "Norman" or any Latin terms related to it. The documents provided are focused on pharmaceutical etymology, not on Norman or Latin language history. 
+
+Since the question is about the Latin version of "Norman," which isn't addressed in the context, I need to determine if there's any indirect information. But the context doesn't discuss Norman, Latin translations, or historical records of words. Therefore, the answer isn't present in the given documents. The correct response would be to state that the answer isn't available in the context.
+</think>
+
+I don't know.
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/131072/qa_1_131072.jsonl:
+Accuracy on needles/131072/qa_1_131072.jsonl: 2/10 = 20.00%
+Final aggregated results:
+('needles/2048/qa_1_2048.jsonl', 'paragraph'): 50.00%
+('needles/32768/qa_1_32768.jsonl', 'paragraph'): 20.00%
+('needles/131072/qa_1_131072.jsonl', 'paragraph'): 20.00%
+('needles/2048/qa_1_2048.jsonl', 'sentence'): 50.00%
+('needles/32768/qa_1_32768.jsonl', 'sentence'): 20.00%
+('needles/131072/qa_1_131072.jsonl', 'sentence'): 20.00%
+('needles/2048/qa_1_2048.jsonl', 'both'): 50.00%
+('needles/32768/qa_1_32768.jsonl', 'both'): 20.00%
+('needles/131072/qa_1_131072.jsonl', 'both'): 20.00%

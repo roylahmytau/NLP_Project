@@ -1,0 +1,29 @@
+This can be accomplished by assuming that the domain is equipped with a standard representation, or by stating that the result holds for any choice of a suitable encoding.
+
+Document 15:
+A problem is regarded as inherently difficult if its solution requires significant resources, whatever the algorithm used. The theory formalizes this intuition, by introducing mathematical models of computation to study these problems and quantifying the amount of resources needed to solve them, such as time and storage. Other complexity measures are also used, such as the amount of communication (used in communication complexity), the number of gates in a circuit (used in circuit complexity) and the number of processors (used in parallel computing).
+
+Document 16:
+It is possible to define complexity classes using different types of computational models. For instance, the complexity class NC (Nick's Class) is the set of problems that can be decided in polylogarithmic time on a parallel computer with a polynomial number of processors. Another complexity class is PSPACE, which is defined as the set of all problems solvable by a Turing machine using a polynomial amount of space. Since its creation, the class P has been widely studied because of its connection to efficient algorithms and to the famous question of whether P equals NP.
+
+Document 17:
+It is also possible to characterize some complexity classes by using variants of Turing machines. For example, interactive proof systems are defined using Arthur–Merlin games. It is suspected that NC ≠ P, although this is not known. Even weaker classes such as AC0 are believed to be distinct, i.e., AC0 ⊊ NC ⊊ P ⊊ NP ⊊ NEXP, where NEXP is the class of problems solvable by a nondeterministic exponential time Turing machine.
+
+Document 18:
+Another complexity class is BPP, which is the class of decision problems solvable by a probabilistic Turing machine in polynomial time, with an error probability of at most 1/3 for all instances. BPP contains P, and is contained in NP and PSPACE, and possibly in PP. BPP is equal to the subspace of PSPACE that can be solved with only BPP advice.
+
+Document 19:
+Some computational problems have complexity classes that depend on the encoding chosen for the problem. This is in particular the case for problems like SAT or graph isomorphism. To overcome this fact, one can look at the class of all possible encodings, or study problems up to polynomial-time many-one reductions and randomized reductions.
+
+Document 20:
+The complexity class P is the set of decision problems that can be solved by a deterministic Turing machine in polynomial time. Equivalently, P contains those decision problems that can be solved by a non-deterministic Turing machine in polynomial time. It is a fundamental open question whether the class P is equal to the class NP, which contains decision problems that can be solved by a non-deterministic Turing machine in polynomial time. If P = NP, then every problem whose solution can be quickly verified can also be quickly solved. The complexity class NP includes problems such as the Boolean satisfiability problem, the Hamiltonian path problem, and the vertex cover problem.
+
+Q1: What is a deterministic Turing machine?
+A1: A deterministic Turing machine is the most basic Turing machine, which uses a fixed set of rules to determine its future actions.
+Q2: How does a probabilistic Turing machine differ from a deterministic Turing machine?
+A2: A probabilistic Turing machine is a deterministic Turing machine with an extra supply of random bits.
+Q3: What are randomized algorithms?
+A3: Randomized algorithms are algorithms that use random bits.
+Q4: What is a non-deterministic Turing machine?
+A4: A non-deterministic Turing machine is a deterministic Turing machine with an added feature of non-determinism, which allows a Turing machine to have multiple possible future actions from a given state.
+Q5: How is non-determinism viewed

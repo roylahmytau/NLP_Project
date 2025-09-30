@@ -1,0 +1,14 @@
+Q1: By what main attribute are computational problems classified utilizing computational complexity theory?
+A1: Inherent difficulty
+
+Q2: What is the significance of the P versus NP problem in theoretical computer science?
+A2: It is one of the most important open questions in theoretical computer science due to the wide implications of a solution, including efficient solutions to many important problems in operations research, logistics, biology, and formal mathematics.
+
+Q3: What does the term "decision problem" refer to in the context of computational problems?
+A3: A decision problem is a special type of computational problem whose answer is either yes or no, or alternately either 1 or 0, and can be viewed as a formal language where the members of the language are instances whose output is yes, and the non-members are those instances whose output is no.
+
+Q4: What does the time hierarchy theorem tell us about the relationship between complexity classes P and EXPTIME?
+A4: The time hierarchy theorem tells us that P is strictly contained in EXPTIME.
+
+Q5: How does computational complexity theory relate different models of computation?
+A5: Computational complexity theory relates different models of computation by stating that the time complexities in any two reasonable and general models of computation are polynomially related, as per the Cobham-Edmonds thesis. This forms the basis for the complexity class P, which includes decision problems solvable by a deterministic Turing machine within polynomial time.

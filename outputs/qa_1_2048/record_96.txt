@@ -1,0 +1,42 @@
+This work allowed mathematicians to begin thinking about the computational complexity for certain problems.
+
+Document 15:
+In computational complexity theory, the complexity class P is the set of decision problems that can be solved by a deterministic Turing machine within polynomial time. It is a measure of the efficiency of an algorithm, and represents the best known upper bounds on the time required to solve a problem. The class P includes all decision problems that can be solved in polynomial time.
+
+Document 16:
+The class NP contains all decision problems for which the instances where the answer is "yes" have verifiable certificates that can be checked in polynomial time. In other words, if someone provides a certificate for a "yes" instance, it can be verified quickly whether the certificate is correct.
+
+Document 17:
+The class NP-hard contains all decision problems that are at least as hard as the hardest problems in NP. More formally, a problem H is NP-hard if there is an NP-complete problem L such that L can be reduced to H in polynomial time. NP-hard problems do not have to be elements of NP themselves.
+
+Document 18:
+The class NP-complete is the intersection of NP and NP-hard. That is, it contains all the decision problems in NP for which every other problem in NP can be reduced to in polynomial time. Equivalently, it contains the problems that can be solved in polynomial time on a non-deterministic Turing machine.
+
+Document 19:
+The class BQP is the set of decision problems solvable by a quantum computer in polynomial time. It is the quantum computing version of the complexity class BPP and is contained in the complexity class PSPACE.
+
+Document 20:
+The class QMA is the quantum Merlin-Arthur class, which is the quantum analog of the classical complexity class MA. It is a quantum complexity class that generalizes the class NP, and it is used to study the power of quantum computers in the context of interactive proof systems.
+
+Document 21:
+The class IP is the class of languages decidable by an interactive proof system, where the prover and verifier are probabilistic polynomial time Turing machines, and the probability that a verifier accepts a string outside the language is bounded away from 1.
+
+Document 22:
+The class AM is the class of languages decided by an Arthur-Merlin protocol, where the prover is a probabilistic polynomial time Turing machine and the verifier is a deterministic polynomial time Turing machine. The verifier accepts if and only if the prover convinces him that the string is in the language.
+Q1: What does the worst-case time complexity T(n) represent?
+A1: The maximum time taken over all inputs of size n.
+Q2: According to Cobham's thesis, what type of problems can be solved with a feasible amount of resources?
+A2: Problems that admit a polynomial time algorithm.
+Q3: What does the class P in computational complexity theory represent?
+A3: The set of decision problems that can be solved by a deterministic Turing machine within polynomial time.
+Q4: Which class contains all decision problems for which the instances where the answer is "yes" have verifiable certificates that can be checked in polynomial time?
+A4: The class NP.
+Q5: What does the class NP-hard contain?
+A5: All decision problems that are at least as hard as the hardest problems in NP.
+Q6: What is the relationship between NP-complete and NP and NP-hard classes?
+A6: The class NP-complete is the intersection of NP and NP-hard.
+Q7: Which complexity class does Shor's algorithm belong to?
+A7: BQP.
+Q8: What is the significance of the phrase "all possible algorithms" in the context of proving lower bounds?
+A8: It refers to all algorithms that might be discovered in the future, not just the ones known today.
+Q9: How many problems in NP can be reduced to an NP-complete

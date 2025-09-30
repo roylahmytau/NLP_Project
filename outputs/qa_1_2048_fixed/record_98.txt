@@ -1,0 +1,10 @@
+Q1: What is the term for a task that generally lends itself to being solved by a computer?
+A1: Computational problem
+Q2: According to the document, what is the relationship between the complexity classes P and NP?
+A2: Each problem in P is also a member of the class NP.
+Q3: What does a deterministic Turing machine lack that a non-deterministic Turing machine has?
+A3: A non-deterministic Turing machine has the added feature of non-determinism, which allows for multiple possible future actions from a given state.
+Q4: In the context of computational problems, how are problem instances typically represented?
+A4: Problem instances are typically represented as strings over an alphabet, usually the binary alphabet.
+Q5: What is the significance of the P versus NP problem according to the document?
+A5: The P versus NP problem is one of the most important open questions in theoretical computer science because a solution could lead to more efficient solutions for many important problems. It is also one of the Millennium Prize Problems with a US$1,000,000 prize for resolving it.

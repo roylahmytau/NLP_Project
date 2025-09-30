@@ -1,0 +1,194 @@
+⏱️  Imports started at 1758913171.97
+⏱️  Transformers imported at 1758913266.38
+⏱️  All imports completed at 1758913266.45
+Using existing Hugging Face cache directory: /root/.cache/huggingface
+🚀 Initializing RAG model (this happens only once)...
+Using device: cuda
+GPU: NVIDIA RTX 4000 Ada Generation
+GPU Memory: 19.7 GB
+📥 Loading Qwen3-8B model using train_lora_optimized.py approach...
+✅ Model loaded successfully!
+Extracted 100 complete Q&A pairs from needles/2048/qa_1_2048.jsonl
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 4 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5800.2 MB allocated, 7330.0 MB reserved
+GPU Memory before inference: 5800.2 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: In what country is Normandy located?
+A: n which country Normandy is located. Let me think. The context provided talks about Norman mercenaries serving in the Byzantine Empire, mentioning places like Trebizond, Georgia, Malatya, Edessa, and Asia Minor. It also references historical events in France, like the French Wars of Religion and the French Revolution. 
+
+Wait, the question is about the country where Normandy is located. The term "Normandy" refers to a region in France. The context mentions French history, so that's a clue. The Normans were a people from that region. Even though the context doesn't explicitly state "Normandy is in France," the mention of French historical events and the fact that Normans are associated with France (as in the Norman conquest of England) would imply that Normandy is part of France. Since the question is based solely on the provided documents, and the documents do mention France in the context of Norman history, the answer should
+Expected: ['France', 'France', 'France', 'France']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7408.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When were the Normans in Normandy?
+A: ion is asking when the Normans were in Normandy. The context provided talks about the Normans giving their name to Normandy in the 10th and 11th centuries. It also mentions that the customary law was developed between the 10th and 13th centuries. So the Normans were in Normandy during the 10th and 11th centuries. The answer should be those time frames.
+</think>
+
+The Normans were in Normandy during the 10th and 11th centuries.
+Expected: ['10th and 11th centuries', 'in the 10th and 11th centuries', '10th and 11th centuries', '10th and 11th centuries']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 11 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7408.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: From which countries did the Norse originate?
+A: this out. The question is asking: "From which countries did the Norse originate?" I need to answer based on the given context.
+
+First, I'll look through the provided context to find any mention of the Norse. The first paragraph talks about the Anglo-Norman language and its influence on Old English, but there's no mention of Norse origins here. The second part of the context discusses Norman mercenaries in the Byzantine Empire, mentioning places like Trebizond, Georgia, Malatya, Edessa, and references to Isaac Komnenos and Alexius Komnenos. However, there's a mention of the Norse language in the first paragraph: "along with the Norse language of the earlier Anglo-Norse settlers..." 
+
+Wait, the question is about the origin of the Norse. The term "Norse" typically refers to the people and culture of the Norsemen, who are associated with the Viking Age. Historically, the Norse originated from
+Expected: ['Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway', 'Denmark, Iceland and Norway']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the Norse leader?
+A: ion is asking for the Norse leader mentioned in the context. I need to look through the provided documents to find any references to a Norse leader.
+
+Looking at the context, it starts by talking about the Normans, their origin, and how they gave their name to Normandy. Then it mentions Hervé as one of the first Norman mercenaries serving as a Byzantine general in the 1050s. It also talks about other Normans serving in Trebizond and Georgia, based at Malatya and Edessa under Isaac Komnenos. Later, Robert Crispin led the Normans of Edessa against the Turks in the 1060s. There's also mention of Roussel de Bailleul trying to carve out an independent state but being stopped by Alexius Komnenos.
+
+Wait, the question is about a Norse leader. The Normans are descended from Norse (Viking) settlers. The text
+Expected: ['Rollo', 'Rollo', 'Rollo', 'Rollo']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What century did the Normans first gain their separate identity?
+A: this out. The question is asking about the century when the Normans first gained their separate identity. The context provided talks about the Normans in the early 11th century, mentioning church reforms, Cluniac monasteries, and intellectual pursuits. But wait, the question is about when they gained their separate identity.
+
+Wait, the context says "in the early 11th century the dukes began a programme of church reform..." So that's the early 11th century. But does that mean they gained their identity then? The question is about when they first gained their separate identity. But the context doesn't explicitly mention when they gained their identity. It talks about their activities in the early 11th century, but maybe the formation of their identity was earlier. However, the given documents don't mention anything about the formation of their identity. The answer has to be based solely on the context provided. Since the context
+Expected: ['10th century', 'the first half of the 10th century', '10th', '10th']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 3 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who was the duke in the battle of Hastings?
+A: ion is asking who the duke was in the Battle of Hastings. The context provided mentions Duke William II of Normandy conquering England and killing King Harold II at the Battle of Hastings. So, the key here is to identify the duke involved in that battle.
+
+First, I need to recall the historical context. The Battle of Hastings took place in 1066. The Normans, led by William, Duke of Normandy, invaded England. King Harold II of England was defeated there. The context states that Duke William II was the one who conquered England, which aligns with historical facts. The answer should be William, Duke of Normandy. The user wants only the answer without any extra text, so I need to make sure I don't add anything else. Let me double-check the context again to confirm. Yes, it says Duke William II of Normandy. So the answer is William, Duke of Normandy. But the question
+Expected: ['William the Conqueror', 'William the Conqueror', 'William the Conqueror']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: Who ruled the duchy of Normandy
+A: ion is asking who ruled the Duchy of Normandy based on the provided context.
+
+First, I'll need to go through the context documents again to find any mentions of the ruler of Normandy. The first document talks about the Normans and their contact with England, mentioning Emma's marriage to King Ethelred II. Then it says that Ethelred fled to Normandy in 1013 and stayed until 1016. His sons by Emma stayed in Normandy after Cnut's conquest. 
+
+The second part of the context discusses the Norman dynasty's impact. It mentions the Duchy of Normandy formed by treaty with the French crown. Then there's a sentence: "under Richard I of Normandy was forged into a cohesive and formidable principality in feudal tenure." So that seems to indicate that Richard I of Normandy was the ruler. 
+
+Wait, but the context also mentions William the Conqueror leading an
+Expected: ['Richard I', 'Richard I', 'Richard I']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 5 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.4 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What religion were the Normans
+A: ion is asking what religion the Normans were. I need to check the provided context to find the answer.
+
+Looking through the context, the first paragraph mentions that the Normans "becoming exponents of the Catholic orthodoxy into which they assimilated." That seems important. Also, they adopted the Gallo-Romance language, but that's cultural. Later parts talk about their military and cultural impacts, but the key part here is the mention of Catholic orthodoxy. There's also a part about their Christian piety. 
+
+Wait, the context says they assimilated into the Catholic orthodoxy. So the answer should be Christianity. Let me make sure there's no mention of another religion. The text doesn't talk about them converting from another religion, but rather that they became exponents of Catholic orthodoxy. So the answer is Christianity.
+</think>
+
+Christianity
+Expected: ['Catholic', 'Catholic orthodoxy', 'Catholic']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: What is the original meaning of the word Norman?
+A: is asking about the original meaning of the word "Norman." The context provided talks about the Normans invading Ireland in 1169 and their cultural impact. But does it mention the origin of the word "Norman"?
+
+The context says the Normans had a profound effect on Irish culture after their invasion. It mentions their initial distinct culture and how they were subsumed into Irish culture. However, there's no information about the etymology of the word "Norman" itself. The documents provided don't explain where the term comes from. 
+
+Since the question is about the original meaning of "Norman," and the given context doesn't cover that, I should check if there's any implicit information. The term "Norman" might relate to Normandy, but the context doesn't discuss that. The answer isn't in the provided documents. So the correct response is to say "I don't know."
+</think>
+
+I
+Expected: ['Viking', 'Norseman, Viking', 'Norseman, Viking']
+---
+📄 Processing documents (split_mode: paragraph, min_length: 20)...
+Created 2 document chunks
+🔍 Creating TF-IDF vectors for retrieval...
+✅ TF-IDF vectors created
+📄 Document processing complete!
+GPU Memory after setup: 5808.3 MB allocated, 7412.0 MB reserved
+GPU Memory before inference: 5808.3 MB
+GPU Memory after inference: 5808.3 MB
+Q: Answer the question based on the given documents. Only give me the answer and do not output any other words.
+
+Question: When was the Latin version of the word Norman first recorded?
+A: estion. The user is asking when the Latin version of the word "Norman" was first recorded. The context provided talks about the Normans entering Italy, their battles with the Pechenegs, Bulgars, and Seljuk Turks, their service under George Maniaces in 1038–40, and some debates about their origins. 
+
+First, I need to check if the context mentions anything about the Latin term "Norman" or its first recording. The context discusses historical events involving Normans, their military campaigns, and some historical debates. However, it doesn't mention the etymology of the word "Norman" or when the Latin term was first used.
+
+The question is about the Latin version of the word "Norman." The term "Norman" itself comes from the Latin "Normanni," which refers to the people from the region of Normandy. The Latin term was used by contemporary sources,
+Expected: ['9th century', '9th century', '9th century']
+---
+Results for file at path needles/2048/qa_1_2048.jsonl:
+Accuracy on needles/2048/qa_1_2048.jsonl: 4/10 = 40.00%
